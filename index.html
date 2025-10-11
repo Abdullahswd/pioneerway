@@ -12,17 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        cairo: ['Cairo', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         :root {
             --primary-dark: #1a365d;
@@ -68,35 +57,18 @@
             font-family: 'Cairo', sans-serif;
         }
 
-        .drawer {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .drawer.closed {
-            transform: translateX(100%);
-        }
-
-        .drawer.open {
-            transform: translateX(0);
-        }
-
         /* ******************************************************************************************************** */
 
         /* الترويسة المحسنة */
-
         header {
             backdrop-filter: blur(10px);
-            /* تأثير بلور خلف الهيدر */
             background-color: rgba(255, 255, 255, 0.95);
-            /* خلفية شفافة قليلاً */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-            /* ظل ناعم أسفل الهيدر */
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         header.scrolled {
             background-color: rgba(255, 255, 255, 1);
-            /* عندما يتم التمرير، تصبح الخلفية غير شفافة */
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
@@ -114,7 +86,6 @@
             height: 2px;
             width: 0%;
             background-color: #2563eb;
-            /* اللون الأزرق */
             transition: width 0.3s ease;
         }
 
@@ -125,15 +96,85 @@
         }
 
         /* تحسين شكل زر الهامبرغر */
-        #menu-btn svg {
+        #menu-btn {
             transition: transform 0.3s ease;
         }
 
-        #menu-btn:hover svg {
+        #menu-btn:hover {
             transform: scale(1.1);
         }
 
+        /* القائمة الجانبية للموبايل */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 320px;
+            height: 100vh;
+            background: var(--gradient-primary);
+            z-index: 1000;
+            transition: right 0.4s ease;
+            padding: 80px 20px 30px;
+            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
 
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            color: var(--white);
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateX(-5px);
+        }
+
+        .mobile-menu a i {
+            margin-left: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
 
         /* *******************************************************************************************************************/
 
@@ -995,48 +1036,77 @@
         </div>
     </header>
 
-
-   
-
-
-<!-- واجهة رئيسية جذابة ومقنعة -->
-<section id="home" style="padding: 80px 20px; background: linear-gradient(to bottom, #f8f9ff, #ffffff); font-family: 'Cairo', sans-serif;">
-  <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
-
-    <!-- النصوص -->
-    <div style="flex: 1 1 500px; text-align: right;">
-      <h1 style="font-size: 3rem; color: #2563eb; font-weight: 800; margin-bottom: 30px;">
-        طريق الريادة
-      </h1>
-
-      <ul style="list-style: none; padding: 0; font-size: 1.3rem; color: #222; line-height: 2; margin-bottom: 30px;">
-        <li>🎯 حلول متكاملة للأعمال بأسلوب احترافي</li>
-        <li>📈 خطط نمو ذكية تناسب طموحاتك</li>
-        <li>🤝 شريك موثوق يدعمك نحو الريادة</li>
-      </ul>
-
-      <p style="color: #555; font-size: 1.1rem; margin-bottom: 40px;">
-        نمنحك أدوات النجاح الرقمي: تصميم متجر احترافي، دعم مستمر، وتسويق يوصلك إلى جمهورك بخطى واثقة.
-      </p>
-
-      <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: flex-start;">
-        <a href="#services" style="background-color: #2563eb; color: #fff; padding: 14px 30px; border-radius: 8px; font-size: 1rem; font-weight: bold; text-decoration: none; transition: background-color 0.3s;">
-          🚀 ابدأ مشروعك الآن
+    <!-- القائمة الجانبية للموبايل -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-menu" id="close-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#home">
+            <i class="fas fa-house"></i>
+            الرئيسية
         </a>
-        <a href="#contact" style="border: 2px solid #2563eb; color: #2563eb; padding: 12px 28px; border-radius: 8px; font-size: 1rem; font-weight: bold; text-decoration: none; background-color: transparent; transition: all 0.3s;">
-          💬 تواصل معنا
+        <a href="#about">
+            <i class="fas fa-user"></i>
+            من نحن
         </a>
-      </div>
+        <a href="#services">
+            <i class="fas fa-briefcase"></i>
+            خدماتنا
+        </a>
+        <a href="#portfolio">
+            <i class="fas fa-th-large"></i>
+            أعمالنا
+        </a>
+        <a href="#blog">
+            <i class="fas fa-blog"></i>
+            المدونة
+        </a>
+        <a href="#contact">
+            <i class="fas fa-envelope"></i>
+            تواصل معنا
+        </a>
     </div>
 
-    <!-- صورة توضيحية -->
-    <div style="flex: 1 1 400px; text-align: center;">
-      <img src="image\resize.jpg" alt="ريادة الأعمال" style="width: 100%; max-width: 350px;" />
-    </div>
+    <!-- طبقة التعتيم -->
+    <div class="overlay" id="overlay"></div>
 
-  </div>
-</section>
+    <!-- واجهة رئيسية جذابة ومقنعة -->
+    <section id="home" style="padding: 80px 20px; background: linear-gradient(to bottom, #f8f9ff, #ffffff); font-family: 'Cairo', sans-serif;">
+        <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
 
+            <!-- النصوص -->
+            <div style="flex: 1 1 500px; text-align: right;">
+                <h1 style="font-size: 3rem; color: #2563eb; font-weight: 800; margin-bottom: 30px;">
+                    طريق الريادة
+                </h1>
+
+                <ul style="list-style: none; padding: 0; font-size: 1.3rem; color: #222; line-height: 2; margin-bottom: 30px;">
+                    <li>🎯 حلول متكاملة للأعمال بأسلوب احترافي</li>
+                    <li>📈 خطط نمو ذكية تناسب طموحاتك</li>
+                    <li>🤝 شريك موثوق يدعمك نحو الريادة</li>
+                </ul>
+
+                <p style="color: #555; font-size: 1.1rem; margin-bottom: 40px;">
+                    نمنحك أدوات النجاح الرقمي: تصميم متجر احترافي، دعم مستمر، وتسويق يوصلك إلى جمهورك بخطى واثقة.
+                </p>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: flex-start;">
+                    <a href="#services" style="background-color: #2563eb; color: #fff; padding: 14px 30px; border-radius: 8px; font-size: 1rem; font-weight: bold; text-decoration: none; transition: background-color 0.3s;">
+                        🚀 ابدأ مشروعك الآن
+                    </a>
+                    <a href="#contact" style="border: 2px solid #2563eb; color: #2563eb; padding: 12px 28px; border-radius: 8px; font-size: 1rem; font-weight: bold; text-decoration: none; background-color: transparent; transition: all 0.3s;">
+                        💬 تواصل معنا
+                    </a>
+                </div>
+            </div>
+
+            <!-- صورة توضيحية -->
+            <div style="flex: 1 1 400px; text-align: center;">
+                <img src="image\resize.jpg" alt="ريادة الأعمال" style="width: 100%; max-width: 350px;" />
+            </div>
+
+        </div>
+    </section>
 
     <!-- قسم الخدمات -->
     <section class="services" id="services">
@@ -1099,7 +1169,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- قسم من نحن -->
     <section class="about" id="about">
@@ -1391,22 +1460,6 @@
         // تفعيل تأثير الظهور عند التحميل
         window.dispatchEvent(new Event('scroll'));
 
-        // القائمة المتنقلة للهواتف
-        // const mobileMenu = document.getElementById('mobileMenu');
-        // const navLinks = document.getElementById('navLinks');
-        // const navAnchors = navLinks.querySelectorAll('a');
-
-        // mobileMenu.addEventListener('click', () => {
-        //     navLinks.classList.toggle('active');
-        // });
-
-        // // عند الضغط على أي رابط، يتم إغلاق القائمة تلقائياً
-        // navAnchors.forEach(link => {
-        //     link.addEventListener('click', () => {
-        //         navLinks.classList.remove('active');
-        //     });
-        // });
-
         // جعل الهيدر يتغير عند التمرير
         window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
@@ -1416,7 +1469,6 @@
                 header.classList.remove('scrolled');
             }
         });
-
 
         //  الاحصائيات
         document.addEventListener("DOMContentLoaded", function () {
@@ -1461,7 +1513,39 @@
             }
         });
 
+        // التحكم في القائمة الجانبية للموبايل
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const overlay = document.getElementById('overlay');
 
+        menuBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenu.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        overlay.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // إغلاق القائمة عند النقر على رابط
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
     </script>
 </body>
 
