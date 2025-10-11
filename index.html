@@ -946,10 +946,24 @@
         .drawer {
             transition: transform 0.3s ease-in-out;
             transform: translateX(100%);
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 280px;
+            height: 100vh;
+            background: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            overflow-y: auto;
         }
 
         .drawer.open {
             transform: translateX(0);
+        }
+
+        /* إزالة الكلاس closed من CSS لأنه غير مستخدم */
+        .drawer.closed {
+            transform: translateX(100%);
         }
 
         /* منع التمرير عند فتح القائمة */
@@ -960,17 +974,19 @@
         /* تحسين شكل الروابط في القائمة الجانبية */
         .mobile-link {
             display: block;
-            padding: 12px 15px;
+            padding: 15px 20px;
             color: #333;
             text-decoration: none;
             border-bottom: 1px solid #f0f0f0;
             transition: all 0.3s;
             font-weight: 500;
+            font-size: 1.1rem;
         }
 
         .mobile-link:hover {
             background-color: #f8f9fa;
             color: #2563eb;
+            padding-right: 25px;
         }
 
         /* تحسين زر الإغلاق */
@@ -978,8 +994,21 @@
             background: none;
             border: none;
             cursor: pointer;
-            padding: 5px;
-            margin-bottom: 20px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        #close-btn:hover {
+            background: #f5f5f5;
+        }
+
+        /* إخفاء القائمة على الشاشات الكبيرة */
+        @media (min-width: 769px) {
+            .drawer {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -1037,22 +1066,22 @@
     </header>
 
 
-    <!-- Drawer Menu -->
-    <div id="drawer" class="drawer fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-40 p-6 md:hidden">
-        <button id="close-btn" class="mb-6 focus:outline-none">
-            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-        <nav class="flex flex-col space-y-2 text-gray-700">
-            <a href="#home" class="mobile-link">🏠 الرئيسية</a>
-            <a href="#about" class="mobile-link">👤 من نحن</a>
-            <a href="#services" class="mobile-link">🛠 خدماتنا</a>
-            <a href="#portfolio" class="mobile-link">📁 أعمالنا</a>
-            <a href="#blog" class="mobile-link">📰 المدونة</a>
-            <a href="#contact" class="mobile-link">✉️ تواصل معنا</a>
-        </nav>
-    </div>
+<!-- Drawer Menu -->
+<div id="drawer" class="drawer fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-40 p-6 md:hidden">
+    <button id="close-btn" class="mb-6 focus:outline-none">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+    <nav class="flex flex-col">
+        <a href="#home" class="mobile-link">🏠 الرئيسية</a>
+        <a href="#about" class="mobile-link">👤 من نحن</a>
+        <a href="#services" class="mobile-link">🛠 خدماتنا</a>
+        <a href="#portfolio" class="mobile-link">📁 أعمالنا</a>
+        <a href="#blog" class="mobile-link">📰 المدونة</a>
+        <a href="#contact" class="mobile-link">✉️ تواصل معنا</a>
+    </nav>
+</div>
 
 
 
@@ -1524,64 +1553,70 @@
         });
 
         // القائمة الجانبية للموبايل - الإصدار المحسن
-        const menuBtn = document.getElementById("menu-btn");
-        const closeBtn = document.getElementById("close-btn");
-        const drawer = document.getElementById("drawer");
-        const links = document.querySelectorAll(".mobile-link");
-        const body = document.body;
+       // القائمة الجانبية للموبايل - الإصدار المبسط
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.getElementById("menu-btn");
+    const closeBtn = document.getElementById("close-btn");
+    const drawer = document.getElementById("drawer");
+    const body = document.body;
 
-        // تأكد من إغلاق القائمة عند التحميل
-        document.addEventListener('DOMContentLoaded', function () {
-            drawer.classList.remove('open');
-        });
+    // تأكد من إغلاق القائمة عند التحميل
+    drawer.classList.remove('open');
+    drawer.style.transform = 'translateX(100%)';
 
-        menuBtn.addEventListener("click", () => {
-            drawer.classList.add("open");
-            body.classList.add("drawer-open");
-        });
+    // فتح القائمة
+    menuBtn.addEventListener("click", () => {
+        drawer.classList.add("open");
+        drawer.style.transform = 'translateX(0)';
+        body.classList.add("drawer-open");
+    });
 
-        closeBtn.addEventListener("click", () => {
-            drawer.classList.remove("open");
-            body.classList.remove("drawer-open");
-        });
+    // إغلاق القائمة
+    function closeDrawer() {
+        drawer.classList.remove("open");
+        drawer.style.transform = 'translateX(100%)';
+        body.classList.remove("drawer-open");
+    }
 
-        links.forEach(link => {
-            link.addEventListener("click", () => {
-                drawer.classList.remove("open");
-                body.classList.remove("drawer-open");
+    closeBtn.addEventListener("click", closeDrawer);
 
-                // التنقل السلس للقسم المطلوب
-                const targetId = link.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    setTimeout(() => {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }, 300);
-                }
-            });
-        });
-
-        // إغلاق القائمة عند النقر خارجها
-        document.addEventListener('click', (e) => {
-            if (drawer.classList.contains('open') &&
-                !drawer.contains(e.target) &&
-                e.target !== menuBtn &&
-                !menuBtn.contains(e.target)) {
-                drawer.classList.remove("open");
-                body.classList.remove("drawer-open");
+    // إغلاق القائمة عند النقر على رابط
+    document.querySelectorAll(".mobile-link").forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            closeDrawer();
+            
+            // التنقل السلس بعد إغلاق القائمة
+            const targetId = link.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                setTimeout(() => {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }, 300);
             }
         });
+    });
 
-        // إغلاق القائمة عند تغيير حجم النافذة
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                drawer.classList.remove("open");
-                body.classList.remove("drawer-open");
-            }
-        });
+    // إغلاق القائمة عند النقر خارجها
+    document.addEventListener('click', (e) => {
+        if (drawer.classList.contains('open') && 
+            !drawer.contains(e.target) && 
+            e.target !== menuBtn && 
+            !menuBtn.contains(e.target)) {
+            closeDrawer();
+        }
+    });
+
+    // إغلاق القائمة عند الضغط على زر Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && drawer.classList.contains('open')) {
+            closeDrawer();
+        }
+    });
+});
 
 
     </script>
