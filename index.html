@@ -1010,6 +1010,44 @@
                 display: none;
             }
         }
+
+        /* إصلاح القائمة الجانبية */
+.drawer {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+}
+
+.drawer.open {
+    transform: translateX(0);
+}
+
+/* إخفاء القائمة على الشاشات الكبيرة */
+@media (min-width: 769px) {
+    .drawer {
+        display: none !important;
+    }
+}
+
+/* منع التمرير عند فتح القائمة */
+body.drawer-open {
+    overflow: hidden;
+}
+
+
+/* حل طارئ - إخفاء القائمة بالقوة */
+#drawer {
+    display: none;
+}
+
+#drawer.open {
+    display: block;
+}
+
+@media (min-width: 769px) {
+    #drawer {
+        display: none !important;
+    }
+}
     </style>
 </head>
 
@@ -1073,7 +1111,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
     </button>
-    <nav class="flex flex-col">
+    <nav class="flex flex-col space-y-4 text-gray-700">
         <a href="#home" class="mobile-link">🏠 الرئيسية</a>
         <a href="#about" class="mobile-link">👤 من نحن</a>
         <a href="#services" class="mobile-link">🛠 خدماتنا</a>
@@ -1552,69 +1590,32 @@
             }
         });
 
-        // القائمة الجانبية للموبايل - الإصدار المحسن
-       // القائمة الجانبية للموبايل - الإصدار المبسط
+       // حل بسيط وفعال للقائمة الجانبية
 document.addEventListener('DOMContentLoaded', function() {
     const menuBtn = document.getElementById("menu-btn");
     const closeBtn = document.getElementById("close-btn");
     const drawer = document.getElementById("drawer");
     const body = document.body;
 
-    // تأكد من إغلاق القائمة عند التحميل
-    drawer.classList.remove('open');
+    // تأكد من إخفاء القائمة عند التحميل
     drawer.style.transform = 'translateX(100%)';
 
-    // فتح القائمة
     menuBtn.addEventListener("click", () => {
-        drawer.classList.add("open");
         drawer.style.transform = 'translateX(0)';
         body.classList.add("drawer-open");
     });
 
-    // إغلاق القائمة
-    function closeDrawer() {
-        drawer.classList.remove("open");
+    closeBtn.addEventListener("click", () => {
         drawer.style.transform = 'translateX(100%)';
         body.classList.remove("drawer-open");
-    }
+    });
 
-    closeBtn.addEventListener("click", closeDrawer);
-
-    // إغلاق القائمة عند النقر على رابط
+    // إغلاق القائمة عند النقر على أي رابط
     document.querySelectorAll(".mobile-link").forEach(link => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
-            closeDrawer();
-            
-            // التنقل السلس بعد إغلاق القائمة
-            const targetId = link.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                setTimeout(() => {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }, 300);
-            }
+        link.addEventListener("click", () => {
+            drawer.style.transform = 'translateX(100%)';
+            body.classList.remove("drawer-open");
         });
-    });
-
-    // إغلاق القائمة عند النقر خارجها
-    document.addEventListener('click', (e) => {
-        if (drawer.classList.contains('open') && 
-            !drawer.contains(e.target) && 
-            e.target !== menuBtn && 
-            !menuBtn.contains(e.target)) {
-            closeDrawer();
-        }
-    });
-
-    // إغلاق القائمة عند الضغط على زر Escape
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && drawer.classList.contains('open')) {
-            closeDrawer();
-        }
     });
 });
 
