@@ -940,114 +940,6 @@
             height: 50px;
             width: auto;
         }
-
-
-        /* تحسينات القائمة الجانبية للهواتف */
-        .drawer {
-            transition: transform 0.3s ease-in-out;
-            transform: translateX(100%);
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 280px;
-            height: 100vh;
-            background: white;
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-            z-index: 100;
-            overflow-y: auto;
-        }
-
-        .drawer.open {
-            transform: translateX(0);
-        }
-
-        /* إزالة الكلاس closed من CSS لأنه غير مستخدم */
-        .drawer.closed {
-            transform: translateX(100%);
-        }
-
-        /* منع التمرير عند فتح القائمة */
-        body.drawer-open {
-            overflow: hidden;
-        }
-
-        /* تحسين شكل الروابط في القائمة الجانبية */
-        .mobile-link {
-            display: block;
-            padding: 15px 20px;
-            color: #333;
-            text-decoration: none;
-            border-bottom: 1px solid #f0f0f0;
-            transition: all 0.3s;
-            font-weight: 500;
-            font-size: 1.1rem;
-        }
-
-        .mobile-link:hover {
-            background-color: #f8f9fa;
-            color: #2563eb;
-            padding-right: 25px;
-        }
-
-        /* تحسين زر الإغلاق */
-        #close-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        #close-btn:hover {
-            background: #f5f5f5;
-        }
-
-        /* إخفاء القائمة على الشاشات الكبيرة */
-        @media (min-width: 769px) {
-            .drawer {
-                display: none;
-            }
-        }
-
-        /* إصلاح القائمة الجانبية */
-.drawer {
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(100%);
-}
-
-.drawer.open {
-    transform: translateX(0);
-}
-
-/* إخفاء القائمة على الشاشات الكبيرة */
-@media (min-width: 769px) {
-    .drawer {
-        display: none !important;
-    }
-}
-
-/* منع التمرير عند فتح القائمة */
-body.drawer-open {
-    overflow: hidden;
-}
-
-
-/* حل طارئ - إخفاء القائمة بالقوة */
-#drawer {
-    display: none;
-}
-
-#drawer.open {
-    display: block;
-}
-
-@media (min-width: 769px) {
-    #drawer {
-        display: none !important;
-    }
-}
     </style>
 </head>
 
@@ -1104,67 +996,46 @@ body.drawer-open {
     </header>
 
 
-<!-- Drawer Menu -->
-<div id="drawer" class="drawer fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-40 p-6 md:hidden">
-    <button id="close-btn" class="mb-6 focus:outline-none">
-        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-    </button>
-    <nav class="flex flex-col space-y-4 text-gray-700">
-        <a href="#home" class="mobile-link">🏠 الرئيسية</a>
-        <a href="#about" class="mobile-link">👤 من نحن</a>
-        <a href="#services" class="mobile-link">🛠 خدماتنا</a>
-        <a href="#portfolio" class="mobile-link">📁 أعمالنا</a>
-        <a href="#blog" class="mobile-link">📰 المدونة</a>
-        <a href="#contact" class="mobile-link">✉️ تواصل معنا</a>
-    </nav>
-</div>
+   
 
 
+<!-- واجهة رئيسية جذابة ومقنعة -->
+<section id="home" style="padding: 80px 20px; background: linear-gradient(to bottom, #f8f9ff, #ffffff); font-family: 'Cairo', sans-serif;">
+  <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
 
+    <!-- النصوص -->
+    <div style="flex: 1 1 500px; text-align: right;">
+      <h1 style="font-size: 3rem; color: #2563eb; font-weight: 800; margin-bottom: 30px;">
+        طريق الريادة
+      </h1>
 
-    <!-- واجهة رئيسية جذابة ومقنعة -->
-    <section id="home"
-        style="padding: 80px 20px; background: linear-gradient(to bottom, #f8f9ff, #ffffff); font-family: 'Cairo', sans-serif;">
-        <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+      <ul style="list-style: none; padding: 0; font-size: 1.3rem; color: #222; line-height: 2; margin-bottom: 30px;">
+        <li>🎯 حلول متكاملة للأعمال بأسلوب احترافي</li>
+        <li>📈 خطط نمو ذكية تناسب طموحاتك</li>
+        <li>🤝 شريك موثوق يدعمك نحو الريادة</li>
+      </ul>
 
-            <!-- النصوص -->
-            <div style="flex: 1 1 500px; text-align: right;">
-                <h1 style="font-size: 3rem; color: #2563eb; font-weight: 800; margin-bottom: 30px;">
-                    طريق الريادة
-                </h1>
+      <p style="color: #555; font-size: 1.1rem; margin-bottom: 40px;">
+        نمنحك أدوات النجاح الرقمي: تصميم متجر احترافي، دعم مستمر، وتسويق يوصلك إلى جمهورك بخطى واثقة.
+      </p>
 
-                <ul
-                    style="list-style: none; padding: 0; font-size: 1.3rem; color: #222; line-height: 2; margin-bottom: 30px;">
-                    <li>🎯 حلول متكاملة للأعمال بأسلوب احترافي</li>
-                    <li>📈 خطط نمو ذكية تناسب طموحاتك</li>
-                    <li>🤝 شريك موثوق يدعمك نحو الريادة</li>
-                </ul>
+      <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: flex-start;">
+        <a href="#services" style="background-color: #2563eb; color: #fff; padding: 14px 30px; border-radius: 8px; font-size: 1rem; font-weight: bold; text-decoration: none; transition: background-color 0.3s;">
+          🚀 ابدأ مشروعك الآن
+        </a>
+        <a href="#contact" style="border: 2px solid #2563eb; color: #2563eb; padding: 12px 28px; border-radius: 8px; font-size: 1rem; font-weight: bold; text-decoration: none; background-color: transparent; transition: all 0.3s;">
+          💬 تواصل معنا
+        </a>
+      </div>
+    </div>
 
-                <p style="color: #555; font-size: 1.1rem; margin-bottom: 40px;">
-                    نمنحك أدوات النجاح الرقمي: تصميم متجر احترافي، دعم مستمر، وتسويق يوصلك إلى جمهورك بخطى واثقة.
-                </p>
+    <!-- صورة توضيحية -->
+    <div style="flex: 1 1 400px; text-align: center;">
+      <img src="image\resize.jpg" alt="ريادة الأعمال" style="width: 100%; max-width: 350px;" />
+    </div>
 
-                <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: flex-start;">
-                    <a href="#services"
-                        style="background-color: #2563eb; color: #fff; padding: 14px 30px; border-radius: 8px; font-size: 1rem; font-weight: bold; text-decoration: none; transition: background-color 0.3s;">
-                        🚀 ابدأ مشروعك الآن
-                    </a>
-                    <a href="#contact"
-                        style="border: 2px solid #2563eb; color: #2563eb; padding: 12px 28px; border-radius: 8px; font-size: 1rem; font-weight: bold; text-decoration: none; background-color: transparent; transition: all 0.3s;">
-                        💬 تواصل معنا
-                    </a>
-                </div>
-            </div>
-
-            <!-- صورة توضيحية -->
-            <div style="flex: 1 1 400px; text-align: center;">
-                <img src="image\resize.jpg" alt="ريادة الأعمال" style="width: 200%; max-width: 550px;" />
-            </div>
-
-        </div>
-    </section>
+  </div>
+</section>
 
 
     <!-- قسم الخدمات -->
@@ -1589,35 +1460,6 @@ body.drawer-open {
                 requestAnimationFrame(updateCount);
             }
         });
-
-       // حل بسيط وفعال للقائمة الجانبية
-document.addEventListener('DOMContentLoaded', function() {
-    const menuBtn = document.getElementById("menu-btn");
-    const closeBtn = document.getElementById("close-btn");
-    const drawer = document.getElementById("drawer");
-    const body = document.body;
-
-    // تأكد من إخفاء القائمة عند التحميل
-    drawer.style.transform = 'translateX(100%)';
-
-    menuBtn.addEventListener("click", () => {
-        drawer.style.transform = 'translateX(0)';
-        body.classList.add("drawer-open");
-    });
-
-    closeBtn.addEventListener("click", () => {
-        drawer.style.transform = 'translateX(100%)';
-        body.classList.remove("drawer-open");
-    });
-
-    // إغلاق القائمة عند النقر على أي رابط
-    document.querySelectorAll(".mobile-link").forEach(link => {
-        link.addEventListener("click", () => {
-            drawer.style.transform = 'translateX(100%)';
-            body.classList.remove("drawer-open");
-        });
-    });
-});
 
 
     </script>
