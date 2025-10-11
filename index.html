@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طريق الريادة - حلول التجارة الإلكترونية المتكاملة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --primary-dark: #1a365d;
+            --primary-blue: #2d3748;
+            --accent-orange: #ed8936;
+            --accent-orange-light: #fbd38d;
+            --light-gray: #f7fafc;
+            --medium-gray: #e2e8f0;
+            --dark-gray: #4a5568;
+            --white: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            --gradient-accent: linear-gradient(135deg, #ed8936 0%, #f6ad55 100%);
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--primary-blue);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .drawer {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .drawer.closed {
+            transform: translateX(100%);
+        }
+
+        .drawer.open {
+            transform: translateX(0);
+        }
+
+        /* ******************************************************************************************************** */
+
+        /* الترويسة المحسنة */
+
+        header {
+            backdrop-filter: blur(10px);
+            /* تأثير بلور خلف الهيدر */
+            background-color: rgba(255, 255, 255, 0.95);
+            /* خلفية شفافة قليلاً */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+            /* ظل ناعم أسفل الهيدر */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 1);
+            /* عندما يتم التمرير، تصبح الخلفية غير شفافة */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* تأثير عند تمرير المؤشر على روابط القائمة */
+        nav a {
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0%;
+            background-color: #2563eb;
+            /* اللون الأزرق */
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+            left: 0;
+            right: auto;
+        }
+
+        /* تحسين شكل زر الهامبرغر */
+        #menu-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        #menu-btn:hover svg {
+            transform: scale(1.1);
+        }
+
+
+
+        /* *******************************************************************************************************************/
+
+        /* القسم الرئيسي المحسن */
+        .hero {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 180px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            right: -50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .hero-buttons .cta-button {
+            background: var(--gradient-accent);
+            font-size: 1.1rem;
+            padding: 15px 35px;
+        }
+
+        .hero-buttons .secondary-button {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .hero-buttons .secondary-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* قسم الخدمات المحسن */
+        .services {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 4px;
+            background: var(--gradient-accent);
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--dark-gray);
+            max-width: 600px;
+            margin: 20px auto 0;
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            transition: all 0.4s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 0;
+            background: var(--gradient-primary);
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
+
+        .service-card:hover:before {
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            color: var(--white);
+        }
+
+        .service-card:hover .service-icon {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+        }
+
+        .service-card:hover h3,
+        .service-card:hover p {
+            color: var(--white);
+        }
+
+        .service-icon {
+            background-color: var(--light-gray);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--accent-orange);
+            font-size: 1.8rem;
+            transition: all 0.4s ease;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+            transition: color 0.4s;
+        }
+
+        .service-card p {
+            color: var(--dark-gray);
+            transition: color 0.4s;
+        }
+
+        /* قسم المميزات المحسن */
+        .features {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .features-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .features-content {
+            padding-left: 20px;
+        }
+
+        .features-image {
+            position: relative;
+        }
+
+        .features-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .feature-item:hover {
+            background-color: var(--light-gray);
+            transform: translateX(-5px);
+        }
+
+        .feature-icon {
+            background: var(--gradient-accent);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            flex-shrink: 0;
+            font-size: 1.3rem;
+        }
+
+        .feature-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        /* قسم الإحصائيات */
+        .stats {
+            padding: 80px 0;
+            background: var(--gradient-primary);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--accent-orange);
+        }
+
+        .stat-item p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* قسم من نحن المحسن */
+        .about {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+            font-weight: 800;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .vision-mission {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .vision,
+        .mission {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+
+        .vision:hover,
+        .mission:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .vision h3,
+        .mission h3 {
+            color: var(--accent-orange);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .vision h3 i,
+        .mission h3 i {
+            margin-left: 10px;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        /* قسم الأعمال المحسن */
+        .portfolio {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            background-color: var(--light-gray);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s;
+            position: relative;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .portfolio-img {
+            height: 250px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-img:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .portfolio-item:hover .portfolio-img:after {
+            opacity: 1;
+        }
+
+        .portfolio-content {
+            padding: 25px;
+        }
+
+        .portfolio-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+        }
+
+        /* قسم المدونة المحسن */
+        .blog {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .blog-img {
+            height: 220px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-content h3 {
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        .blog-meta {
+            display: flex;
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .blog-meta span {
+            margin-left: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .blog-meta i {
+            margin-left: 5px;
+        }
+
+        .read-more {
+            color: var(--accent-orange);
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .read-more i {
+            margin-right: 5px;
+            transition: transform 0.3s;
+        }
+
+        .read-more:hover {
+            color: var(--primary-dark);
+        }
+
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+
+        /* قسم اتصل بنا المحسن */
+        .contact {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-form {
+            background-color: var(--light-gray);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--medium-gray);
+            border-radius: 8px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 0 3px rgba(237, 137, 54, 0.2);
+            outline: none;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            background-color: var(--light-gray);
+        }
+
+        .contact-icon {
+            background: var(--gradient-accent);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            font-size: 1.3rem;
+        }
+
+        .contact-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--primary-dark);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--light-gray);
+            border-radius: 50%;
+            margin-left: 15px;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-accent);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        /* التذييل المحسن */
+        footer {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 70px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            color: var(--accent-orange);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-orange);
+            bottom: 0;
+            right: 0;
+            border-radius: 2px;
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: var(--medium-gray);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-col ul li a i {
+            margin-left: 8px;
+            font-size: 0.8rem;
+            transition: transform 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-orange);
+            transform: translateX(-5px);
+        }
+
+        .footer-col ul li a:hover i {
+            transform: translateX(3px);
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 0 30px 30px 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .newsletter-form button {
+            background: var(--gradient-accent);
+            color: var(--white);
+            border: none;
+            padding: 0 20px;
+            border-radius: 30px 0 0 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--accent-orange);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+        }
+
+        /* التجاوب مع الأجهزة المختلفة */
+        @media (max-width: 992px) {
+
+            .features-container,
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .features-content {
+                padding-left: 0;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-buttons button {
+                width: 100%;
+                max-width: 280px;
+                margin-bottom: 15px;
+            }
+
+            .vision-mission {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        /* تأثيرات الظهور */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- الترويسة -->
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+
+            <!-- شعار الشركة -->
+            <div class="flex items-center gap-3">
+                <img src="image/logo.png" alt="شعار" class="h-10 w-auto">
+                <div class="text-xl font-bold text-blue-600">طريق الريادة</div>
+            </div>
+
+            <!-- قائمة سطح المكتب -->
+            <nav class="hidden md:flex space-x-6 space-x-reverse">
+                <a href="#home" class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-house ml-1 text-blue-500"></i>
+                    الرئيسية
+                </a>
+                <a href="#about" class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-user ml-1 text-blue-500"></i>
+                    من نحن
+                </a>
+                <a href="#services" class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-briefcase ml-1 text-blue-500"></i>
+                    خدماتنا
+                </a>
+                <a href="#portfolio"
+                    class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-th-large ml-1 text-blue-500"></i>
+                    أعمالنا
+                </a>
+                <a href="#blog" class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-blog ml-1 text-blue-500"></i>
+                    المدونة
+                </a>
+                <a href="#contact" class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-envelope ml-1 text-blue-500"></i>
+                    تواصل معنا
+                </a>
+            </nav>
+
+
+            <!-- زر القائمة الجانبية للموبايل -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+
+    <!-- Drawer Menu -->
+    <div id="drawer" class="drawer closed fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-40 p-6 md:hidden">
+        <button id="close-btn" class="mb-6 focus:outline-none">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <nav class="flex flex-col space-y-4 text-gray-700">
+            <a href="#home" class="mobile-link">🏠 الرئيسية</a>
+            <a href="#about" class="mobile-link">👤 من نحن</a>
+            <a href="#services" class="mobile-link">🛠 خدماتنا</a>
+            <a href="#portfolio" class="mobile-link">📁 أعمالنا</a>
+            <a href="#blog" class="mobile-link">📰 المدونة</a>
+            <a href="#contact" class="mobile-link">✉️ تواصل معنا</a>
+        </nav>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const closeBtn = document.getElementById("close-btn");
+        const drawer = document.getElementById("drawer");
+        const links = document.querySelectorAll(".mobile-link");
+
+        menuBtn.addEventListener("click", () => {
+            drawer.classList.remove("closed");
+            drawer.classList.add("open");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            drawer.classList.remove("open");
+            drawer.classList.add("closed");
+        });
+
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                drawer.classList.remove("open");
+                drawer.classList.add("closed");
+            });
+        });
+    </script>
+
+
+<!-- واجهة رئيسية جذابة ومقنعة -->
+<section id="home" style="padding: 80px 20px; background: linear-gradient(to bottom, #f8f9ff, #ffffff); font-family: 'Cairo', sans-serif;">
+  <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+
+    <!-- النصوص -->
+    <div style="flex: 1 1 500px; text-align: right;">
+      <h1 style="font-size: 3rem; color: #2563eb; font-weight: 800; margin-bottom: 30px;">
+        طريق الريادة
+      </h1>
+
+      <ul style="list-style: none; padding: 0; font-size: 1.3rem; color: #222; line-height: 2; margin-bottom: 30px;">
+        <li>🎯 حلول متكاملة للأعمال بأسلوب احترافي</li>
+        <li>📈 خطط نمو ذكية تناسب طموحاتك</li>
+        <li>🤝 شريك موثوق يدعمك نحو الريادة</li>
+      </ul>
+
+      <p style="color: #555; font-size: 1.1rem; margin-bottom: 40px;">
+        نمنحك أدوات النجاح الرقمي: تصميم متجر احترافي، دعم مستمر، وتسويق يوصلك إلى جمهورك بخطى واثقة.
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: flex-start;">
+        <a href="#services" style="background-color: #2563eb; color: #fff; padding: 14px 30px; border-radius: 8px; font-size: 1rem; font-weight: bold; text-decoration: none; transition: background-color 0.3s;">
+          🚀 ابدأ مشروعك الآن
+        </a>
+        <a href="#contact" style="border: 2px solid #2563eb; color: #2563eb; padding: 12px 28px; border-radius: 8px; font-size: 1rem; font-weight: bold; text-decoration: none; background-color: transparent; transition: all 0.3s;">
+          💬 تواصل معنا
+        </a>
+      </div>
+    </div>
+
+    <!-- صورة توضيحية -->
+    <div style="flex: 1 1 400px; text-align: center;">
+      <img src="image\resize.jpg" alt="ريادة الأعمال" style="width: 200%; max-width: 550px;" />
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- قسم الخدمات -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>خدماتنا المتكاملة</h2>
+                <p>نقدم مجموعة شاملة من الخدمات التي تغطي جميع جوانب التجارة الإلكترونية</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3>إنشاء المتاجر الإلكترونية</h3>
+                    <p>تصميم وتطوير متاجر إلكترونية احترافية بتقنيات حديثة وجذابة، مع ضمان تجربة مستخدم استثنائية.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>إدارة المتاجر الإلكترونية</h3>
+                    <p>خدمة إدارة متكاملة تشمل تحديث المنتجات، متابعة الطلبات، خدمة العملاء، وإدارة المخزون.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>التسويق الإلكتروني</h3>
+                    <p>حلول تسويقية شاملة تشمل التسويق عبر وسائل التواصل الاجتماعي، محركات البحث، والبريد الإلكتروني.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>تصميم الهوية التجارية</h3>
+                    <p>تصميم هوية بصرية متكاملة تعبر عن قيم علامتك التجارية وتجذب العملاء المستهدفين.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>الاستشارات والتدريب</h3>
+                    <p>تقديم استشارات متخصصة وبرامج تدريبية لتمكينك من إدارة متجرك الإلكتروني باحترافية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الإحصائيات -->
+    <section class="stats py-16 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="stats-grid grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stat-item fade-in">
+                    <h3 class="stat-number text-4xl font-bold text-blue-600" data-target="150">0</h3>
+                    <p class="text-white-600 mt-2">مشروع ناجح</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <h3 class="stat-number text-4xl font-bold text-blue-600" data-target="98">0</h3>
+                    <p class="text-white-600 mt-2">عملاء راضون</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <h3 class="stat-number text-4xl font-bold text-blue-600" data-target="5">0</h3>
+                    <p class="text-white-600 mt-2">سنوات خبرة</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <h3 class="text-4xl font-bold text-blue-600">24/7</h3>
+                    <p class="text-white-600 mt-2">دعم فني</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- قسم من نحن -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="fade-in">من نحن</h2>
+                    <p class="fade-in">"طريق الريادة" هي شركة رائدة في مجال حلول التجارة الإلكترونية، تأسست برؤية واضحة
+                        لتمكين الشركات والأفراد من تحقيق النجاح في العالم الرقمي.</p>
+                    <p class="fade-in">نحن نؤمن بأن نجاح متجرك الإلكتروني لا يعتمد فقط على التصميم الجذاب، بل على
+                        استراتيجية متكاملة تشمل التطوير، الإدارة، والتسويق الفعال.</p>
+
+                    <div class="vision-mission">
+                        <div class="vision fade-in">
+                            <h3><i class="fas fa-eye"></i> رؤيتنا</h3>
+                            <p>أن نكون الشريك المفضل في رحلة التحول الرقمي للشركات في العالم العربي، وأن نساهم في بناء
+                                جيل من رواد الأعمال الرقميين.</p>
+                        </div>
+                        <div class="mission fade-in">
+                            <h3><i class="fas fa-bullseye"></i> رسالتنا</h3>
+                            <p>تقديم حلول تجارة إلكترونية مبتكرة وشاملة تساعد عملائنا على النمو والازدهار في السوق
+                                الرقمية التنافسية.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image fade-in">
+                    <!-- يمكن إضافة صورة هنا -->
+                    <div
+                        style="background: var(--gradient-primary); height: 500px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.2rem;">
+                        <div style="text-align: center; padding: 20px;">
+                            <i class="fas fa-users" style="font-size: 3rem; margin-bottom: 20px; display: block;"></i>
+                            فريق طريق الريادة المحترف
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأعمال -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>أعمالنا</h2>
+                <p>إليك بعض المشاريع الناجحة التي نفخر بها</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-img">متجر الأزياء الراقية</div>
+                    <div class="portfolio-content">
+                        <h3>متجر الأزياء الراقية</h3>
+                        <p>تصميم وتطوير متجر إلكتروني متكامل لعلامة أزياء رائدة، مع حلول دفع إلكتروني آمنة وتجربة مستخدم
+                            استثنائية.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-img">متجر ميرا مسك</div>
+                    <div class="portfolio-content">
+                        <h3>متجر ميرا مسك</h3>
+                        <p>تصميم متجر إلكتروني متخصص في عرض وبيع إكسسوارات بديل الذهب الأصلي بجودة عالية وتصاميم عصرية،
+                            مع تجربة تسوّق سهلة وآمنة.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-img">متجر الأدوات المنزلية</div>
+                    <div class="portfolio-content">
+                        <h3>متجر الأدوات المنزلية</h3>
+                        <p>تصميم متجر إلكتروني سهل الاستخدام لبيع الأدوات المنزلية، مع نظام طلبات وتوصيل متكامل.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المدونة -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>مدونة طريق الريادة</h2>
+                <p>أحدث النصائح والمقالات في عالم التجارة الإلكترونية</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card fade-in">
+                    <div class="blog-img">5 استراتيجيات لزيادة المبيعات</div>
+                    <div class="blog-content">
+                        <h3>5 استراتيجيات لزيادة مبيعات متجرك الإلكتروني</h3>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 10 مايو 2025</span>
+                            <span><i class="far fa-folder"></i> نصائح تسويقية</span>
+                        </div>
+                        <p>اكتشف أهم الاستراتيجيات الفعالة لزيادة مبيعات متجرك الإلكتروني وتحقيق نمو مستمر في أرباحك.
+                        </p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card fade-in">
+                    <div class="blog-img">اتجاهات التجارة الإلكترونية</div>
+                    <div class="blog-content">
+                        <h3>أهم اتجاهات التجارة الإلكترونية في 2025</h3>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 25 أبريل 2025</span>
+                            <span><i class="far fa-folder"></i> اتجاهات تقنية</span>
+                        </div>
+                        <p>تعرف على أحدث الاتجاهات والتقنيات التي ستشكل مستقبل التجارة الإلكترونية في العام الحالي.</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card fade-in">
+                    <div class="blog-img">اختيار المنصة المناسبة</div>
+                    <div class="blog-content">
+                        <h3>كيف تختار المنصة المناسبة لمتجرك الإلكتروني؟</h3>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 15 أبريل 2025</span>
+                            <span><i class="far fa-folder"></i> أدوات وتقنيات</span>
+                        </div>
+                        <p>دليل شامل لمساعدتك في اختيار منصة التجارة الإلكترونية المناسبة لاحتياجات عملك وميزانيتك.</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اتصل بنا -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>اتصل بنا</h2>
+                <p>نحن هنا لمساعدتك في تحقيق نجاح متجرك الإلكتروني</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form fade-in">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">الخدمة المطلوبة</label>
+                            <select id="service">
+                                <option value="">اختر الخدمة</option>
+                                <option value="store-creation">إنشاء متجر إلكتروني</option>
+                                <option value="store-management">إدارة متجر إلكتروني</option>
+                                <option value="marketing">التسويق الإلكتروني</option>
+                                <option value="branding">تصميم الهوية التجارية</option>
+                                <option value="consultation">الاستشارات والتدريب</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">إرسال الرسالة</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h3>عنواننا</h3>
+                            <p>جدة، المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h3>هاتفنا</h3>
+                            <p dir="ltr">+966 12 345 6789</p>
+                        </div>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h3>بريدنا الإلكتروني</h3>
+                            <p>info@tarig-alriyada.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="إنستجرام"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>طريق الريادة</h3>
+                    <p>شركة رائدة في تقديم حلول التجارة الإلكترونية المتكاملة، نساعدك في بناء وتطوير متجرك الإلكتروني
+                        لتحقيق النجاح في العالم الرقمي.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="إنستجرام"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="لينكد إن"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-arrow-left"></i> الرئيسية</a></li>
+                        <li><a href="#about"><i class="fas fa-arrow-left"></i> من نحن</a></li>
+                        <li><a href="#services"><i class="fas fa-arrow-left"></i> خدماتنا</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-arrow-left"></i> أعمالنا</a></li>
+                        <li><a href="#contact"><i class="fas fa-arrow-left"></i> اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>خدماتنا</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-arrow-left"></i> إنشاء المتاجر</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-left"></i> إدارة المتاجر</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-left"></i> التسويق الإلكتروني</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-left"></i> تصميم الهوية</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-left"></i> الاستشارات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>النشرة البريدية</h3>
+                    <p>ابق على اطلاع بأحدث النصائح والعروض الخاصة</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="بريدك الإلكتروني" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; 2025 طريق الريادة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // كود جافا سكريبت للتنقل السلس والتأثيرات
+        document.querySelectorAll('nav a, .hero-buttons button, .footer-col a').forEach(anchor => {
+            if (anchor.getAttribute('href') && anchor.getAttribute('href').startsWith('#')) {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }
+        });
+
+        // إضافة تأثير التمرير للترويسة
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+
+            // تأثير الظهور للعناصر
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+
+        // تفعيل تأثير الظهور عند التحميل
+        window.dispatchEvent(new Event('scroll'));
+
+        // القائمة المتنقلة للهواتف
+        // const mobileMenu = document.getElementById('mobileMenu');
+        // const navLinks = document.getElementById('navLinks');
+        // const navAnchors = navLinks.querySelectorAll('a');
+
+        // mobileMenu.addEventListener('click', () => {
+        //     navLinks.classList.toggle('active');
+        // });
+
+        // // عند الضغط على أي رابط، يتم إغلاق القائمة تلقائياً
+        // navAnchors.forEach(link => {
+        //     link.addEventListener('click', () => {
+        //         navLinks.classList.remove('active');
+        //     });
+        // });
+
+        // جعل الهيدر يتغير عند التمرير
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+
+        //  الاحصائيات
+        document.addEventListener("DOMContentLoaded", function () {
+            const statItems = document.querySelectorAll(".stat-item");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const numberEl = entry.target.querySelector(".stat-number");
+                        const target = parseInt(numberEl?.getAttribute("data-target"));
+                        if (numberEl && !numberEl.classList.contains("counted")) {
+                            animateCount(numberEl, target);
+                            numberEl.classList.add("counted");
+                        }
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            statItems.forEach(item => {
+                observer.observe(item);
+            });
+
+            function animateCount(element, target) {
+                let count = 0;
+                const duration = 4000;
+                const step = Math.ceil(target / (duration / 16));
+
+                function updateCount() {
+                    count += step;
+                    if (count >= target) {
+                        element.textContent = target + (target >= 100 ? "+" : "%");
+                    } else {
+                        element.textContent = count;
+                        requestAnimationFrame(updateCount);
+                    }
+                }
+
+                requestAnimationFrame(updateCount);
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
