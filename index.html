@@ -1013,29 +1013,7 @@
         </nav>
     </div>
 
-    <script>
-        const menuBtn = document.getElementById("menu-btn");
-        const closeBtn = document.getElementById("close-btn");
-        const drawer = document.getElementById("drawer");
-        const links = document.querySelectorAll(".mobile-link");
 
-        menuBtn.addEventListener("click", () => {
-            drawer.classList.remove("closed");
-            drawer.classList.add("open");
-        });
-
-        closeBtn.addEventListener("click", () => {
-            drawer.classList.remove("open");
-            drawer.classList.add("closed");
-        });
-
-        links.forEach(link => {
-            link.addEventListener("click", () => {
-                drawer.classList.remove("open");
-                drawer.classList.add("closed");
-            });
-        });
-    </script>
 
 
 <!-- واجهة رئيسية جذابة ومقنعة -->
@@ -1498,6 +1476,29 @@
 
                 requestAnimationFrame(updateCount);
             }
+        });
+
+        // القائمة الجانبية للموبايل
+         const menuBtn = document.getElementById("menu-btn");
+        const closeBtn = document.getElementById("close-btn");
+        const drawer = document.getElementById("drawer");
+        const links = document.querySelectorAll(".mobile-link");
+
+        menuBtn.addEventListener("click", () => {
+            drawer.classList.remove("closed");
+            drawer.classList.add("open");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            drawer.classList.remove("open");
+            drawer.classList.add("closed");
+        });
+
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                drawer.classList.remove("open");
+                drawer.classList.add("closed");
+            });
         });
 
 
