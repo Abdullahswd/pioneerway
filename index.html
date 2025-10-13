@@ -599,6 +599,73 @@
             transition: color 0.4s;
         }
 
+        /* تنسيق مودل الخدمات  */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            direction: rtl;
+            animation: fadeIn 0.3s ease-in-out;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close {
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .cta-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #0056b3;
+        }
+
+
         /* قسم الإحصائيات */
         .stats {
             padding: 80px 0;
@@ -1006,6 +1073,129 @@
 
         .read-more:hover i {
             transform: translateX(5px);
+        }
+
+
+        /* قسم  قصتنا  */
+        .about-us {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: stretch;
+            /* هذا هو المفتاح! */
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1 1 500px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .about-text strong {
+            color: var(--primary-dark);
+            font-weight: bold;
+        }
+
+        .about-image {
+            flex: 1 1 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-height: 650px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+
+        /* قسم فريق العمل  */
+        .team {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .team-member {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .member-img {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .member-img img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover .member-img img {
+            transform: scale(1.05);
+        }
+
+        .member-info {
+            padding: 25px 20px;
+        }
+
+        .member-info h3 {
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+        }
+
+        .member-role {
+            color: var(--accent-orange);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1rem;
         }
 
         /* قسم اتصل بنا */
@@ -1449,6 +1639,11 @@
                             <i class="fas fa-users ml-3 text-blue-500"></i>
                             فريقنا
                         </a>
+                        <a href="#about-us"
+                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
+                            <i class="fas fa-book-open ml-3 text-blue-500"></i>
+                            قصتنا
+                        </a>
                         <a href="#faq"
                             class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
                             <i class="fas fa-question-circle ml-3 text-blue-500"></i>
@@ -1588,35 +1783,324 @@
                 <p>نقدم مجموعة شاملة من الخدمات التي تغطي جميع جوانب التجارة الإلكترونية</p>
             </div>
             <div class="services-grid">
-                <div class="service-card fade-in">
+                <!-- كل بطاقة مرتبطة بمودال -->
+                <div class="service-card" onclick="openModal('store')">
                     <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
-                    <h3>إنشاء المتاجر الإلكترونية</h3>
-                    <p>تصميم وتطوير متاجر إلكترونية احترافية بتقنيات حديثة وجذابة، مع ضمان تجربة مستخدم استثنائية.</p>
+                    <h3>تصميم وتطوير المتاجر الإلكترونية</h3>
+                    <p>متاجر احترافية جاهزة للعمل ومخصصة لتجربة مستخدم سلسة.</p>
                 </div>
-                <div class="service-card fade-in">
+
+                <div class="service-card" onclick="openModal('manage')">
                     <div class="service-icon"><i class="fas fa-cogs"></i></div>
-                    <h3>إدارة المتاجر الإلكترونية</h3>
-                    <p>خدمة إدارة متكاملة تشمل تحديث المنتجات، متابعة الطلبات، خدمة العملاء، وإدارة المخزون.</p>
+                    <h3>إدارة وتسويق المتاجر الإلكترونية</h3>
+                    <p>إدارة متاجر كاملة مع حملات تسويقية رقمية فعالة.</p>
                 </div>
-                <div class="service-card fade-in">
+
+                <div class="service-card" onclick="openModal('content')">
                     <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>التسويق الإلكتروني</h3>
-                    <p>حلول تسويقية شاملة تشمل التسويق عبر وسائل التواصل الاجتماعي، محركات البحث، والبريد الإلكتروني.
-                    </p>
+                    <h3>كتابة المحتوى التسويقي</h3>
+                    <p>محتوى جذاب يعبر عن علامتك ويؤثر بجمهورك.</p>
                 </div>
-                <div class="service-card fade-in">
+
+                <div class="service-card" onclick="openModal('identity')">
                     <div class="service-icon"><i class="fas fa-palette"></i></div>
-                    <h3>تصميم الهوية التجارية</h3>
-                    <p>تصميم هوية بصرية متكاملة تعبر عن قيم علامتك التجارية وتجذب العملاء المستهدفين.</p>
+                    <h3>تصميم الهوية البصرية</h3>
+                    <p>هوية مرئية متكاملة تعكس شخصية مشروعك باحترافية.</p>
                 </div>
-                <div class="service-card fade-in">
+
+                <div class="service-card" onclick="openModal('consulting')">
                     <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
-                    <h3>الاستشارات والتدريب الريادي</h3>
-                    <p>تقديم استشارات متخصصة وبرامج تدريبية لتمكينك من إدارة متجرك الإلكتروني باحترافية.</p>
+                    <h3>الاستشارات والتدريب الريادي</h3>
+                    <p>إرشاد وتدريب عملي لتأسيس وتطوير المشاريع الريادية.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- النوافذ المنبثقة -->
+
+    <div id="store-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 md:p-8 overflow-y-auto hidden">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 md:p-10 relative">
+
+            <button onclick="closeModal('store')"
+                class="absolute top-4 left-4 text-gray-400 hover:text-red-500 text-2xl font-bold">
+                &times;
+            </button>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-right">تصميم وتطوير المتاجر الإلكترونية
+            </h2>
+            <p class="text-gray-600 leading-relaxed text-right mb-6">
+                هل تبحث عن متجر إلكتروني احترافي يعكس هويتك ويحقق لك المبيعات؟ نحن في
+                <span class="font-semibold text-blue-600">طريق الريادة</span> نُصمم متاجر متجاوبة، سهلة الاستخدام،
+                ومربوطة بأنظمة الدفع والشحن لتكون جاهزة للانطلاق.
+            </p>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">💻 ما الذي نقدمه لك؟</h3>
+                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
+                    <li>تصميم متجر احترافي متجاوب مع كافة الأجهزة.</li>
+                    <li>ربط بوابات الدفع الإلكتروني والشحن المحلي والدولي.</li>
+                    <li>تهيئة تجربة مستخدم سلسة وتحسين الأداء التقني.</li>
+                    <li>ربط المتجر بأدوات التسويق والقياس (مثل Google Analytics).</li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">🚀 الفوائد التي ستحصل عليها:</h3>
+                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
+                    <li>إطلاق سريع وآمن لمتجرك الإلكتروني.</li>
+                    <li>ثقة العملاء عبر تصميم احترافي وتجربة متقدمة.</li>
+                    <li>تكامل سلس مع الخدمات اللوجستية والدفع.</li>
+                    <li>أساس تقني قوي للتوسع والنمو المستقبلي.</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">💡 لماذا تختار طريق الريادة؟</h3>
+                <p class="text-gray-600 text-right leading-relaxed">
+                    لأننا لا نقدم مجرد تصميم، بل نبني متجرك بناءً على دراسة احتياجاتك وسلوك جمهورك المستهدف، مع دعم
+                    مستمر بعد التسليم.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <button
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-300">
+                    اطلب الخدمة الآن
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="manage-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 md:p-8 overflow-y-auto hidden">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 md:p-10 relative">
+
+            <button onclick="closeModal('manage')"
+                class="absolute top-4 left-4 text-gray-400 hover:text-red-500 text-2xl font-bold">
+                &times;
+            </button>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-right">إدارة وتسويق المتاجر الإلكترونية
+            </h2>
+
+            <p class="text-gray-600 leading-relaxed text-right mb-6">
+                هل تملك متجرًا إلكترونيًا ولكن تعاني من ضعف المبيعات أو عدم وضوح الرؤية؟ في <span
+                    class="font-semibold text-blue-600">طريق الريادة</span>، نقدم خدمة متكاملة لإدارة وتشغيل وتسويق
+                متجرك الإلكتروني باحترافية، لتصل لجمهورك وتحقق مبيعات حقيقية.
+            </p>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">📦 ما الذي نقدمه لك؟</h3>
+                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
+                    <li>إدارة كاملة للمتجر (رفع المنتجات، متابعة الطلبات، دعم العملاء).</li>
+                    <li>حملات إعلانية مدفوعة فعالة على Google ووسائل التواصل.</li>
+                    <li>تحسين ظهور متجرك في محركات البحث (SEO).</li>
+                    <li>تقارير تحليلية دورية لقياس الأداء واتخاذ القرار.</li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">🎯 الفوائد التي ستحصل عليها:</h3>
+                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
+                    <li>زيادة المبيعات وتحسين معدلات التحويل.</li>
+                    <li>وصول فعّال للعملاء المحتملين في الوقت المناسب.</li>
+                    <li>راحة من تفاصيل التشغيل اليومية.</li>
+                    <li>رؤية واضحة عبر تقارير الأداء الشهرية.</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">💡 لماذا تختار طريق الريادة؟</h3>
+                <p class="text-gray-600 text-right leading-relaxed">
+                    لأننا نعمل بمنهجية تعتمد على تحليل السوق، وفهم سلوك جمهورك، وتقديم حلول عملية قابلة للتنفيذ. نجاحك
+                    هو مهمتنا الأساسية.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <button
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-300">
+                    اطلب الخدمة الآن وابدأ بتحقيق نتائج حقيقية
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="content-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 md:p-8 overflow-y-auto hidden">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 md:p-10 relative">
+
+            <button onclick="closeModal('content')"
+                class="absolute top-4 left-4 text-gray-400 hover:text-red-500 text-2xl font-bold">
+                &times;
+            </button>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-right">كتابة المحتوى التسويقي</h2>
+
+            <p class="text-gray-600 leading-relaxed text-right mb-6">
+                نكتب لك محتوى تسويقي يجذب جمهورك المستهدف، ويعبّر عن هوية علامتك التجارية بطريقة احترافية تؤدي إلى
+                تحويلات حقيقية وزيادة في التفاعل.
+            </p>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">✍️ ما الذي نقدمه لك؟</h3>
+                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
+                    <li>كتابة محتوى صفحات الهبوط والموقع الإلكتروني.</li>
+                    <li>وصف احترافي للمنتجات والخدمات.</li>
+                    <li>محتوى جذاب لمنصات التواصل الاجتماعي.</li>
+                    <li>صياغة عبارات تسويقية تؤثر في القرار الشرائي.</li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">🚀 الفوائد التي ستحصل عليها:</h3>
+                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
+                    <li>زيادة معدل التفاعل والمبيعات.</li>
+                    <li>تعزيز هوية علامتك التجارية وتمييزها عن المنافسين.</li>
+                    <li>تحسين تجربة المستخدم وتحفيزه على اتخاذ الإجراء.</li>
+                    <li>محتوى مُهيأ لمحركات البحث (SEO Friendly).</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">💡 لماذا تختار طريق الريادة؟</h3>
+                <p class="text-gray-600 text-right leading-relaxed">
+                    لأننا نكتب بناءً على فهم جمهورك وسوقك، باستخدام أسلوب مقنع يجمع بين البساطة والفعالية لتحقيق نتائج
+                    ملموسة.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <button
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-300">
+                    اطلب الخدمة الآن
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div id="identity-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 md:p-8 overflow-y-auto hidden">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 md:p-10 relative">
+
+            <button onclick="closeModal('identity')"
+                class="absolute top-4 left-4 text-gray-400 hover:text-red-500 text-2xl font-bold">
+                &times;
+            </button>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-right">تصميم الهوية البصرية</h2>
+
+            <p class="text-gray-600 leading-relaxed text-right mb-6">
+                نبتكر لك هوية بصرية متكاملة تعكس شخصية مشروعك وتترك انطباعاً قوياً لا يُنسى في ذهن العملاء. تصميماتنا
+                تمزج بين الإبداع والاستراتيجية.
+            </p>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">🎨 ما الذي نقدمه لك؟</h3>
+                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
+                    <li>تصميم شعار احترافي يعبر عن رؤيتك.</li>
+                    <li>دليل استخدام الهوية البصرية (Brand Guidelines).</li>
+                    <li>تصميم ملفات السوشيال ميديا والمواد الدعائية.</li>
+                    <li>اختيار الألوان والخطوط بطريقة مدروسة.</li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">🚀 الفوائد التي ستحصل عليها:</h3>
+                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
+                    <li>بناء هوية بصرية متسقة ومؤثرة.</li>
+                    <li>تعزيز الثقة والمصداقية أمام العملاء.</li>
+                    <li>تميّز في السوق ووضوح في الانطباع الأول.</li>
+                    <li>مرونة في استخدام الهوية عبر جميع القنوات.</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">💡 لماذا تختار طريق الريادة؟</h3>
+                <p class="text-gray-600 text-right leading-relaxed">
+                    لأننا ندمج بين الذوق الإبداعي وفهم السوق، لتخرج بهوية بصرية تعبر عنك بصدق وتُحدث تأثيراً بصرياً لا
+                    يُنسى.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <button
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-300">
+                    اطلب الخدمة الآن
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div id="consulting-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 md:p-8 overflow-y-auto hidden">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 md:p-10 relative">
+
+            <button onclick="closeModal('consulting')"
+                class="absolute top-4 left-4 text-gray-400 hover:text-red-500 text-2xl font-bold">
+                &times;
+            </button>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-right">الاستشارات والتدريب الريادي</h2>
+
+            <p class="text-gray-600 leading-relaxed text-right mb-6">
+                هل لديك فكرة مشروع لكن لا تعرف من أين تبدأ؟ في <span class="font-semibold text-blue-600">طريق
+                    الريادة</span> نقدم لك الدعم الكامل من خلال جلسات استشارية وتدريبية تساعدك على بناء مشروعك بخطوات
+                واضحة وفعالة.
+            </p>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">📘 ما الذي نقدمه لك؟</h3>
+                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
+                    <li>استشارات تطوير الأعمال وبناء نماذج العمل.</li>
+                    <li>تدريب عملي على أدوات السوق وأبحاث المنافسين.</li>
+                    <li>تحليل الفجوات والفرص في السوق المستهدف.</li>
+                    <li>إعداد خطة عمل واضحة وقابلة للتنفيذ.</li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">🎯 الفوائد التي ستحصل عليها:</h3>
+                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
+                    <li>وضوح كامل في خطوات البدء والنمو.</li>
+                    <li>توفير الوقت والموارد عبر تجنب الأخطاء الشائعة.</li>
+                    <li>اكتساب مهارات ريادية حقيقية.</li>
+                    <li>توجيه مباشر من خبراء في ريادة الأعمال.</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">💡 لماذا تختار طريق الريادة؟</h3>
+                <p class="text-gray-600 text-right leading-relaxed">
+                    لأننا نؤمن أن كل رائد أعمال يستحق أن يبدأ من مكان آمن وموجّه، بخبرات متراكمة وأساليب مدروسة تناسب
+                    طبيعة السوق المحلي.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <button
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-300">
+                    احجز استشارتك الآن
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
 
     <!-- قسم الإحصائيات -->
     <section class="stats py-16 bg-gray-50">
@@ -1712,6 +2196,130 @@
             </div>
         </div>
     </section>
+
+    <!-- قسم قصتنا-->
+    <section class="about-us" id="about-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>قصتنا</h2>
+                <p>من فكرة طموحة إلى شريك موثوق في عالم التجارة الإلكترونية</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        بدأت رحلتنا بشغف حقيقي لصناعة بيئة متكاملة تدعم رواد الأعمال الطموحين في دخول عالم التجارة
+                        الإلكترونية بثقة واستعداد.
+                        رأينا التحديات التي يواجهها الكثيرون في الانطلاقة، من تأسيس المتجر وبناء الهوية، إلى توريد
+                        المنتجات وتسويقها باحتراف.
+                        ومن هنا، نشأت رسالتنا: أن نكون الشريك الذي يحوّل الأفكار إلى واقع، والطموحات إلى إنجازات.
+                    </p>
+
+                    <p>
+                        نقدم منظومة خدمات متكاملة تبدأ من بناء المتاجر الإلكترونية عبر منصات <strong>سلة</strong>
+                        و<strong>زد</strong>، وتشمل إدارة وتشغيل العمليات، صياغة المحتوى التسويقي الجاذب، تصميم الهويات
+                        البصرية الاحترافية، وحتى التوريد من الصين بخبرة لوجستية عالية.
+                        كل ذلك مدعوم باستشارات عملية وتدريب ريادي يمكّن عملاءنا من النمو بثبات في سوق متسارع التغير.
+                    </p>
+
+                    <p>
+                        نحن لا نقدّم حلولاً مؤقتة، بل نبني شراكات طويلة الأمد تُثمر نتائج ملموسة وتُحدث فرقًا حقيقيًا في
+                        أعمال عملائنا.
+                        نجاحنا لا يُقاس بعدد المشاريع، بل بقصص النجاح التي نشارك فيها، وبالعلامات التجارية التي ساعدناها
+                        على التميّز والبروز.
+                    </p>
+
+                    <p>
+                        نؤمن أن لكل مشروع قصة تستحق أن تُروى، ولكل رائد أعمال حلم يستحق أن يُصنع. ونحن هنا لنكتب تلك
+                        القصة معًا... بخبرة، واحتراف، وشغف.
+                    </p>
+                </div>
+
+                <div class="about-image">
+                    <img src="image\team1.jpg" alt="قصتنا">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم فريق العمل  -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>فريقنا</h2>
+                <p>نمتلك فريقاً متكاملاً من الخبراء المتخصصين في إنشاء وتشغيل وتسويق المتاجر الإلكترونية، من الفكرة حتى
+                    النجاح</p>
+            </div>
+            <div class="team-grid">
+
+                <!-- مديرة المشاريع + استشارات ريادية -->
+                <div class="team-member fade-in">
+                    <div class="member-img">
+                        <img src="image\team1.jpg" alt="مديرة المشاريع">
+                    </div>
+                    <div class="member-info">
+                        <h3>مسك الختام عمر</h3>
+                        <div class="member-role">مديرة المشاريع والاستشارات</div>
+                        <p>تشرف على تنفيذ المشاريع التجارية باحترافية، وتقدّم استشارات ريادية وتدريب عملي لأصحاب المتاجر
+                            لتحقيق نمو مستدام.</p>
+                    </div>
+                </div>
+
+                <!-- مطور متاجر سلة وزد -->
+                <div class="team-member fade-in">
+                    <div class="member-img">
+                        <img src="image\team2.jpg" alt="مطور متاجر">
+                    </div>
+                    <div class="member-info">
+                        <h3> عبدالله خليل</h3>
+                        <div class="member-role">مطور متاجر إلكترونية</div>
+                        <p>خبير في تطوير المتاجر الإلكترونية عبر "سلة" و"زد"، ويقديم حلول تقنية مخصصة تتماشى مع متطلبات
+                            السوق السعودي.</p>
+                    </div>
+                </div>
+
+                <!-- أخصائي التوريد من الصين -->
+                <div class="team-member fade-in">
+                    <div class="member-img">
+                        <img src="images/team/import-specialist.jpg" alt="">
+                    </div>
+                    <div class="member-info">
+                        <h3> أأأأأأأأأ</h3>
+                        <div class="member-role">أخصائي التوريد والاستيراد</div>
+                        <p>يُشرف على عمليات الاستيراد من الصين، بدءًا من اختيار الموردين وحتى الشحن والتوصيل داخل
+                            المملكة بجودة وتكلفة تنافسية.</p>
+                    </div>
+                </div>
+
+                <!-- خبيرة التسويق -->
+                <div class="team-member fade-in">
+                    <div class="member-img">
+                        <img src="images/team/marketing-expert.jpg" alt="">
+                    </div>
+                    <div class="member-info">
+                        <h3> أأأأأأأأ</h3>
+                        <div class="member-role">خبير التسويق الرقمي</div>
+                        <p>يخطط وينفذ استراتيجيات تسويقية رقمية فعّالة لرفع الوعي بالعلامة التجارية وتحقيق نتائج
+                            ملموسة في المبيعات.</p>
+                    </div>
+                </div>
+
+                <!-- كاتب محتوى ومصمم هوية -->
+                <div class="team-member fade-in">
+                    <div class="member-img">
+                        <img src="images/team/content-designer.jpg" alt="">
+                    </div>
+                    <div class="member-info">
+                        <h3> أأأأأأأأ</h3>
+                        <div class="member-role">كاتب محتوى ومصمم هوية</div>
+                        <p>يبدع في صياغة محتوى تسويقي احترافي وتصميم هويات بصرية متكاملة تعبّر عن رسالة علامتك التجارية
+                            بأسلوب جذّاب وموثوق.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 
     <!-- قسم الأعمال -->
     <section class="portfolio" id="portfolio">
@@ -2334,6 +2942,27 @@
             duration: 1000,
             once: true
         });
+
+
+        // التحكم في مودل الخدمات
+        function openModal(id) {
+            document.getElementById(id + '-modal').style.display = 'block';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id + '-modal').style.display = 'none';
+        }
+
+        // إغلاق عند الضغط خارج المودال
+        window.onclick = function (event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        };
+
     </script>
 </body>
 
