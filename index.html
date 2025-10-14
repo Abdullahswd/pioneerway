@@ -220,52 +220,7 @@
             padding: 0 20px;
         }
 
-        /* الخلفية المتحركة */
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            top: -50%;
-            right: -50%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
-            animation: rotate 20s linear infinite;
-            z-index: 0;
-        }
 
-        /* خلفية بارالاكس خفيفة */
-        .hero-bg {
-            background: url('your-image.jpg') center / cover fixed;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.05;
-            z-index: 0;
-            animation: subtleMove 30s ease-in-out infinite alternate;
-        }
-
-        /* تأثير دوران الخلفية */
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes subtleMove {
-            0% {
-                background-position: center 0;
-            }
-
-            100% {
-                background-position: center 100px;
-            }
-        }
 
         /* الحاوية الرئيسية */
         .hero-container {
@@ -277,6 +232,7 @@
             align-items: center;
             position: relative;
             z-index: 2;
+            padding: 0 auto;
         }
 
         /* المحتوى */
@@ -409,24 +365,7 @@
             }
         }
 
-        /* صورة البطل */
-        .hero-image {
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto;
-        }
 
-        .hero-image div {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-            transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
-            transition: transform 0.5s;
-        }
-
-        .hero-image:hover div {
-            transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-        }
 
         /* مؤشر التمرير */
         .scroll-indicator {
@@ -482,6 +421,81 @@
                 justify-content: center;
             }
         }
+
+        .hero-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+            max-width: 800px;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .hero-flex {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-content,
+            .hero-image {
+                max-width: 100%;
+            }
+
+            .hero-image img {
+                animation: floatAround 8s ease-in-out infinite;
+                transition: transform 0.3s ease;
+                will-change: transform;
+                max-width: 120%;
+                height: auto;
+            }
+        }
+
+        @keyframes floatAround {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(10px, -10px);
+            }
+
+            50% {
+                transform: translate(0, 10px);
+            }
+
+            75% {
+                transform: translate(-10px, -10px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        .hero-image img {
+            animation: floatAround 6s ease-in-out infinite;
+        }
+
+
 
         /* قسم الخدمات */
         .services {
@@ -1732,11 +1746,12 @@
     <div class="overlay" id="overlay"></div>
 
 
-    <!-- واجهة رئيسية جذابة ومقنعة -->
+    <!-- واجهة رئيسية -->
     <section class="hero-section" id="home">
         <div class="hero-bg"></div>
 
-        <div class="hero-container">
+        <div class="hero-container hero-flex">
+            <!-- نص الواجهة -->
             <div class="hero-content">
 
                 <div class="hero-badge animate__animated animate__fadeInDown" data-aos="fade-down">
@@ -1768,12 +1783,18 @@
                     </a>
                 </div>
             </div>
+
+            <!-- صورة المؤسس -->
+            <div class="hero-image" data-aos="fade-left">
+                <img src="image\misk main.png" alt="مؤسس الشركة" />
+            </div>
         </div>
 
         <div class="scroll-indicator animate__animated animate__bounce" data-aos="fade-up" data-aos-delay="800">
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
+
 
     <!-- قسم الخدمات -->
     <section class="services" id="services">
@@ -2235,7 +2256,7 @@
                 </div>
 
                 <div class="about-image">
-                    <img src="image\team1.jpg" alt="قصتنا">
+                    <img src="image\story.png" alt="قصتنا">
                 </div>
             </div>
         </div>
@@ -2280,10 +2301,10 @@
                 <!-- أخصائي التوريد من الصين -->
                 <div class="team-member fade-in">
                     <div class="member-img">
-                        <img src="images/team/import-specialist.jpg" alt="">
+                        <img src="image\team3.jpg" alt="">
                     </div>
                     <div class="member-info">
-                        <h3> أأأأأأأأأ</h3>
+                        <h3>Novak wei zhang</h3>
                         <div class="member-role">أخصائي التوريد والاستيراد</div>
                         <p>يُشرف على عمليات الاستيراد من الصين، بدءًا من اختيار الموردين وحتى الشحن والتوصيل داخل
                             المملكة بجودة وتكلفة تنافسية.</p>
@@ -2338,7 +2359,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">متجر ميرا مسك</div>
+                    <div class="portfolio-img">متجر ميرامسك</div>
                     <div class="portfolio-content">
                         <h3>متجر ميرا مسك</h3>
                         <p>تصميم متجر إلكتروني متخصص في عرض وبيع إكسسوارات بديل الذهب الأصلي بجودة عالية وتصاميم عصرية،
