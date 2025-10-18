@@ -1658,7 +1658,23 @@
             gap: 15px;
         }
 
-       
+        /* تنسيق كل شعار */
+        .logos-row img {
+            width: 80px;
+            /* عرض موحد */
+            height: 40px;
+            /* ارتفاع موحد */
+            object-fit: cover;
+            /* الحفاظ على أبعاد الشعار داخل الإطار */
+            background-color: #fff;
+            /* خلفية بيضاء لتوضيح الشعارات الشفافة */
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* ظل خفيف */
+            transition: transform 0.3s ease;
+        }
+
         /* تأثير عند المرور */
         .logos-row img:hover {
             transform: scale(1.1);
