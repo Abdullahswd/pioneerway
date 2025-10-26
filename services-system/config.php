@@ -18,6 +18,10 @@ $templateConfig = [
     'office' => [
         'title' => 'الخدمات المكتبية',
         'description' => 'خدمات مكتبية شاملة لتنظيم أعمالك'
+    ],
+    'design' => [
+        'title' => 'الخدمات الإبداعية والتسويق',
+        'description' => ''
     ]
 ];
 

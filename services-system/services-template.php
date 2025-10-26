@@ -11,7 +11,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/pioneerway/style.css">
-<style>
+    <style>
         body {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
@@ -27,7 +27,8 @@
         }
 
         .price-tag {
-            font-size: 1.1rem;
+             color: #3b82f6;
+            
         }
 
         .brand-primary {
@@ -85,7 +86,7 @@
                 height: 150px !important;
                 padding-top: 10px;
             }
-            
+
             .service-image img {
                 max-width: 95%;
                 transform: scale(1.15);
@@ -140,7 +141,7 @@
                 height: 140px !important;
                 padding-top: 10px;
             }
-            
+
             .service-image img {
                 max-width: 85%;
                 transform: scale(1.2);
@@ -429,7 +430,7 @@
             .service-image {
                 height: 130px !important;
             }
-            
+
             .service-image img {
                 max-width: 90%;
                 transform: scale(1.25) !important;
@@ -449,7 +450,7 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
             }
-            
+
             .service-image img {
                 max-width: 85%;
                 transform: scale(1.1);
@@ -584,7 +585,7 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-3 line-clamp-2">${service.name}</h3>
                     <p class="text-gray-600 mb-4 flex-grow line-clamp-3">${service.description}</p>
                     <div class="flex items-center justify-between mb-5">
-                        <span class="text-2xl font-bold price-tag">${service.price}</span>
+                    <span price-tag class="text-2xl">${service.price}</span>
                         <div class="flex items-center text-yellow-400">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -695,7 +696,7 @@
             initializeApp();
         }
     </script>
-            <?php include 'footer.php'; ?>
+    <?php include 'footer.php'; ?>
 
     <script src="/pioneerway/script.js"></script>
 </body>

@@ -35,9 +35,9 @@
                        <a href="business-services.php"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
                            <i class="fas fa-shopping-cart ml-3 text-blue-500"></i>
-                           خدمات التجارة والعمل الحر 
+                           خدمات التجارة والعمل الحر
                        </a>
-                       <a href="#work-steps"
+                       <a href="design-services.php"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
                            <i class="fas fa-route ml-3 text-blue-500"></i>
                            الخدمات الإبداعية والتسويقية
@@ -47,10 +47,16 @@
                            <i class="fas fa-tags ml-3 text-blue-500"></i>
                            الخدمات البرمجية
                        </a>
-                        <a href="#offers"
+                       <a href="office-services.php"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
                            <i class="fas fa-tags ml-3 text-blue-500"></i>
                            الخدمات المكتبية
+                       </a>
+                       </a>
+                       <a href="government-services.php"
+                           class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                           <i class="fas fa-tags ml-3 text-blue-500"></i>
+                           الخدمات الحكومية - السعودية
                        </a>
                    </div>
                </div>
@@ -144,11 +150,23 @@
            <i class="fas fa-user"></i>
            خدمات التجارة والعمل الحر
        </a>
+       <a href="design-services.php">
+           <i class="fas fa-user"></i>
+           الخدمات الإبداعية والتسويقية
+       </a>
        <a href="programming-services.php">
            <i class="fas fa-briefcase"></i>
            الخدمات البرمجية
        </a>
-            <a href="blog.php">
+       <a href="office-services.php">
+           <i class="fas fa-briefcase"></i>
+           الخدمات المكتبية
+       </a>
+       <a href="government-services.php">
+           <i class="fas fa-briefcase"></i>
+           الخدمات الحكومية - السعودية
+       </a>
+       <a href="blog.php">
            <i class="fas fa-briefcase"></i>
            المدونة
        </a>
