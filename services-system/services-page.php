@@ -1,6 +1,6 @@
 <?php
 // services-page.php
-include __DIR__ . '/../header.php';
+include __DIR__ . '/../header-services.php';
 include 'services-functions.php';
 include 'config.php';
 

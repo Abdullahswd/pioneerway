@@ -35,94 +35,275 @@
 
 
     <!-- واجهة رئيسية -->
-    <section class="hero-section" id="home">
-        <div class="hero-bg"></div>
-
-        <div class="hero-container hero-flex">
-            <!-- نص الواجهة -->
-            <div class="hero-content">
-
-                <div class="hero-badge animate__animated animate__fadeInDown" data-aos="fade-down">
-                    <i class="fas fa-rocket"></i> الشركة الرائدة في حلول التجارة الإلكترونية
+<section class="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 overflow-hidden" id="home">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 bg-[#6C9EFC]/5 dark:bg-[#6C9EFC]/10"></div>
+    
+    <!-- Animated Background Shapes -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-[#6C9EFC]/10 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#6C9EFC]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    
+    <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+        <div class="flex flex-col lg:flex-row items-center justify-between min-h-[80vh] gap-12">
+            
+            <!-- Content Section - First on Mobile -->
+            <div class="flex-1 text-center lg:text-right space-y-8 order-1" data-aos="fade-up">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 bg-white dark:bg-gray-800 border border-[#6C9EFC]/20 rounded-full px-6 py-3 shadow-lg" data-aos="fade-down">
+                    <i class="fas fa-rocket text-[#6C9EFC]"></i>
+                    <span class="text-[#6A5E62] dark:text-gray-300 font-semibold text-sm">
+                        الشركة الرائدة في حلول التجارة الإلكترونية
+                    </span>
                 </div>
 
-                <h1 class="hero-title animate__animated animate__fadeInUp" data-aos="fade-up">
-                    طريق الريادة<br>
-                    <span style="font-size: 2.5rem; display: block; margin-top: 10px;">لتحويل أفكارك إلى واقع
-                        ملموس</span>
-                </h1>
+                <!-- Main Title -->
+                <div class="space-y-4">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+                        طريق الريادة
+                        <span class="block text-[#6C9EFC] dark:text-blue-400 text-3xl md:text-4xl lg:text-5xl mt-4">
+                            لتحويل أفكارك إلى واقع ملموس
+                        </span>
+                    </h1>
+                </div>
 
-                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                <!-- Subtitle -->
+                <p class="text-xl text-[#6A5E62] dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mr-0" data-aos="fade-up" data-aos-delay="200">
                     نقدم حلولاً متكاملة تجمع بين الإبداع والتكنولوجيا لبناء متاجر إلكترونية استثنائية تنمو مع طموحاتك.
                 </p>
 
-                <ul class="hero-features" data-aos="fade-up" data-aos-delay="400">
-                    <li><i class="fas fa-check"></i> تصميم متاجر احترافية بتجربة مستخدم استثنائية</li>
-                    <li><i class="fas fa-check"></i> حلول تسويقية تزيد مبيعاتك بنسبة تصل إلى 200%</li>
-                    <li><i class="fas fa-check"></i> دعم فني مستمر وخطط نمو طويلة المدى</li>
+                <!-- Features List -->
+                <ul class="space-y-3 max-w-xl mx-auto lg:mr-0" data-aos="fade-up" data-aos-delay="400">
+                    <li class="flex items-center gap-3 text-lg text-[#6A5E62] dark:text-gray-300">
+                        <i class="fas fa-check text-[#6C9EFC] bg-[#6C9EFC]/10 p-2 rounded-full"></i>
+                        <span>تصميم متاجر احترافية بتجربة مستخدم استثنائية</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-lg text-[#6A5E62] dark:text-gray-300">
+                        <i class="fas fa-check text-[#6C9EFC] bg-[#6C9EFC]/10 p-2 rounded-full"></i>
+                        <span>حلول تسويقية تزيد مبيعاتك بنسبة تصل إلى 200%</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-lg text-[#6A5E62] dark:text-gray-300">
+                        <i class="fas fa-check text-[#6C9EFC] bg-[#6C9EFC]/10 p-2 rounded-full"></i>
+                        <span>دعم فني مستمر وخطط نمو طويلة المدى</span>
+                    </li>
                 </ul>
 
-                <div class="hero-buttons" data-aos="zoom-in" data-aos-delay="600">
-                    <a href="#services" class="btn-primary">
-                        <i class="fas fa-play-circle"></i> ابدأ مشروعك الآن
+                <!-- Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="zoom-in" data-aos-delay="600">
+                    <a href="#services" class="group bg-[#6C9EFC] hover:bg-[#5a8efc] text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center gap-2 justify-center">
+                        <i class="fas fa-play-circle"></i>
+                        <span>ابدأ مشروعك الآن</span>
+                        <i class="fas fa-arrow-left group-hover:mr-2 transition-all duration-300"></i>
                     </a>
-                    <a href="#portfolio" class="btn-secondary">
-                        <i class="fas fa-eye"></i> شاهد أعمالنا
+                    
+                    <a href="#portfolio" class="group border-2 border-[#6C9EFC] text-[#6C9EFC] hover:bg-[#6C9EFC] hover:text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center gap-2 justify-center">
+                        <i class="fas fa-eye"></i>
+                        <span>شاهد أعمالنا</span>
                     </a>
                 </div>
             </div>
 
-            <!-- صورة المؤسس -->
-            <div class="hero-image" data-aos="fade-left">
-                <img src="image\misk main.png" alt="مؤسس الشركة" />
+            <!-- Image Section - Second on Mobile -->
+            <div class="flex-1 flex justify-center lg:justify-start order-2" data-aos="fade-left">
+                <div class="relative">
+                    <!-- Main Image Container -->
+                    <div class="relative bg-gradient-to-br from-[#6C9EFC] to-blue-400 rounded-3xl p-2 shadow-2xl">
+                        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden">
+                            <img 
+                                src="image/misk main.png" 
+                                alt="مؤسس الشركة" 
+                                class="w-full h-auto max-w-md lg:max-w-lg rounded-2xl transform hover:scale-105 transition-transform duration-500"
+                            />
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-4 -right-4 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl border border-[#6C9EFC]/20">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                            <span class="text-sm font-semibold text-[#6A5E62] dark:text-gray-300">نشط الآن</span>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl border border-[#6C9EFC]/20">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-[#6C9EFC]">150+</div>
+                            <div class="text-xs text-[#6A5E62] dark:text-gray-300">مشروع ناجح</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="scroll-indicator animate__animated animate__bounce" data-aos="fade-up" data-aos-delay="800">
-            <i class="fas fa-chevron-down"></i>
+        <!-- Scroll Indicator - Third on Mobile -->
+        <div class="flex justify-center mt-12 lg:mt-0 lg:absolute lg:bottom-8 lg:left-1/2 lg:transform lg:-translate-x-1/2 animate-bounce order-3" data-aos="fade-up" data-aos-delay="800">
+            <a href="#services" class="flex flex-col items-center gap-2 text-[#6C9EFC] hover:text-[#5a8efc] transition-colors duration-300">
+                <span class="text-sm font-semibold text-[#6A5E62] dark:text-gray-300">اكتشف المزيد</span>
+                <i class="fas fa-chevron-down text-xl"></i>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
 
     <!-- قسم الخدمات -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>خدماتنا المتكاملة</h2>
-                <p>نقدم مجموعة شاملة من الخدمات التي تغطي جميع جوانب التجارة الإلكترونية</p>
-            </div>
-            <div class="services-grid">
-
-                <a href="business-services.php" class="service-card">
-                    <div class="service-icon"><i class="fas fa-store"></i></div>
-                    <h3>خدمات التجارة والعمل الحر</h3>
-                    <p>نوفر لك متاجر إلكترونية احترافية جاهزة للانطلاق والربح.</p>
-                </a>
-
-                <a href="marketing.html" class="service-card">
-                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
-                    <h3>الخدمات الإبداعية والتسويقية</h3>
-                    <p>حملات تسويقية مبتكرة لإبراز مشروعك وزيادة مبيعاتك.</p>
-                </a>
-
-                <a href="programming-services.php" class="service-card">
-                    <div class="service-icon"><i class="fas fa-code"></i></div>
-                    <h3>الخدمات البرمجية</h3>
-                    <p>تطوير مواقع وتطبيقات مخصصة بأحدث التقنيات.</p>
-                </a>
-
-                <a href="office.html" class="service-card">
-                    <div class="service-icon"><i class="fas fa-file-alt"></i></div>
-                    <h3>الخدمات المكتبية</h3>
-                    <p>إعداد مستندات وتقارير احترافية بأعلى جودة.</p>
-                </a>
-
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-blue-900" id="services">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div class="inline-block mb-4">
+                    <span class="text-[#6C9EFC] dark:text-blue-400 text-sm font-semibold bg-blue-100 dark:bg-blue-900/30 px-4 py-2 rounded-full">
+                        خدماتنا المتكاملة
+                    </span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                    حلول <span class="text-[#6C9EFC] dark:text-blue-400">شاملة</span> لنمو أعمالك
+                </h2>
+                <p class="text-xl text-[#6A5E62] dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    نقدم مجموعة متكاملة من الخدمات الاحترافية التي تمكّنك من النمو في العالم الرقمي بثقة واحترافية
+                </p>
             </div>
 
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service Card 1 -->
+                <a href="business-services.php" class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-[#6C9EFC] dark:hover:border-blue-400 hover:-translate-y-2">
+                    <!-- Background Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    <!-- Icon Container -->
+                    <div class="relative p-6">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-[#6C9EFC] rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-500 mb-4">
+                            <i class="fas fa-store text-xl text-white"></i>
+                        </div>
+
+                        <!-- Content -->
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-[#6C9EFC] dark:group-hover:text-blue-400 transition-colors duration-300">
+                            خدمات التجارة والعمل الحر
+                        </h3>
+                        <p class="text-[#6A5E62] dark:text-gray-300 text-sm leading-relaxed mb-4">
+                            نوفر لك متاجر إلكترونية احترافية جاهزة للانطلاق والربح مع دعم متكامل وشامل.
+                        </p>
+
+                        <!-- Arrow -->
+                        <div class="flex items-center text-[#6C9EFC] dark:text-blue-400 font-semibold text-sm">
+                            <span>اكتشف المزيد</span>
+                            <i class="fas fa-arrow-left mr-2 group-hover:mr-3 transition-all duration-300"></i>
+                        </div>
+                    </div>
+
+                    <!-- Hover Effect -->
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#6C9EFC] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </a>
+
+                <!-- Service Card 2 -->
+                <a href="marketing.html" class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-[#6C9EFC] dark:hover:border-blue-400 hover:-translate-y-2">
+                    <!-- Background Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    <!-- Icon Container -->
+                    <div class="relative p-6">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-[#6C9EFC] rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-500 mb-4">
+                            <i class="fas fa-bullhorn text-xl text-white"></i>
+                        </div>
+
+                        <!-- Content -->
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-[#6C9EFC] dark:group-hover:text-blue-400 transition-colors duration-300">
+                            الخدمات الإبداعية والتسويقية
+                        </h3>
+                        <p class="text-[#6A5E62] dark:text-gray-300 text-sm leading-relaxed mb-4">
+                            حملات تسويقية مبتكرة لإبراز مشروعك وزيادة مبيعاتك باستراتيجيات فعالة.
+                        </p>
+
+                        <!-- Arrow -->
+                        <div class="flex items-center text-[#6C9EFC] dark:text-blue-400 font-semibold text-sm">
+                            <span>اكتشف المزيد</span>
+                            <i class="fas fa-arrow-left mr-2 group-hover:mr-3 transition-all duration-300"></i>
+                        </div>
+                    </div>
+
+                    <!-- Hover Effect -->
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#6C9EFC] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </a>
+
+                <!-- Service Card 3 -->
+                <a href="programming-services.php" class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-[#6C9EFC] dark:hover:border-blue-400 hover:-translate-y-2">
+                    <!-- Background Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    <!-- Icon Container -->
+                    <div class="relative p-6">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-[#6C9EFC] rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-500 mb-4">
+                            <i class="fas fa-code text-xl text-white"></i>
+                        </div>
+
+                        <!-- Content -->
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-[#6C9EFC] dark:group-hover:text-blue-400 transition-colors duration-300">
+                            الخدمات البرمجية
+                        </h3>
+                        <p class="text-[#6A5E62] dark:text-gray-300 text-sm leading-relaxed mb-4">
+                            تطوير مواقع وتطبيقات مخصصة بأحدث التقنيات وتجارب مستخدم استثنائية.
+                        </p>
+
+                        <!-- Arrow -->
+                        <div class="flex items-center text-[#6C9EFC] dark:text-blue-400 font-semibold text-sm">
+                            <span>اكتشف المزيد</span>
+                            <i class="fas fa-arrow-left mr-2 group-hover:mr-3 transition-all duration-300"></i>
+                        </div>
+                    </div>
+
+                    <!-- Hover Effect -->
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#6C9EFC] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </a>
+
+                <!-- Service Card 4 -->
+                <a href="office.html" class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-[#6C9EFC] dark:hover:border-blue-400 hover:-translate-y-2">
+                    <!-- Background Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    <!-- Icon Container -->
+                    <div class="relative p-6">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-[#6C9EFC] rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-500 mb-4">
+                            <i class="fas fa-file-alt text-xl text-white"></i>
+                        </div>
+
+                        <!-- Content -->
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-[#6C9EFC] dark:group-hover:text-blue-400 transition-colors duration-300">
+                            الخدمات المكتبية
+                        </h3>
+                        <p class="text-[#6A5E62] dark:text-gray-300 text-sm leading-relaxed mb-4">
+                            إعداد مستندات وتقارير احترافية بأعلى جودة تناسب احتياجات عملك.
+                        </p>
+
+                        <!-- Arrow -->
+                        <div class="flex items-center text-[#6C9EFC] dark:text-blue-400 font-semibold text-sm">
+                            <span>اكتشف المزيد</span>
+                            <i class="fas fa-arrow-left mr-2 group-hover:mr-3 transition-all duration-300"></i>
+                        </div>
+                    </div>
+
+                    <!-- Hover Effect -->
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#6C9EFC] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </a>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center mt-16">
+                <div class="bg-[#6C9EFC] rounded-2xl p-8 md:p-12 shadow-xl">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">
+                        مستعد لبدء رحلتك الرقمية؟
+                    </h3>
+                    <p class="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">
+                        تواصل معنا الآن للحصول على استشارة مجانية وتصميم الحل المناسب لاحتياجاتك
+                    </p>
+                    <button class="bg-white text-[#6C9EFC] px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                        احجز استشارة مجانية
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
-    
+
     <!-- قسم الإحصائيات -->
     <section class="stats py-16 bg-gray-50">
         <div class="container mx-auto">
@@ -146,7 +327,7 @@
             </div>
         </div>
     </section>
-   
+
     <!-- قسم خطوات العمل  -->
     <section class="work-steps" id="work-steps">
         <div class="container">
@@ -293,7 +474,7 @@
                     <div class="member-info">
                         <h3> عبدالله خليل</h3>
                         <div class="member-role">مطور متاجر إلكترونية</div>
-                        <p>خبير في تطوير المتاجر الإلكترونية عبر "سلة" و"زد"، ويقديم حلول تقنية مخصصة تتماشى مع متطلبات
+                        <p>خبير في تطوير المتاجر الإلكترونية عبر "سلة" و"زد"، ويقدم حلول تقنية مخصصة تتماشى مع متطلبات
                             السوق السعودي.</p>
                     </div>
                 </div>
@@ -327,10 +508,10 @@
                 <!-- كاتب محتوى ومصمم هوية -->
                 <div class="team-member fade-in">
                     <div class="member-img">
-                        <img src="images/team/content-designer.jpg" alt="">
+                        <img src="image\team4.png" alt="">
                     </div>
                     <div class="member-info">
-                        <h3> أأأأأأأأ</h3>
+                        <h3>حسن قاسم</h3>
                         <div class="member-role">كاتب محتوى ومصمم هوية</div>
                         <p>يبدع في صياغة محتوى تسويقي احترافي وتصميم هويات بصرية متكاملة تعبّر عن رسالة علامتك التجارية
                             بأسلوب جذّاب وموثوق.</p>
@@ -361,7 +542,7 @@
                 <div class="portfolio-item fade-in">
                     <div class="portfolio-img">متجر ميرامسك</div>
                     <div class="portfolio-content">
-                        <h3>متجر ميرا مسك</h3>
+                        <h3>متجر ميرامسك</h3>
                         <p>تصميم متجر إلكتروني متخصص في عرض وبيع إكسسوارات بديل الذهب الأصلي بجودة عالية وتصاميم عصرية،
                             مع تجربة تسوّق سهلة وآمنة.</p>
                     </div>
@@ -480,88 +661,7 @@
     </section>
 
     <!-- قسم المدونة -->
-    <section class="blog" id="blog">
-        <div class="container">
-            <div class="section-title">
-                <h2>مدونة طريق الريادة</h2>
-                <p>أحدث النصائح والمقالات في عالم التجارة الإلكترونية</p>
-            </div>
-            <div class="blog-grid">
 
-                <!-- المقالة الأولى -->
-                <div class="blog-card fade-in">
-                    <div class="blog-img">
-                        <img src="image\blog1.jpg" alt="زيادة المبيعات">
-                    </div>
-                    <div class="blog-content">
-                        <h3>5 استراتيجيات لزيادة مبيعات متجرك الإلكتروني</h3>
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> 10 مايو 2025</span>
-                            <span><i class="far fa-folder"></i> نصائح تسويقية</span>
-                        </div>
-                        <p>اكتشف أهم الاستراتيجيات الفعالة لزيادة مبيعات متجرك الإلكتروني وتحقيق نمو مستمر في أرباحك.
-                        </p>
-                        <a href="#" class="read-more" data-title="5 استراتيجيات لزيادة مبيعات متجرك الإلكتروني"
-                            data-date="10 مايو 2025" data-category="نصائح تسويقية" data-image="image\blog1.jpg"
-                            data-content="إليك 5 استراتيجيات فعالة لزيادة مبيعات متجرك الإلكتروني:
-               1. تحسين وصف المنتج والصور.
-               2. استخدام التسويق عبر البريد الإلكتروني.
-               3. تقديم عروض حصرية.
-               4. تحسين تجربة المستخدم وسرعة الموقع.
-               5. إطلاق حملات إعلانية مدفوعة باحترافية.">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </div>
-
-                <!-- المقالة الثانية -->
-                <div class="blog-card fade-in">
-                    <div class="blog-img">
-                        <img src="image\blog2.webp" alt="اتجاهات 2025">
-                    </div>
-                    <div class="blog-content">
-                        <h3>أهم اتجاهات التجارة الإلكترونية في 2025</h3>
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> 25 أبريل 2025</span>
-                            <span><i class="far fa-folder"></i> اتجاهات تقنية</span>
-                        </div>
-                        <p>تعرف على أحدث الاتجاهات والتقنيات التي ستشكل مستقبل التجارة الإلكترونية في العام الحالي.</p>
-                        <a href="#" class="read-more" data-title="أهم اتجاهات التجارة الإلكترونية في 2025"
-                            data-date="25 أبريل 2025" data-category="اتجاهات تقنية" data-image="image\blog2.webp"
-                            data-content="من أبرز اتجاهات التجارة الإلكترونية في 2025:
-               - اعتماد الذكاء الاصطناعي لتحسين تجربة التسوق.
-               - استخدام الواقع المعزز AR لعرض المنتجات.
-               - نمو التجارة عبر الشبكات الاجتماعية.
-               - الدفع عبر المحافظ الرقمية والعملات المشفرة.
-               - التركيز على الاستدامة والتغليف الصديق للبيئة.">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </div>
-
-                <!-- المقالة الثالثة -->
-                <div class="blog-card fade-in">
-                    <div class="blog-img">
-                        <img src="image\blog3.jpg" alt="اختيار المنصة">
-                    </div>
-                    <div class="blog-content">
-                        <h3>كيف تختار المنصة المناسبة لمتجرك الإلكتروني؟</h3>
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> 15 أبريل 2025</span>
-                            <span><i class="far fa-folder"></i> أدوات وتقنيات</span>
-                        </div>
-                        <p>دليل شامل لمساعدتك في اختيار منصة التجارة الإلكترونية المناسبة لاحتياجات عملك وميزانيتك.</p>
-                        <a href="#" class="read-more" data-title="كيف تختار المنصة المناسبة لمتجرك الإلكتروني؟"
-                            data-date="15 أبريل 2025" data-category="أدوات وتقنيات" data-image="image\blog3.jpg"
-                            data-content="عند اختيار منصة التجارة الإلكترونية، يجب أن تسأل نفسك:
-               - هل أحتاج إلى واجهة سهلة أم مرنة للبرمجة؟
-               - كم عدد المنتجات التي سأعرضها؟
-               - ما هي طرق الدفع التي أحتاجها؟
-              منصات مثل سلة مناسبة للمبتدئين لأنها سهلة الاستخدام وتوفر كل الأدوات اللي تحتاجها، بينما WooCommerce تعطيك تحكمًا أكبر إذا كنت مرتاحًا تقنيًا وتحب التخصيص العميق.">اقرأ
-                            المزيد <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
 
     <!-- قسم اتصل بنا -->
     <section class="contact" id="contact">
@@ -730,7 +830,7 @@ justify-content:center; align-items:center; z-index:9998;">
     </section>
 
     <!-- التذييل -->
-        <?php include 'footer.php'; ?>
+    <?php include 'footer.php'; ?>
 
 
     <!-- النافذة المنبثقة -->

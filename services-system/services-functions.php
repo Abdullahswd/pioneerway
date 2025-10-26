@@ -259,7 +259,7 @@ function getBusinessServices()
             'name' => "إصدار جهاز نقاط البيع",
             'group' => "خدمات الشركات والموسسات",
             'price' => "135 ريال",
-            'image' => "/pioneerway/image/logo.png",
+            'image' => "/pioneerway/image\services\Device issuance.png",
             'link' => "order.php?service=24",
             'description' => "نساعدك في إصدار وتفعيل جهاز نقاط البيع (POS) لمتجرك أو مطعمك بسهولة"
         ],

@@ -200,87 +200,87 @@
         });
 
         // تأثيرات تفاعلية إضافية
-        document.addEventListener('DOMContentLoaded', function () {
-            const heroSection = document.querySelector('.hero-section');
-            const scrollIndicator = document.querySelector('.scroll-indicator');
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const heroSection = document.querySelector('.hero-section');
+        //     const scrollIndicator = document.querySelector('.scroll-indicator');
 
-            // تأثير التمرير السلس
-            scrollIndicator.addEventListener('click', function () {
-                window.scrollTo({
-                    top: window.innerHeight,
-                    behavior: 'smooth'
-                });
-            });
+        //     // تأثير التمرير السلس
+        //     scrollIndicator.addEventListener('click', function () {
+        //         window.scrollTo({
+        //             top: window.innerHeight,
+        //             behavior: 'smooth'
+        //         });
+        //     });
 
-            // تأثير البارالاكس للخلفية
-            window.addEventListener('scroll', function () {
-                const scrolled = window.pageYOffset;
-                const rate = scrolled * -0.5;
-                heroSection.style.transform = `translateY(${rate}px)`;
-            });
-        });
+        //     // تأثير البارالاكس للخلفية
+        //     window.addEventListener('scroll', function () {
+        //         const scrolled = window.pageYOffset;
+        //         const rate = scrolled * -0.5;
+        //         heroSection.style.transform = `translateY(${rate}px)`;
+        //     });
+        // });
 
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+        // AOS.init({
+        //     duration: 1000,
+        //     once: true
+        // });
 
 
-        // التحكم في مودل الخدمات
-        function openModal(id) {
-            document.getElementById(id + '-modal').style.display = 'block';
-        }
+//         // التحكم في مودل الخدمات
+//         function openModal(id) {
+//             document.getElementById(id + '-modal').style.display = 'block';
+//         }
 
-        function closeModal(id) {
-            document.getElementById(id + '-modal').style.display = 'none';
-        }
+//         function closeModal(id) {
+//             document.getElementById(id + '-modal').style.display = 'none';
+//         }
 
-        // إغلاق عند الضغط خارج المودال
-        window.onclick = function (event) {
-            const modals = document.querySelectorAll('.modal');
-            modals.forEach(modal => {
-                if (event.target === modal) {
-                    modal.style.display = "none";
-                }
-            });
-        };
+//         // إغلاق عند الضغط خارج المودال
+//         window.onclick = function (event) {
+//             const modals = document.querySelectorAll('.modal');
+//             modals.forEach(modal => {
+//                 if (event.target === modal) {
+//                     modal.style.display = "none";
+//                 }
+//             });
+//         };
 
-         // فتح النافذة عند النقر على "اقرأ المزيد"
-  document.querySelectorAll('.read-more').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
+//          // فتح النافذة عند النقر على "اقرأ المزيد"
+//   document.querySelectorAll('.read-more').forEach(link => {
+//     link.addEventListener('click', function (e) {
+//       e.preventDefault();
 
-      // استخرج البيانات من data attributes
-      const title = this.dataset.title;
-      const date = this.dataset.date;
-      const category = this.dataset.category;
-      const image = this.dataset.image;
-      const content = this.dataset.content;
+//       // استخرج البيانات من data attributes
+//       const title = this.dataset.title;
+//       const date = this.dataset.date;
+//       const category = this.dataset.category;
+//       const image = this.dataset.image;
+//       const content = this.dataset.content;
 
-      // ضع البيانات في المودال
-      document.getElementById('modal-title').innerText = title;
-      document.getElementById('modal-date').innerText = date;
-      document.getElementById('modal-category').innerText = category;
-      document.getElementById('modal-image').src = image;
-      document.getElementById('modal-content').innerText = content;
+//       // ضع البيانات في المودال
+//       document.getElementById('modal-title').innerText = title;
+//       document.getElementById('modal-date').innerText = date;
+//       document.getElementById('modal-category').innerText = category;
+//       document.getElementById('modal-image').src = image;
+//       document.getElementById('modal-content').innerText = content;
 
-      // أظهر النافذة
-      document.getElementById('blog-modal').style.display = 'block';
-    });
-  });
+//       // أظهر النافذة
+//       document.getElementById('blog-modal').style.display = 'block';
+//     });
+//   });
 
-  // زر الإغلاق (X)
-  document.getElementById('modal-close').addEventListener('click', function () {
-    document.getElementById('blog-modal').style.display = 'none';
-  });
+//   // زر الإغلاق (X)
+//   document.getElementById('modal-close').addEventListener('click', function () {
+//     document.getElementById('blog-modal').style.display = 'none';
+//   });
 
-  // الإغلاق عند النقر خارج المحتوى
-  window.addEventListener('click', function (event) {
-    const modal = document.getElementById('blog-modal');
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
+//   // الإغلاق عند النقر خارج المحتوى
+//   window.addEventListener('click', function (event) {
+//     const modal = document.getElementById('blog-modal');
+//     if (event.target === modal) {
+//       modal.style.display = 'none';
+//     }
+//   });
 
 
 //   form

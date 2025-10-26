@@ -31,7 +31,7 @@
                 <div class="footer-col">
                     <h3>روابط سريعة</h3>
                     <ul>
-                        <li><a href="#home"><i class="fas fa-arrow-left"></i> الرئيسية</a></li>
+                        <li><a href="/pioneerway/index.php"><i class="fas fa-arrow-left"></i> الرئيسية</a></li>
                         <li><a href="#about"><i class="fas fa-arrow-left"></i> من نحن</a></li>
                         <li><a href="#services"><i class="fas fa-arrow-left"></i> خدماتنا</a></li>
                         <li><a href="#portfolio"><i class="fas fa-arrow-left"></i> أعمالنا</a></li>
@@ -41,10 +41,10 @@
                 <div class="footer-col">
                     <h3>خدماتنا</h3>
                     <ul>
-                        <li><a href="#"><i class="fas fa-arrow-left"></i> إنشاء المتاجر</a></li>
-                        <li><a href="#"><i class="fas fa-arrow-left"></i> إدارة المتاجر</a></li>
-                        <li><a href="#"><i class="fas fa-arrow-left"></i> التسويق الإلكتروني</a></li>
-                        <li><a href="#"><i class="fas fa-arrow-left"></i> تصميم الهوية</a></li>
+                        <li><a href="business-services.php"><i class="fas fa-arrow-left"></i> خدمات التجارة والعمل الحر </a></li>
+                        <li><a href="#"><i class="fas fa-arrow-left"></i>الخدمات الإبداعية والتسويقية</a></li>
+                        <li><a href="programming-services.php"><i class="fas fa-arrow-left"></i>الخدمات البرمجية</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-left"></i>الخدمات المكتبية</a></li>
                         <li><a href="#"><i class="fas fa-arrow-left"></i> الاستشارات</a></li>
                     </ul>
                 </div>
@@ -72,7 +72,8 @@
             </div>
 
             <div class="copyright">
-                <p>جميع الحقوق محفوظة &copy; 2025 طريق الريادة</p>
+                <p>جميع الحقوق محفوظة &copy; <?php echo date('Y'); ?> طريق الريادة</p>
             </div>
+
         </div>
     </footer>

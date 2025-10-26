@@ -32,20 +32,25 @@
                    </button>
                    <div
                        class="dropdown-menu absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible transition-all duration-300 transform translate-y-2">
-                       <a href="#services"
+                       <a href="business-services.php"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
                            <i class="fas fa-shopping-cart ml-3 text-blue-500"></i>
-                           جميع الخدمات
+                           خدمات التجارة والعمل الحر 
                        </a>
                        <a href="#work-steps"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
                            <i class="fas fa-route ml-3 text-blue-500"></i>
-                           خطوات العمل
+                           الخدمات الإبداعية والتسويقية
                        </a>
-                       <a href="#offers"
+                       <a href="programming-services.php"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
                            <i class="fas fa-tags ml-3 text-blue-500"></i>
-                           العروض والباقات
+                           الخدمات البرمجية
+                       </a>
+                        <a href="#offers"
+                           class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
+                           <i class="fas fa-tags ml-3 text-blue-500"></i>
+                           الخدمات المكتبية
                        </a>
                    </div>
                </div>
@@ -135,45 +140,17 @@
            <i class="fas fa-house"></i>
            الرئيسية
        </a>
-       <a href="#about">
+       <a href="business-services.php">
            <i class="fas fa-user"></i>
-           من نحن
+           خدمات التجارة والعمل الحر
        </a>
-       <a href="#services">
+       <a href="programming-services.php">
            <i class="fas fa-briefcase"></i>
-           خدماتنا
+           الخدمات البرمجية
        </a>
-       <a href="#work-steps">
-           <i class="fas fa-route"></i>
-           خطوات العمل
-       </a>
-       <a href="#portfolio">
-           <i class="fas fa-th-large"></i>
-           أعمالنا
-       </a>
-       <a href="#team">
-           <i class="fas fa-users"></i>
-           فريقنا
-       </a>
-       <a href="#testimonials">
-           <i class="fas fa-star"></i>
-           شهادات العملاء
-       </a>
-       <a href="#offers">
-           <i class="fas fa-tags"></i>
-           العروض
-       </a>
-       <a href="#faq">
-           <i class="fas fa-question-circle"></i>
-           الأسئلة الشائعة
-       </a>
-       <a href="blog.php">
-           <i class="fas fa-blog"></i>
+            <a href="blog.php">
+           <i class="fas fa-briefcase"></i>
            المدونة
-       </a>
-       <a href="#contact">
-           <i class="fas fa-envelope"></i>
-           تواصل معنا
        </a>
    </div>
 

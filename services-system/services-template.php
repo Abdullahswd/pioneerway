@@ -697,7 +697,7 @@
     </script>
             <?php include 'footer.php'; ?>
 
-    <script src="../script.js"></script>
+    <script src="/pioneerway/script.js"></script>
 </body>
 
 </html>
