@@ -34,7 +34,6 @@
     <?php include 'header.php'; ?>
 
 
-
     <!-- واجهة رئيسية -->
     <section class="hero-section" id="home">
         <div class="hero-bg"></div>
@@ -123,10 +122,31 @@
         </div>
     </section>
 
+    
     <!-- قسم الإحصائيات -->
-    <?php include 'section/statistics.php'; ?>
+    <section class="stats py-16 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="stats-grid grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stat-item fade-in">
+                    <h3 class="stat-number text-4xl font-bold text-blue-600" data-target="150">0</h3>
+                    <p class="text-white-600 mt-2">مشروع ناجح</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <h3 class="stat-number text-4xl font-bold text-blue-600" data-target="98">0</h3>
+                    <p class="text-white-600 mt-2">عملاء راضون</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <h3 class="text-4xl font-bold text-blue-600">5+</h3>
+                    <p class="text-white-600 mt-2">سنوات خبرة</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <h3 class="text-4xl font-bold text-blue-600">24/7</h3>
+                    <p class="text-white-600 mt-2">دعم فني</p>
+                </div>
+            </div>
+        </div>
+    </section>
    
-
     <!-- قسم خطوات العمل  -->
     <section class="work-steps" id="work-steps">
         <div class="container">
