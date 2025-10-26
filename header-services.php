@@ -32,33 +32,43 @@
                    </button>
                    <div
                        class="dropdown-menu absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible transition-all duration-300 transform translate-y-2">
+
+                       <!-- خدمات التجارة والعمل الحر -->
                        <a href="business-services.php"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
-                           <i class="fas fa-shopping-cart ml-3 text-blue-500"></i>
+                           <i class="fas fa-briefcase ml-3 text-blue-500"></i>
                            خدمات التجارة والعمل الحر
                        </a>
+
+                       <!-- الخدمات الإبداعية والتسويقية -->
                        <a href="design-services.php"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
-                           <i class="fas fa-route ml-3 text-blue-500"></i>
+                           <i class="fas fa-paint-brush ml-3 text-blue-500"></i>
                            الخدمات الإبداعية والتسويقية
                        </a>
+
+                       <!-- الخدمات البرمجية -->
                        <a href="programming-services.php"
-                           class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
-                           <i class="fas fa-tags ml-3 text-blue-500"></i>
+                           class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
+                           <i class="fas fa-code ml-3 text-blue-500"></i>
                            الخدمات البرمجية
                        </a>
+
+                       <!-- الخدمات المكتبية -->
                        <a href="office-services.php"
-                           class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
-                           <i class="fas fa-tags ml-3 text-blue-500"></i>
+                           class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
+                           <i class="fas fa-file-alt ml-3 text-blue-500"></i>
                            الخدمات المكتبية
                        </a>
-                       </a>
+
+                       <!-- الخدمات الحكومية -->
                        <a href="government-services.php"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
-                           <i class="fas fa-tags ml-3 text-blue-500"></i>
+                           <i class="fas fa-landmark ml-3 text-blue-500"></i>
                            الخدمات الحكومية - السعودية
                        </a>
                    </div>
+
                </div>
 
                <!-- أعمالنا - قائمة منسدلة -->
