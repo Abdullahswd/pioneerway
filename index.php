@@ -31,187 +31,8 @@
 <body>
 
     <!-- الترويسة -->
-    <header class="bg-white shadow-md fixed top-0 w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-            <!-- شعار الشركة -->
-            <div class="flex items-center gap-3">
-                <img src="image/logo.png" alt="شعار" class="h-10 w-auto">
-                <div class="text-xl font-bold text-blue-600">طريق الريادة</div>
-            </div>
+    <?php include 'header.php'; ?>
 
-            <!-- قائمة سطح المكتب -->
-            <nav class="hidden md:flex space-x-4 space-x-reverse items-center">
-                <!-- الرئيسية -->
-                <a href="#home"
-                    class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">
-                    <i class="fas fa-house ml-1 text-blue-500"></i>
-                    الرئيسية
-                </a>
-
-                <!-- من نحن -->
-                <a href="#about"
-                    class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">
-                    <i class="fas fa-user ml-1 text-blue-500"></i>
-                    من نحن
-                </a>
-
-                <!-- خدماتنا - قائمة منسدلة -->
-                <div class="dropdown-group relative">
-                    <button
-                        class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">
-                        <i class="fas fa-briefcase ml-1 text-blue-500"></i>
-                        خدماتنا
-                        <i class="fas fa-chevron-down mr-2 text-xs"></i>
-                    </button>
-                    <div
-                        class="dropdown-menu absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible transition-all duration-300 transform translate-y-2">
-                        <a href="#services"
-                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
-                            <i class="fas fa-shopping-cart ml-3 text-blue-500"></i>
-                            جميع الخدمات
-                        </a>
-                        <a href="#work-steps"
-                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
-                            <i class="fas fa-route ml-3 text-blue-500"></i>
-                            خطوات العمل
-                        </a>
-                        <a href="#offers"
-                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
-                            <i class="fas fa-tags ml-3 text-blue-500"></i>
-                            العروض والباقات
-                        </a>
-                    </div>
-                </div>
-
-                <!-- أعمالنا - قائمة منسدلة -->
-                <div class="dropdown-group relative">
-                    <button
-                        class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">
-                        <i class="fas fa-th-large ml-1 text-blue-500"></i>
-                        أعمالنا
-                        <i class="fas fa-chevron-down mr-2 text-xs"></i>
-                    </button>
-                    <div
-                        class="dropdown-menu absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible transition-all duration-300 transform translate-y-2">
-                        <a href="#portfolio"
-                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
-                            <i class="fas fa-briefcase ml-3 text-blue-500"></i>
-                            مشاريعنا
-                        </a>
-                        <a href="#testimonials"
-                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
-                            <i class="fas fa-star ml-3 text-blue-500"></i>
-                            شهادات العملاء
-                        </a>
-                    </div>
-                </div>
-
-                <!-- عن الشركة - قائمة منسدلة -->
-                <div class="dropdown-group relative">
-                    <button
-                        class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">
-                        <i class="fas fa-building ml-1 text-blue-500"></i>
-                        عن الشركة
-                        <i class="fas fa-chevron-down mr-2 text-xs"></i>
-                    </button>
-                    <div
-                        class="dropdown-menu absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible transition-all duration-300 transform translate-y-2">
-                        <a href="#team"
-                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
-                            <i class="fas fa-users ml-3 text-blue-500"></i>
-                            فريقنا
-                        </a>
-                        <a href="#about-us"
-                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
-                            <i class="fas fa-book-open ml-3 text-blue-500"></i>
-                            قصتنا
-                        </a>
-                        <a href="#faq"
-                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
-                            <i class="fas fa-question-circle ml-3 text-blue-500"></i>
-                            الأسئلة الشائعة
-                        </a>
-                    </div>
-                </div>
-
-                <!-- المدونة -->
-                <a href="#blog"
-                    class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">
-                    <i class="fas fa-blog ml-1 text-blue-500"></i>
-                    المدونة
-                </a>
-
-                <!-- تواصل معنا -->
-                <a href="#contact"
-                    class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">
-                    <i class="fas fa-envelope ml-1 text-blue-500"></i>
-                    تواصل معنا
-                </a>
-            </nav>
-
-            <!-- زر القائمة الجانبية للموبايل -->
-            <button id="menu-btn" class="md:hidden focus:outline-none">
-                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-    </header>
-
-    <!-- القائمة الجانبية للموبايل -->
-    <div class="mobile-menu" id="mobile-menu">
-        <button style="color: white; font-size: 30px; position: absolute; top: 10px; left: 10px;" class="close-menu"
-            id="close-menu">
-            <i class="fas fa-times"></i>
-        </button>
-        <a href="#home">
-            <i class="fas fa-house"></i>
-            الرئيسية
-        </a>
-        <a href="#about">
-            <i class="fas fa-user"></i>
-            من نحن
-        </a>
-        <a href="#services">
-            <i class="fas fa-briefcase"></i>
-            خدماتنا
-        </a>
-        <a href="#work-steps">
-            <i class="fas fa-route"></i>
-            خطوات العمل
-        </a>
-        <a href="#portfolio">
-            <i class="fas fa-th-large"></i>
-            أعمالنا
-        </a>
-        <a href="#team">
-            <i class="fas fa-users"></i>
-            فريقنا
-        </a>
-        <a href="#testimonials">
-            <i class="fas fa-star"></i>
-            شهادات العملاء
-        </a>
-        <a href="#offers">
-            <i class="fas fa-tags"></i>
-            العروض
-        </a>
-        <a href="#faq">
-            <i class="fas fa-question-circle"></i>
-            الأسئلة الشائعة
-        </a>
-        <a href="#blog">
-            <i class="fas fa-blog"></i>
-            المدونة
-        </a>
-        <a href="#contact">
-            <i class="fas fa-envelope"></i>
-            تواصل معنا
-        </a>
-    </div>
-
-    <!-- طبقة التعتيم -->
-    <div class="overlay" id="overlay"></div>
 
 
     <!-- واجهة رئيسية -->
@@ -272,348 +93,39 @@
                 <p>نقدم مجموعة شاملة من الخدمات التي تغطي جميع جوانب التجارة الإلكترونية</p>
             </div>
             <div class="services-grid">
-                <!-- كل بطاقة مرتبطة بمودال -->
-                <div class="service-card" onclick="openModal('store')">
-                    <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
-                    <h3>تصميم وتطوير المتاجر الإلكترونية</h3>
-                    <p>متاجر احترافية جاهزة للعمل ومخصصة لتجربة مستخدم سلسة.</p>
-                </div>
 
-                <div class="service-card" onclick="openModal('manage')">
-                    <div class="service-icon"><i class="fas fa-cogs"></i></div>
-                    <h3>إدارة وتسويق المتاجر الإلكترونية</h3>
-                    <p>إدارة متاجر كاملة مع حملات تسويقية رقمية فعالة.</p>
-                </div>
+                <a href="business-services.php" class="service-card">
+                    <div class="service-icon"><i class="fas fa-store"></i></div>
+                    <h3>خدمات التجارة والعمل الحر</h3>
+                    <p>نوفر لك متاجر إلكترونية احترافية جاهزة للانطلاق والربح.</p>
+                </a>
 
-                <div class="service-card" onclick="openModal('content')">
-                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>كتابة المحتوى التسويقي</h3>
-                    <p>محتوى جذاب يعبر عن علامتك ويؤثر بجمهورك.</p>
-                </div>
+                <a href="marketing.html" class="service-card">
+                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>الخدمات الإبداعية والتسويقية</h3>
+                    <p>حملات تسويقية مبتكرة لإبراز مشروعك وزيادة مبيعاتك.</p>
+                </a>
 
-                <div class="service-card" onclick="openModal('identity')">
-                    <div class="service-icon"><i class="fas fa-palette"></i></div>
-                    <h3>تصميم الهوية البصرية</h3>
-                    <p>هوية مرئية متكاملة تعكس شخصية مشروعك باحترافية.</p>
-                </div>
+                <a href="programming-services.php" class="service-card">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>الخدمات البرمجية</h3>
+                    <p>تطوير مواقع وتطبيقات مخصصة بأحدث التقنيات.</p>
+                </a>
 
-                <div class="service-card" onclick="openModal('consulting')">
-                    <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
-                    <h3>الاستشارات والتدريب الريادي</h3>
-                    <p>إرشاد وتدريب عملي لتأسيس وتطوير المشاريع الريادية.</p>
-                </div>
+                <a href="office.html" class="service-card">
+                    <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>الخدمات المكتبية</h3>
+                    <p>إعداد مستندات وتقارير احترافية بأعلى جودة.</p>
+                </a>
+
             </div>
+
         </div>
     </section>
-
-    <!-- النوافذ المنبثقة -->
-
-    <div id="store-modal"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 md:p-8 overflow-y-auto hidden">
-        <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 md:p-10 relative">
-
-            <button onclick="closeModal('store')"
-                class="absolute top-4 left-4 text-gray-400 hover:text-red-500 text-2xl font-bold">
-                &times;
-            </button>
-
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-right">تصميم وتطوير المتاجر الإلكترونية
-            </h2>
-            <p class="text-gray-600 leading-relaxed text-right mb-6">
-                هل تبحث عن متجر إلكتروني احترافي يعكس هويتك ويحقق لك المبيعات؟ نحن في
-                <span class="font-semibold text-blue-600">طريق الريادة</span> نُصمم متاجر متجاوبة، سهلة الاستخدام،
-                ومربوطة بأنظمة الدفع والشحن لتكون جاهزة للانطلاق.
-            </p>
-
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">💻 ما الذي نقدمه لك؟</h3>
-                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
-                    <li>تصميم متجر احترافي متجاوب مع كافة الأجهزة.</li>
-                    <li>ربط بوابات الدفع الإلكتروني والشحن المحلي والدولي.</li>
-                    <li>تهيئة تجربة مستخدم سلسة وتحسين الأداء التقني.</li>
-                    <li>ربط المتجر بأدوات التسويق والقياس (مثل Google Analytics).</li>
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">🚀 الفوائد التي ستحصل عليها:</h3>
-                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
-                    <li>إطلاق سريع وآمن لمتجرك الإلكتروني.</li>
-                    <li>ثقة العملاء عبر تصميم احترافي وتجربة متقدمة.</li>
-                    <li>تكامل سلس مع الخدمات اللوجستية والدفع.</li>
-                    <li>أساس تقني قوي للتوسع والنمو المستقبلي.</li>
-                </ul>
-            </div>
-
-            <div class="mb-8">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">💡 لماذا تختار طريق الريادة؟</h3>
-                <p class="text-gray-600 text-right leading-relaxed">
-                    لأننا لا نقدم مجرد تصميم، بل نبني متجرك بناءً على دراسة احتياجاتك وسلوك جمهورك المستهدف، مع دعم
-                    مستمر بعد التسليم.
-                </p>
-            </div>
-
-            <div class="text-center">
-                <a href="https://pioneerway-sa.com/yKoPYpZ"
-                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-300 inline-block">
-                    اطلب الخدمة الآن
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div id="manage-modal"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 md:p-8 overflow-y-auto hidden">
-        <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 md:p-10 relative">
-
-            <button onclick="closeModal('manage')"
-                class="absolute top-4 left-4 text-gray-400 hover:text-red-500 text-2xl font-bold">
-                &times;
-            </button>
-
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-right">إدارة وتسويق المتاجر الإلكترونية
-            </h2>
-
-            <p class="text-gray-600 leading-relaxed text-right mb-6">
-                هل تملك متجرًا إلكترونيًا ولكن تعاني من ضعف المبيعات أو عدم وضوح الرؤية؟ في <span
-                    class="font-semibold text-blue-600">طريق الريادة</span>، نقدم خدمة متكاملة لإدارة وتشغيل وتسويق
-                متجرك الإلكتروني باحترافية، لتصل لجمهورك وتحقق مبيعات حقيقية.
-            </p>
-
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">📦 ما الذي نقدمه لك؟</h3>
-                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
-                    <li>إدارة كاملة للمتجر (رفع المنتجات، متابعة الطلبات، دعم العملاء).</li>
-                    <li>حملات إعلانية مدفوعة فعالة على Google ووسائل التواصل.</li>
-                    <li>تحسين ظهور متجرك في محركات البحث (SEO).</li>
-                    <li>تقارير تحليلية دورية لقياس الأداء واتخاذ القرار.</li>
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">🎯 الفوائد التي ستحصل عليها:</h3>
-                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
-                    <li>زيادة المبيعات وتحسين معدلات التحويل.</li>
-                    <li>وصول فعّال للعملاء المحتملين في الوقت المناسب.</li>
-                    <li>راحة من تفاصيل التشغيل اليومية.</li>
-                    <li>رؤية واضحة عبر تقارير الأداء الشهرية.</li>
-                </ul>
-            </div>
-
-            <div class="mb-8">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">💡 لماذا تختار طريق الريادة؟</h3>
-                <p class="text-gray-600 text-right leading-relaxed">
-                    لأننا نعمل بمنهجية تعتمد على تحليل السوق، وفهم سلوك جمهورك، وتقديم حلول عملية قابلة للتنفيذ. نجاحك
-                    هو مهمتنا الأساسية.
-                </p>
-            </div>
-
-            <div class="text-center">
-                <a href="https://pioneerway-sa.com/PDymjQG"
-                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-300 inline-block">
-                    اطلب الخدمة الآن وابدأ بتحقيق نتائج حقيقية
-                </a>
-            </div>
-
-        </div>
-    </div>
-
-
-    <div id="content-modal"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 md:p-8 overflow-y-auto hidden">
-        <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 md:p-10 relative">
-
-            <button onclick="closeModal('content')"
-                class="absolute top-4 left-4 text-gray-400 hover:text-red-500 text-2xl font-bold">
-                &times;
-            </button>
-
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-right">كتابة المحتوى التسويقي</h2>
-
-            <p class="text-gray-600 leading-relaxed text-right mb-6">
-                نكتب لك محتوى تسويقي يجذب جمهورك المستهدف، ويعبّر عن هوية علامتك التجارية بطريقة احترافية تؤدي إلى
-                تحويلات حقيقية وزيادة في التفاعل.
-            </p>
-
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">✍️ ما الذي نقدمه لك؟</h3>
-                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
-                    <li>كتابة محتوى صفحات الهبوط والموقع الإلكتروني.</li>
-                    <li>وصف احترافي للمنتجات والخدمات.</li>
-                    <li>محتوى جذاب لمنصات التواصل الاجتماعي.</li>
-                    <li>صياغة عبارات تسويقية تؤثر في القرار الشرائي.</li>
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">🚀 الفوائد التي ستحصل عليها:</h3>
-                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
-                    <li>زيادة معدل التفاعل والمبيعات.</li>
-                    <li>تعزيز هوية علامتك التجارية وتمييزها عن المنافسين.</li>
-                    <li>تحسين تجربة المستخدم وتحفيزه على اتخاذ الإجراء.</li>
-                    <li>محتوى مُهيأ لمحركات البحث (SEO Friendly).</li>
-                </ul>
-            </div>
-
-            <div class="mb-8">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">💡 لماذا تختار طريق الريادة؟</h3>
-                <p class="text-gray-600 text-right leading-relaxed">
-                    لأننا نكتب بناءً على فهم جمهورك وسوقك، باستخدام أسلوب مقنع يجمع بين البساطة والفعالية لتحقيق نتائج
-                    ملموسة.
-                </p>
-            </div>
-
-            <div class="text-center">
-                <a href=""
-                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-300 inline-block">
-                    اطلب الخدمة الآن
-                </a>
-            </div>
-
-        </div>
-    </div>
-
-
-
-    <div id="identity-modal"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 md:p-8 overflow-y-auto hidden">
-        <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 md:p-10 relative">
-
-            <button onclick="closeModal('identity')"
-                class="absolute top-4 left-4 text-gray-400 hover:text-red-500 text-2xl font-bold">
-                &times;
-            </button>
-
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-right">تصميم الهوية البصرية</h2>
-
-            <p class="text-gray-600 leading-relaxed text-right mb-6">
-                نبتكر لك هوية بصرية متكاملة تعكس شخصية مشروعك وتترك انطباعاً قوياً لا يُنسى في ذهن العملاء. تصميماتنا
-                تمزج بين الإبداع والاستراتيجية.
-            </p>
-
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">🎨 ما الذي نقدمه لك؟</h3>
-                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
-                    <li>تصميم شعار احترافي يعبر عن رؤيتك.</li>
-                    <li>دليل استخدام الهوية البصرية (Brand Guidelines).</li>
-                    <li>تصميم ملفات السوشيال ميديا والمواد الدعائية.</li>
-                    <li>اختيار الألوان والخطوط بطريقة مدروسة.</li>
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">🚀 الفوائد التي ستحصل عليها:</h3>
-                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
-                    <li>بناء هوية بصرية متسقة ومؤثرة.</li>
-                    <li>تعزيز الثقة والمصداقية أمام العملاء.</li>
-                    <li>تميّز في السوق ووضوح في الانطباع الأول.</li>
-                    <li>مرونة في استخدام الهوية عبر جميع القنوات.</li>
-                </ul>
-            </div>
-
-            <div class="mb-8">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">💡 لماذا تختار طريق الريادة؟</h3>
-                <p class="text-gray-600 text-right leading-relaxed">
-                    لأننا ندمج بين الذوق الإبداعي وفهم السوق، لتخرج بهوية بصرية تعبر عنك بصدق وتُحدث تأثيراً بصرياً لا
-                    يُنسى.
-                </p>
-            </div>
-
-            <div class="text-center">
-                <a href="https://pioneerway-sa.com/dbzxXKd"
-                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-300 inline-block">
-                    اطلب الخدمة الآن
-                </a>
-            </div>
-
-        </div>
-    </div>
-
-
-
-    <div id="consulting-modal"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 md:p-8 overflow-y-auto hidden">
-        <div class="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 md:p-10 relative">
-
-            <button onclick="closeModal('consulting')"
-                class="absolute top-4 left-4 text-gray-400 hover:text-red-500 text-2xl font-bold">
-                &times;
-            </button>
-
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-right">الاستشارات والتدريب الريادي</h2>
-
-            <p class="text-gray-600 leading-relaxed text-right mb-6">
-                هل لديك فكرة مشروع لكن لا تعرف من أين تبدأ؟ في <span class="font-semibold text-blue-600">طريق
-                    الريادة</span> نقدم لك الدعم الكامل من خلال جلسات استشارية وتدريبية تساعدك على بناء مشروعك بخطوات
-                واضحة وفعالة.
-            </p>
-
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">📘 ما الذي نقدمه لك؟</h3>
-                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
-                    <li>استشارات تطوير الأعمال وبناء نماذج العمل.</li>
-                    <li>تدريب عملي على أدوات السوق وأبحاث المنافسين.</li>
-                    <li>تحليل الفجوات والفرص في السوق المستهدف.</li>
-                    <li>إعداد خطة عمل واضحة وقابلة للتنفيذ.</li>
-                </ul>
-            </div>
-
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">🎯 الفوائد التي ستحصل عليها:</h3>
-                <ul class="list-disc pr-5 text-gray-600 text-right space-y-2">
-                    <li>وضوح كامل في خطوات البدء والنمو.</li>
-                    <li>توفير الوقت والموارد عبر تجنب الأخطاء الشائعة.</li>
-                    <li>اكتساب مهارات ريادية حقيقية.</li>
-                    <li>توجيه مباشر من خبراء في ريادة الأعمال.</li>
-                </ul>
-            </div>
-
-            <div class="mb-8">
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 text-right">💡 لماذا تختار طريق الريادة؟</h3>
-                <p class="text-gray-600 text-right leading-relaxed">
-                    لأننا نؤمن أن كل رائد أعمال يستحق أن يبدأ من مكان آمن وموجّه، بخبرات متراكمة وأساليب مدروسة تناسب
-                    طبيعة السوق المحلي.
-                </p>
-            </div>
-
-            <div class="text-center">
-                <a href="https://pioneerway-sa.com/eQKEqlO"
-                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-300 inline-block">
-                    احجز استشارتك الآن
-                </a>
-            </div>
-
-        </div>
-    </div>
-
-
 
     <!-- قسم الإحصائيات -->
-    <section class="stats py-16 bg-gray-50">
-        <div class="container mx-auto">
-            <div class="stats-grid grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="stat-item fade-in">
-                    <h3 class="stat-number text-4xl font-bold text-blue-600" data-target="150">0</h3>
-                    <p class="text-white-600 mt-2">مشروع ناجح</p>
-                </div>
-                <div class="stat-item fade-in">
-                    <h3 class="stat-number text-4xl font-bold text-blue-600" data-target="98">0</h3>
-                    <p class="text-white-600 mt-2">عملاء راضون</p>
-                </div>
-                <div class="stat-item fade-in">
-                    <h3 class="text-4xl font-bold text-blue-600">5+</h3>
-                    <p class="text-white-600 mt-2">سنوات خبرة</p>
-                </div>
-                <div class="stat-item fade-in">
-                    <h3 class="text-4xl font-bold text-blue-600">24/7</h3>
-                    <p class="text-white-600 mt-2">دعم فني</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php include 'section/statistics.php'; ?>
+   
 
     <!-- قسم خطوات العمل  -->
     <section class="work-steps" id="work-steps">
@@ -1198,84 +710,8 @@ justify-content:center; align-items:center; z-index:9998;">
     </section>
 
     <!-- التذييل -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h3>طريق الريادة</h3>
-                    <p>شركة رائدة في تقديم حلول التجارة الإلكترونية المتكاملة، نساعدك في بناء وتطوير متجرك الإلكتروني
-                        لتحقيق النجاح في العالم الرقمي.</p>
-                    <div class="social-links">
-                        <a href="https://www.youtube.com/@PioneerWay2030" target="_blank" rel="noopener noreferrer"
-                            aria-label="يوتيوب">
-                            <i class="fab fa-youtube"></i>
-                        </a>
+        <?php include 'footer.php'; ?>
 
-                        <a href="https://www.instagram.com/pioneerway2030" target="_blank" rel="noopener noreferrer"
-                            aria-label="إنستجرام">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-
-                        <a href="https://www.snapchat.com/add/pioneerway2023" target="_blank" rel="noopener noreferrer"
-                            aria-label="سناب شات">
-                            <i class="fab fa-snapchat"></i>
-                        </a>
-
-                        <a href="https://www.tiktok.com/@user9033286002566" target="_blank" rel="noopener noreferrer"
-                            aria-label="تيك توك">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>روابط سريعة</h3>
-                    <ul>
-                        <li><a href="#home"><i class="fas fa-arrow-left"></i> الرئيسية</a></li>
-                        <li><a href="#about"><i class="fas fa-arrow-left"></i> من نحن</a></li>
-                        <li><a href="#services"><i class="fas fa-arrow-left"></i> خدماتنا</a></li>
-                        <li><a href="#portfolio"><i class="fas fa-arrow-left"></i> أعمالنا</a></li>
-                        <li><a href="#contact"><i class="fas fa-arrow-left"></i> اتصل بنا</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>خدماتنا</h3>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-arrow-left"></i> إنشاء المتاجر</a></li>
-                        <li><a href="#"><i class="fas fa-arrow-left"></i> إدارة المتاجر</a></li>
-                        <li><a href="#"><i class="fas fa-arrow-left"></i> التسويق الإلكتروني</a></li>
-                        <li><a href="#"><i class="fas fa-arrow-left"></i> تصميم الهوية</a></li>
-                        <li><a href="#"><i class="fas fa-arrow-left"></i> الاستشارات</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>النشرة البريدية</h3>
-                    <p>ابق على اطلاع بأحدث النصائح والعروض الخاصة</p>
-                    <form class="newsletter-form">
-                        <input style="color: #2563eb;" type="email" placeholder="بريدك الإلكتروني" required>
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
-            </div>
-            <!-- Logos for Payment -->
-            <div class="footer-logos">
-                <div class="logos-row">
-                    <img src="image\Mada-01.png" alt="mada" />
-                    <img src="image\Visa-01.png" alt="visa" />
-                    <img src="image\Mastercard-01.png" alt="master card" />
-                    <img src="image\STC-pay-01.png" alt="stc pay" />
-                    <img src="image\Tabby-01.png" alt="tabby" />
-                    <img src="image\Tamara-01.png" alt="tamara" />
-
-                    <img src="image\Saudi Business Center.png" alt="Saudi Business Center" />
-                </div>
-            </div>
-
-            <div class="copyright">
-                <p>جميع الحقوق محفوظة &copy; 2025 طريق الريادة</p>
-            </div>
-        </div>
-    </footer>
 
     <!-- النافذة المنبثقة -->
     <div id="blog-modal" class="modal">
