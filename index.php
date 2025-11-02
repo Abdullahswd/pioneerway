@@ -2,28 +2,31 @@
 <html dir="rtl" lang="ar">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة طريق الريادة</title> 
 
-    <title>طريق الريادة - حلول التجارة الإلكترونية المتكاملة</title>
-    <meta name="description"
-        content="طريق الريادة تقدم حلولاً ذكية ومتكاملة للتجارة الإلكترونية، تصميم متاجر إلكترونية، وخدمات تسويق رقمي تساعدك على النجاح في السوق السعودي والخليجي.">
-    <meta name="keywords"
-        content="تجارة إلكترونية, تصميم متجر, طريق الريادة, حلول متاجر, بوابة دفع, متجر الكتروني, السعودية, الخليج, ريادة أعمال, تسويق رقمي">
+    <!-- معلومات الموقع -->
+    <meta name="description" content="طريق الريادة تقدم حلولاً ذكية ومتكاملة للتجارة الإلكترونية، تصميم متاجر إلكترونية، وخدمات تسويق رقمي تساعدك على النجاح في السوق السعودي والخليجي.">
+    <meta name="keywords" content="تجارة إلكترونية, تصميم متجر, طريق الريادة, حلول متاجر, بوابة دفع, متجر الكتروني, السعودية, الخليج, ريادة أعمال, تسويق رقمي">
     <meta name="author" content="شركة طريق الريادة">
-    <link rel="icon" href="image\logo.png" type="image/x-icon">
+
+    <!-- بيانات Open Graph -->
     <meta property="og:title" content="طريق الريادة | حلول التجارة الإلكترونية">
     <meta property="og:description" content="نساعدك في إطلاق متجرك الإلكتروني باحتراف. من التصميم حتى الدفع والتسويق.">
     <meta property="og:type" content="website">
 
+    <!-- أيقونة الموقع -->
+    <link rel="icon" href="image/logo.png" type="image/x-icon">
+
+    <!-- CSS: روابط خارجية أولًا ثم ملفات المشروع -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/pioneerway/fonts.css">
+
+
 </head>
 
 
@@ -35,130 +38,133 @@
 
 
     <!-- واجهة رئيسية -->
-<section class="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 overflow-hidden" id="home">
-    <!-- Background Elements -->
-    <div class="absolute inset-0 bg-[#6C9EFC]/5 dark:bg-[#6C9EFC]/10"></div>
-    
-    <!-- Animated Background Shapes -->
-    <div class="absolute top-0 left-0 w-72 h-72 bg-[#6C9EFC]/10 rounded-full blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#6C9EFC]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-    
-    <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-        <div class="flex flex-col lg:flex-row items-center justify-between min-h-[80vh] gap-12">
-            
-            <!-- Content Section - First on Mobile -->
-            <div class="flex-1 text-center lg:text-right space-y-8 order-1" data-aos="fade-up">
-                <!-- Badge -->
-                <div class="inline-flex items-center gap-2 bg-white dark:bg-gray-800 border border-[#6C9EFC]/20 rounded-full px-6 py-3 shadow-lg" data-aos="fade-down">
-                    <i class="fas fa-rocket text-[#6C9EFC]"></i>
-                    <span class="text-[#6A5E62] dark:text-gray-300 font-semibold text-sm">
-                        الشركة الرائدة في حلول التجارة الإلكترونية
-                    </span>
-                </div>
+    <section class="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 overflow-hidden" id="home">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-[#6C9EFC]/5 dark:bg-[#6C9EFC]/10"></div>
 
-                <!-- Main Title -->
-                <div class="space-y-4">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                        طريق الريادة
-                        <span class="block text-[#6C9EFC] dark:text-blue-400 text-3xl md:text-4xl lg:text-5xl mt-4">
-                            لتحويل أفكارك إلى واقع ملموس
+        <!-- Animated Background Shapes -->
+        <div class="absolute top-0 left-0 w-72 h-72 bg-[#6C9EFC]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-[#6C9EFC]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+        <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+            <div class="flex flex-col lg:flex-row items-center justify-between min-h-[80vh] gap-12">
+
+                <!-- Content Section - First on Mobile -->
+                <div class="flex-1 text-center lg:text-right space-y-8 order-1" data-aos="fade-up">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 bg-white dark:bg-gray-800 border border-[#6C9EFC]/20 rounded-full px-6 py-3 shadow-lg" data-aos="fade-down">
+                        <i class="fas fa-rocket text-[#6C9EFC]"></i>
+                        <span class="text-[#6A5E62] dark:text-gray-300 font-semibold text-sm">
+                            الشركة الرائدة في حلول التجارة الإلكترونية
                         </span>
-                    </h1>
+                    </div>
+
+                    <!-- Main Title -->
+                    <div class="space-y-4">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+                            طريق الريادة
+                            <span class="block text-[#6C9EFC] dark:text-blue-400 text-3xl md:text-4xl lg:text-5xl mt-4">
+                                لتحويل أفكارك إلى واقع ملموس
+                            </span>
+                        </h1>
+                    </div>
+
+                    <!-- Subtitle -->
+                    <p class="text-xl text-[#6A5E62] dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mr-0" data-aos="fade-up" data-aos-delay="200">
+                        نقدّم حلولًا متكاملة لروّاد الأعمال والأفراد في مختلف المجالات الرقمية والإدارية. </p>
+                    <p class="text-base text-[#6A5E62] dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mr-0" data-aos="fade-up" data-aos-delay="200">
+                        من خدمات التجارة الإلكترونية والعمل الحر إلى الخدمات البرمجية والمكتبية، مرورًا بـ الخدمات الإبداعية والتسويقية والخدمات الحكومية السعودية، وصولًا إلى خدمات الدعم والتمويل.
+                    </p>
+
+
+                    <!-- Features List -->
+                    <ul class="space-y-3 max-w-xl mx-auto lg:mr-0" data-aos="fade-up" data-aos-delay="400">
+                        <li class="flex items-center gap-3 text-lg text-[#6A5E62] dark:text-gray-300">
+                            <i class="fas fa-check text-[#ffffff] bg-[#6C9EFC]/10 p-2 rounded-full"></i>
+                            <span>خدمات متنوعة تنطلق بأعمالك نحو القمة</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-lg text-[#6A5E62] dark:text-gray-300">
+                            <i class="fas fa-check text-[#ffffff] bg-[#6C9EFC]/10 p-2 rounded-full"></i>
+                            <span>من التجارة الإلكترونية إلى الخدمات الحكومية والتمويل
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-3 text-lg text-[#6A5E62] dark:text-gray-300">
+                            <i class="fas fa-check text-[#fff] bg-[#6C9EFC]/10 p-2 rounded-full"></i>
+                            <span>شريكك الموثوق في النجاح الرقمي والإداري</span>
+                        </li>
+                    </ul>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="zoom-in" data-aos-delay="600">
+                        <a href="#services" class="group bg-[#6C9EFC] hover:bg-[#5a8efc] text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center gap-2 justify-center">
+                            <i class="fas fa-play-circle"></i>
+                            <span>حقق طموحاتك الآن</span>
+                            <i class="fas fa-arrow-left group-hover:mr-2 transition-all duration-300"></i>
+                        </a>
+
+                        <a href="#portfolio" class="group border-2 border-[#6C9EFC] text-[#6C9EFC] hover:bg-[#6C9EFC] hover:text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center gap-2 justify-center">
+                            <i class="fas fa-eye"></i>
+                            <span>شاهد أعمالنا</span>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Subtitle -->
-                <p class="text-xl text-[#6A5E62] dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mr-0" data-aos="fade-up" data-aos-delay="200">
-                    نقدم حلولاً متكاملة تجمع بين الإبداع والتكنولوجيا لبناء متاجر إلكترونية استثنائية تنمو مع طموحاتك.
-                </p>
+                <!-- Image Section - Second on Mobile -->
+                <div class="flex-1 flex justify-center lg:justify-start order-2" data-aos="fade-left">
+                    <div class="relative">
+                        <!-- Main Image Container -->
+                        <div class="relative bg-gradient-to-br from-[#6C9EFC] to-blue-400 rounded-3xl p-2 shadow-2xl">
+                            <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden">
+                                <img
+                                    src="image/misk main.png"
+                                    alt="مؤسس الشركة"
+                                    class="w-full h-auto max-w-md lg:max-w-lg rounded-2xl transform hover:scale-105 transition-transform duration-500" />
+                            </div>
+                        </div>
 
-                <!-- Features List -->
-                <ul class="space-y-3 max-w-xl mx-auto lg:mr-0" data-aos="fade-up" data-aos-delay="400">
-                    <li class="flex items-center gap-3 text-lg text-[#6A5E62] dark:text-gray-300">
-                        <i class="fas fa-check text-[#6C9EFC] bg-[#6C9EFC]/10 p-2 rounded-full"></i>
-                        <span>تصميم متاجر احترافية بتجربة مستخدم استثنائية</span>
-                    </li>
-                    <li class="flex items-center gap-3 text-lg text-[#6A5E62] dark:text-gray-300">
-                        <i class="fas fa-check text-[#6C9EFC] bg-[#6C9EFC]/10 p-2 rounded-full"></i>
-                        <span>حلول تسويقية تزيد مبيعاتك بنسبة تصل إلى 200%</span>
-                    </li>
-                    <li class="flex items-center gap-3 text-lg text-[#6A5E62] dark:text-gray-300">
-                        <i class="fas fa-check text-[#6C9EFC] bg-[#6C9EFC]/10 p-2 rounded-full"></i>
-                        <span>دعم فني مستمر وخطط نمو طويلة المدى</span>
-                    </li>
-                </ul>
+                        <!-- Floating Elements -->
+                        <div class="absolute -top-4 -right-4 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl border border-[#6C9EFC]/20">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                <span class="text-sm font-semibold text-[#6A5E62] dark:text-gray-300">نشط الآن</span>
+                            </div>
+                        </div>
 
-                <!-- Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="zoom-in" data-aos-delay="600">
-                    <a href="#services" class="group bg-[#6C9EFC] hover:bg-[#5a8efc] text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center gap-2 justify-center">
-                        <i class="fas fa-play-circle"></i>
-                        <span>ابدأ مشروعك الآن</span>
-                        <i class="fas fa-arrow-left group-hover:mr-2 transition-all duration-300"></i>
-                    </a>
-                    
-                    <a href="#portfolio" class="group border-2 border-[#6C9EFC] text-[#6C9EFC] hover:bg-[#6C9EFC] hover:text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center gap-2 justify-center">
-                        <i class="fas fa-eye"></i>
-                        <span>شاهد أعمالنا</span>
-                    </a>
+                        <div class="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl border border-[#6C9EFC]/20">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-[#6C9EFC]">150+</div>
+                                <div class="text-xs text-[#6A5E62] dark:text-gray-300">مشروع ناجح</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Image Section - Second on Mobile -->
-            <div class="flex-1 flex justify-center lg:justify-start order-2" data-aos="fade-left">
-                <div class="relative">
-                    <!-- Main Image Container -->
-                    <div class="relative bg-gradient-to-br from-[#6C9EFC] to-blue-400 rounded-3xl p-2 shadow-2xl">
-                        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden">
-                            <img 
-                                src="image/misk main.png" 
-                                alt="مؤسس الشركة" 
-                                class="w-full h-auto max-w-md lg:max-w-lg rounded-2xl transform hover:scale-105 transition-transform duration-500"
-                            />
-                        </div>
-                    </div>
-                    
-                    <!-- Floating Elements -->
-                    <div class="absolute -top-4 -right-4 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl border border-[#6C9EFC]/20">
-                        <div class="flex items-center gap-2">
-                            <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                            <span class="text-sm font-semibold text-[#6A5E62] dark:text-gray-300">نشط الآن</span>
-                        </div>
-                    </div>
-                    
-                    <div class="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl border border-[#6C9EFC]/20">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-[#6C9EFC]">150+</div>
-                            <div class="text-xs text-[#6A5E62] dark:text-gray-300">مشروع ناجح</div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Scroll Indicator - Third on Mobile -->
+            <div class="flex justify-center mt-12 lg:mt-0 lg:absolute lg:bottom-8 lg:left-1/2 lg:transform lg:-translate-x-1/2 animate-bounce order-3" data-aos="fade-up" data-aos-delay="800">
+                <a href="#services" class="flex flex-col items-center gap-2 text-[#6C9EFC] hover:text-[#5a8efc] transition-colors duration-300">
+                    <span class="text-sm font-semibold text-[#6A5E62] dark:text-gray-300">اكتشف المزيد</span>
+                    <i class="fas fa-chevron-down text-xl"></i>
+                </a>
             </div>
         </div>
-
-        <!-- Scroll Indicator - Third on Mobile -->
-        <div class="flex justify-center mt-12 lg:mt-0 lg:absolute lg:bottom-8 lg:left-1/2 lg:transform lg:-translate-x-1/2 animate-bounce order-3" data-aos="fade-up" data-aos-delay="800">
-            <a href="#services" class="flex flex-col items-center gap-2 text-[#6C9EFC] hover:text-[#5a8efc] transition-colors duration-300">
-                <span class="text-sm font-semibold text-[#6A5E62] dark:text-gray-300">اكتشف المزيد</span>
-                <i class="fas fa-chevron-down text-xl"></i>
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- قسم الخدمات -->
-    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-blue-900" id="services">
+    <section class="py-20 bg-gray-50" id="services">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
             <div class="text-center mb-16">
                 <div class="inline-block mb-4">
-                    <span class="text-[#6C9EFC] dark:text-blue-400 text-sm font-semibold bg-blue-100 dark:bg-blue-900/30 px-4 py-2 rounded-full">
+                    <span class="text-black text-sm font-semibold bg-blue-100 dark:bg-blue-900/30 px-4 py-2 rounded-full">
                         خدماتنا المتكاملة
                     </span>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                    حلول <span class="text-[#6C9EFC] dark:text-blue-400">شاملة</span> لنمو أعمالك
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="text-[#6C9EFC] dark:text-blue-400">حلول شاملة لنمو أعمالك</span>
                 </h2>
-                <p class="text-xl text-[#6A5E62] dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-xl text-[#6A5E62] dark:text-black-300 max-w-3xl mx-auto leading-relaxed">
                     نقدم مجموعة متكاملة من الخدمات الاحترافية التي تمكّنك من النمو في العالم الرقمي بثقة واحترافية
                 </p>
             </div>
@@ -196,7 +202,7 @@
                 </a>
 
                 <!-- Service Card 2 -->
-                <a href="marketing.html" class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-[#6C9EFC] dark:hover:border-blue-400 hover:-translate-y-2">
+                <a href="design-services.php" class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-[#6C9EFC] dark:hover:border-blue-400 hover:-translate-y-2">
                     <!-- Background Gradient -->
                     <div class="absolute inset-0 bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -256,7 +262,7 @@
                 </a>
 
                 <!-- Service Card 4 -->
-                <a href="office.html" class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-[#6C9EFC] dark:hover:border-blue-400 hover:-translate-y-2">
+                <a href="office-services.php" class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-[#6C9EFC] dark:hover:border-blue-400 hover:-translate-y-2">
                     <!-- Background Gradient -->
                     <div class="absolute inset-0 bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -273,6 +279,66 @@
                         <p class="text-[#6A5E62] dark:text-gray-300 text-sm leading-relaxed mb-4">
                             إعداد مستندات وتقارير احترافية بأعلى جودة تناسب احتياجات عملك.
                         </p>
+
+                        <!-- Arrow -->
+                        <div class="flex items-center text-[#6C9EFC] dark:text-blue-400 font-semibold text-sm">
+                            <span>اكتشف المزيد</span>
+                            <i class="fas fa-arrow-left mr-2 group-hover:mr-3 transition-all duration-300"></i>
+                        </div>
+                    </div>
+
+                    <!-- Hover Effect -->
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#6C9EFC] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </a>
+
+                <!-- government Card 5 -->
+
+                <a href="government-services.php" class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-[#6C9EFC] dark:hover:border-blue-400 hover:-translate-y-2">
+                    <!-- Background Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    <!-- Icon Container -->
+                    <div class="relative p-6">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-[#6C9EFC] rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-500 mb-4">
+                            <i class="fas fa-landmark text-xl text-white"></i>
+                        </div>
+
+                        <!-- Content -->
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-[#6C9EFC] dark:group-hover:text-blue-400 transition-colors duration-300">
+                            الخدمات الحكومية -السعودية
+                        </h3>
+                        <p class="text-[#6A5E62] dark:text-gray-300 text-sm leading-relaxed mb-4">
+                            نوفر لك حلولاً رقمية متكاملة للخدمات الحكومية السعودية، تسهّل تنفيذ معاملاتك الرسمية بسرعة وأمان، مع دعم فني مستمر وتجربة استخدام سلسة.
+                        </p>
+
+                        <!-- Arrow -->
+                        <div class="flex items-center text-[#6C9EFC] dark:text-blue-400 font-semibold text-sm">
+                            <span>اكتشف المزيد</span>
+                            <i class="fas fa-arrow-left mr-2 group-hover:mr-3 transition-all duration-300"></i>
+                        </div>
+                    </div>
+
+                    <!-- Hover Effect -->
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#6C9EFC] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </a>
+                <!-- sport Card 6 -->
+
+                <a href="sport-services.php" class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-[#6C9EFC] dark:hover:border-blue-400 hover:-translate-y-2">
+                    <!-- Background Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                    <!-- Icon Container -->
+                    <div class="relative p-6">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-[#6C9EFC] rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-500 mb-4">
+                            <i class="fas fa-hand-holding-dollar text-xl text-white"></i>
+                        </div>
+
+                        <!-- Content -->
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-[#6C9EFC] dark:group-hover:text-blue-400 transition-colors duration-300">
+                            خدمات الدعم والتمويل
+                        </h3>
+                        <p class="text-[#6A5E62] dark:text-gray-300 text-sm leading-relaxed mb-4">
+                            نوفر لك حلول دعم وتمويل مبتكرة تساعدك على تحقيق أهدافك المالية بكل سهولة وأمان، من خلال برامج تمويل مرنة، وخدمات استشارية متخصصة، ودعم متواصل يضمن لك تجربة موثوقة ومتكاملة. </p>
 
                         <!-- Arrow -->
                         <div class="flex items-center text-[#6C9EFC] dark:text-blue-400 font-semibold text-sm">
@@ -333,28 +399,33 @@
         <div class="container">
             <div class="section-title">
                 <h2>كيف نعمل</h2>
-                <p>رحلة نجاح متجرك الإلكتروني تبدأ بخطوات بسيطة ومحكمة</p>
+                <p> نجاح أي مشروع رقمي يبدأ بخطوات واضحة ومحكمة. نحن نرتكز على التحليل الدقيق، التصميم الإبداعي، التطوير الحديث، والدعم المستمر لضمان تحقيق أهدافك بكل كفاءة.
+                </p>
             </div>
             <div class="steps-container">
                 <div class="step-card fade-in">
                     <div class="step-number">1</div>
                     <h3>الاستشارة والتخطيط</h3>
-                    <p>نبدأ بفهم احتياجاتك وأهدافك لتخطيط استراتيجية متكاملة تناسب مشروعك</p>
+                    <p> نبدأ بفهم مشروعك وأهدافك وطبيعة جمهورك، لنضع خطة استراتيجية شاملة تناسب أي نوع من المشاريع الرقمية والخدمات الاحترافية.
+                    </p>
                 </div>
                 <div class="step-card fade-in">
                     <div class="step-number">2</div>
                     <h3>التصميم والتطوير</h3>
-                    <p>نصمم متجرك الإلكتروني بتقنيات حديثة تجمع بين الجمال والوظائف</p>
+                    <p> نقدم حلولاً إبداعية وتقنية تناسب جميع الخدمات الرقمية، من واجهات المستخدم الحديثة إلى تطوير البرمجيات والمواقع، بما يضمن الجمال والكفاءة في الوقت نفسه.
+                    </p>
                 </div>
                 <div class="step-card fade-in">
                     <div class="step-number">3</div>
                     <h3>الاختبار والتجربة</h3>
-                    <p>نختبر كل تفاصيل المتجر لضمان تجربة مستخدم سلسة وخالية من الأخطاء</p>
+                    <p> نختبر كل خدمة بدقة ونتأكد من أدائها العالي، سواء كانت منصة رقمية، تطبيق، أو خدمة مكتبية، لضمان تجربة سلسة ونتائج مضمونة.
+                    </p>
                 </div>
                 <div class="step-card fade-in">
                     <div class="step-number">4</div>
-                    <h3>الإطلاق والدعم</h3>
-                    <p>نطلق متجرك وندعمك بشكل مستمر لضمان نجاحه ونموه المستمر</p>
+                    <h3>الإطلاق والدعم المستمر</h3>
+                    <p> بعد التنفيذ، نضمن استمرارية نجاحك عبر دعم تقني واستشارات مستمرة، وتحليل الأداء، لتطوير أي مشروع أو خدمة رقمية وتحقيق النمو المستدام.
+                    </p>
                 </div>
             </div>
         </div>
@@ -849,6 +920,15 @@ justify-content:center; align-items:center; z-index:9998;">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+        });
+    </script>
+
 </body>
 
 </html>
+
+

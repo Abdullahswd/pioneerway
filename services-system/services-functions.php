@@ -15,6 +15,8 @@ function getServices($section)
             return getDesignServices();
         case 'government':
             return getGovernmentServices();
+        case 'sport':
+            return getSupportFinancingServices();
         default:
             return getBusinessServices();
     }
@@ -146,7 +148,7 @@ function getBusinessServices()
             'name' => "تصميم منيو Menu | مجلة عروض وأسعار",
             'group' => "خدمات الشركات والموسسات",
             'price' => "225 ريال",
-            'image' => "/pioneerway/image/services/menu.png",
+            'image' => "/pioneerway/image/services/Menu.png",
             'link' => "order.php?service=11",
             'description' => "تصميم منيو احترافي أو مجلة عروض بأسلوب جذاب يعكس هوية متجرك ويبرز منتجاتك"
         ],
@@ -353,7 +355,7 @@ function getBusinessServices()
             'name' => "إصدار باركود مطابقة منتج - الهيئة السعودية للمواصفات والمقاييس",
             'group' => "استخراج الوثائق والشهادات",
             'price' => "315 ريال",
-            'image' => "/pioneerway/image/logo.png",
+            'image' => "/pioneerway/image/services/QR2.png",
             'link' => "order.php?service=34",
             'description' => "خدمة استخراج باركود مطابقة المنتج المعتمد لضمان توافق منتجاتك مع المعايير السعودية"
         ],
@@ -380,7 +382,7 @@ function getProgrammingServices()
             'name' => "تصميم صفحات الهبوط",
             'group' => "تطوير المواقع والمنصات",
             'price' => "720 ريال",
-            'image' => "/pioneerway/image/programming/landing-pages.png",
+            'image' => "/pioneerway/image/services/Landing Page.png",
             'link' => "order.php?service=329",
             'description' => "تصميم صفحات هبوط مخصصة للحملات التسويقية والإعلانية"
         ],
@@ -398,7 +400,7 @@ function getProgrammingServices()
             'name' => "إنشاء نطاق / دومين وربطه مع موقعك",
             'group' => "تطوير المواقع والمنصات",
             'price' => "135 ريال",
-            'image' => "/pioneerway/image/programming/domain.png",
+            'image' => "/pioneerway/image/services/Create a domain.png",
             'link' => "order.php?service=332",
             'description' => "إنشاء نطاق إلكتروني وربطه مع موقعك الإلكتروني بشكل احترافي"
         ],
@@ -408,7 +410,7 @@ function getProgrammingServices()
             'id' => 330,
             'name' => "تصميم وبرمجة تطبيقات الجوال",
             'group' => "تطوير التطبيقات",
-            'price' => "سيتم حجز موعد لتحديد السعر",
+            'price' => "استفسار سعر",
             'image' => "/pioneerway/image/programming/mobile-apps.png",
             'link' => "order.php?service=330",
             'description' => "تصميم وبرمجة تطبيقات جوال احترافية لمنصتي iOS و Android"
@@ -435,7 +437,7 @@ function getOfficeServices()
             'name' => "تصميم سيرة ذاتية إبداعية",
             'group' => "خدمات الذكاء الاصطناعي والتصميم",
             'price' => "63 ريال",
-            'image' => "/pioneerway/image/office/cv-design.png",
+            'image' => "/pioneerway/image/services/CV.png",
             'link' => "order.php?service=401",
             'description' => "تصميم سيرة ذاتية إبداعية ومتميزة تعزز فرصك الوظيفية"
         ],
@@ -473,7 +475,7 @@ function getOfficeServices()
             'name' => "إنشاء باركود للمسح الملفات والمواقع",
             'group' => "خدمات الملفات والمستندات",
             'price' => "40.5 ريال",
-            'image' => "/pioneerway/image/office/barcode.png",
+            'image' => "/pioneerway/image/services/QR.png",
             'link' => "order.php?service=405",
             'description' => "إنشاء باركود مخصص لمسح الملفات والمواقع الإلكترونية"
         ],
@@ -484,7 +486,7 @@ function getOfficeServices()
             'name' => "إنشاء حساب آيكلاود",
             'group' => "خدمات الحسابات والاستبيانات",
             'price' => "54 ريال",
-            'image' => "/pioneerway/image/office/icloud.png",
+            'image' => "/pioneerway/image/design/icloud.png",
             'link' => "order.php?service=406",
             'description' => "إنشاء وإعداد حساب آيكلاود بشكل احترافي وآمن"
         ],
@@ -493,7 +495,7 @@ function getOfficeServices()
             'name' => "إنشاء حساب جيميل",
             'group' => "خدمات الحسابات والاستبيانات",
             'price' => "54 ريال",
-            'image' => "/pioneerway/image/office/gmail.png",
+            'image' => "/pioneerway/image/design/gmail.png",
             'link' => "order.php?service=407",
             'description' => "إنشاء وإعداد حساب جيميل بشكل احترافي وآمن"
         ],
@@ -502,13 +504,13 @@ function getOfficeServices()
             'name' => "إنشاء استبيان أو اختبار إلكتروني",
             'group' => "خدمات الحسابات والاستبيانات",
             'price' => "117 ريال",
-            'image' => "/pioneerway/image/office/survey.png",
+            'image' => "/pioneerway/image/services/Questionnaire.png",
             'link' => "order.php?service=408",
             'description' => "إنشاء استبيان أو اختبار إلكتروني متكامل ومهني"
         ]
     ];
 }
-
+// داله الخدمات الابذاعية والتسويقية
 function getDesignServices()
 {
     return [
@@ -518,7 +520,7 @@ function getDesignServices()
             'name' => "بناء وتصميم الهوية البصرية",
             'group' => "التصاميم الاحترافية",
             'price' => "360 ريال",
-            'image' => "/pioneerway/image/design/visual-identity.png",
+            'image' => "/pioneerway/image/services/Visual_identity.png",
             'link' => "order.php?service=300",
             'description' => "تصميم هوية بصرية متكاملة لعلامتك التجارية"
         ],
@@ -527,7 +529,7 @@ function getDesignServices()
             'name' => "تصميم بطاقة الموظف",
             'group' => "التصاميم الاحترافية",
             'price' => "90 ريال",
-            'image' => "/pioneerway/image/design/employee-card.png",
+            'image' => "/pioneerway/image/services/Employee card.png",
             'link' => "order.php?service=301",
             'description' => "تصميم بطاقة موظف احترافية ومميزة"
         ],
@@ -536,7 +538,7 @@ function getDesignServices()
             'name' => "تصميم منيو (قائمة الطعام)",
             'group' => "التصاميم الاحترافية",
             'price' => "225 ريال",
-            'image' => "/pioneerway/image/design/menu.png",
+            'image' => "/pioneerway/image/services/Menu.png",
             'link' => "order.php?service=302",
             'description' => "تصميم قائمة طعام جذابة واحترافية"
         ],
@@ -545,7 +547,7 @@ function getDesignServices()
             'name' => "تصميم البوسترات والإعلانات",
             'group' => "التصاميم الاحترافية",
             'price' => "72 ريال",
-            'image' => "/pioneerway/image/design/posters.png",
+            'image' => "/pioneerway/image/design/poster.png",
             'link' => "order.php?service=303",
             'description' => "تصميم بوسترات وإعلانات مبدعة وجذابة"
         ],
@@ -554,7 +556,7 @@ function getDesignServices()
             'name' => "تحريك شعار - موشن",
             'group' => "التصاميم الاحترافية",
             'price' => "270 ريال",
-            'image' => "/pioneerway/image/design/logo-motion.png",
+            'image' => "/pioneerway/image/design/move_logo.png",
             'link' => "order.php?service=304",
             'description' => "تحريك شعارك بتقنية الموشن جرافيك"
         ],
@@ -563,7 +565,7 @@ function getDesignServices()
             'name' => "تصميم بنر",
             'group' => "التصاميم الاحترافية",
             'price' => "63 ريال",
-            'image' => "/pioneerway/image/design/banner.png",
+            'image' => "/pioneerway/image/design/panar.png",
             'link' => "order.php?service=305",
             'description' => "تصميم بنر إعلاني احترافي وجذاب"
         ],
@@ -572,7 +574,7 @@ function getDesignServices()
             'name' => "تصميم وإضافة فلاتر سناب شات",
             'group' => "التصاميم الاحترافية",
             'price' => "324 ريال",
-            'image' => "/pioneerway/image/design/snapchat-filters.png",
+            'image' => "/pioneerway/image/design/snap.png",
             'link' => "order.php?service=306",
             'description' => "تصميم فلاتر مخصصة لتطبيق سناب شات"
         ],
@@ -581,7 +583,7 @@ function getDesignServices()
             'name' => "تصميم شعار احترافي",
             'group' => "التصاميم الاحترافية",
             'price' => "315 ريال",
-            'image' => "/pioneerway/image/design/professional-logo.png",
+            'image' => "/pioneerway/image/services/Logos design.png",
             'link' => "order.php?service=307",
             'description' => "تصميم شعار احترافي يعبر عن هوية علامتك التجارية"
         ],
@@ -590,7 +592,7 @@ function getDesignServices()
             'name' => "إنشاء باركود للمسح للملفات والمواقع",
             'group' => "التصاميم الاحترافية",
             'price' => "40.5 ريال",
-            'image' => "/pioneerway/image/design/barcode.png",
+            'image' => "/pioneerway/image/services/QR.png",
             'link' => "order.php?service=308",
             'description' => "إنشاء باركود مخصص للملفات والمواقع الإلكترونية"
         ],
@@ -599,7 +601,7 @@ function getDesignServices()
             'name' => "تصميم عروض تقديمية",
             'group' => "التصاميم الاحترافية",
             'price' => "135 ريال",
-            'image' => "/pioneerway/image/design/presentations.png",
+            'image' => "/pioneerway/image/design/presentation.png",
             'link' => "order.php?service=309",
             'description' => "تصميم عروض تقديمية احترافية وجذابة"
         ],
@@ -617,7 +619,7 @@ function getDesignServices()
             'name' => "تصاميم بطاقة دعوة",
             'group' => "التصاميم الاحترافية",
             'price' => "82.8 ريال",
-            'image' => "/pioneerway/image/design/invitation-card.png",
+            'image' => "/pioneerway/image/design/card.png",
             'link' => "order.php?service=311",
             'description' => "تصميم بطاقة دعوة مميزة وفاخرة"
         ],
@@ -626,7 +628,7 @@ function getDesignServices()
             'name' => "تصميم بطاقة عمل",
             'group' => "التصاميم الاحترافية",
             'price' => "82.8 ريال",
-            'image' => "/pioneerway/image/design/business-card.png",
+            'image' => "/pioneerway/image/design/cards.png",
             'link' => "order.php?service=312",
             'description' => "تصميم بطاقة عمل احترافية تعكس هوية علامتك التجارية"
         ],
@@ -637,7 +639,7 @@ function getDesignServices()
             'name' => "تصميم فيديو كولاج مع رياكشن",
             'group' => "إنتاج الفيديو الإبداعي",
             'price' => "225 ريال",
-            'image' => "/pioneerway/image/video/collage-reaction.png",
+            'image' => "/pioneerway/image/design/collage-reaction.png",
             'link' => "order.php?service=313",
             'description' => "تصميم فيديو كولاج مع تفاعل رياكشن مبدع"
         ],
@@ -646,7 +648,7 @@ function getDesignServices()
             'name' => "خدمة تصميم إعلان احترافي بالذكاء الاصطناعي",
             'group' => "إنتاج الفيديو الإبداعي",
             'price' => "135 ريال",
-            'image' => "/pioneerway/image/video/ai-ad.png",
+            'image' => "/pioneerway/image/design/ai-ad.png",
             'link' => "order.php?service=314",
             'description' => "تصميم إعلان احترافي باستخدام تقنيات الذكاء الاصطناعي"
         ],
@@ -655,7 +657,7 @@ function getDesignServices()
             'name' => "تصميم فيديو موشن جرافيك",
             'group' => "إنتاج الفيديو الإبداعي",
             'price' => "162 ريال",
-            'image' => "/pioneerway/image/video/motion-graphics.png",
+            'image' => "/pioneerway/image/design/motion-graphics.png",
             'link' => "order.php?service=315",
             'description' => "تصميم فيديو موشن جرافيك إبداعي واحترافي"
         ],
@@ -664,7 +666,7 @@ function getDesignServices()
             'name' => "تصميم فيديوهات للمناسبات",
             'group' => "إنتاج الفيديو الإبداعي",
             'price' => "90 ريال",
-            'image' => "/pioneerway/image/video/occasion-videos.png",
+            'image' => "/pioneerway/image/design/occasion-videos.png",
             'link' => "order.php?service=316",
             'description' => "تصميم فيديوهات مخصصة للمناسبات والأحداث الخاصة"
         ],
@@ -675,7 +677,7 @@ function getDesignServices()
             'name' => "حل مشاكل حسابات السوشال ميديا | استرجاع الحسابات المخترقة والمعطلة",
             'group' => "خدمات السوشال ميديا",
             'price' => "27 ريال",
-            'image' => "/pioneerway/image/social/account-recovery.png",
+            'image' => "/pioneerway/image/design/account-recovery.png",
             'link' => "order.php?service=317",
             'description' => "حل مشاكل حسابات السوشال ميديا واسترجاع الحسابات المخترقة والمعطلة"
         ],
@@ -684,7 +686,7 @@ function getDesignServices()
             'name' => "خدمة إنشاء رابط موحد لجميع الخدمات",
             'group' => "خدمات السوشال ميديا",
             'price' => "72 ريال",
-            'image' => "/pioneerway/image/social/unified-link.png",
+            'image' => "/pioneerway/image/services/Unified link.png",
             'link' => "order.php?service=318",
             'description' => "إنشاء رابط موحد يجمع جميع خدماتك ومنصاتك"
         ],
@@ -693,7 +695,7 @@ function getDesignServices()
             'name' => "البحث عن اسم لمشروعك",
             'group' => "خدمات السوشال ميديا",
             'price' => "54 ريال",
-            'image' => "/pioneerway/image/social/project-name.png",
+            'image' => "/pioneerway/image/design/search name.png",
             'link' => "order.php?service=319",
             'description' => "البحث واقتراح اسم مميز ومبتكر لمشروعك"
         ],
@@ -702,7 +704,7 @@ function getDesignServices()
             'name' => "خدمات الميل شيمب - التسويق عبر الإيميل",
             'group' => "خدمات السوشال ميديا",
             'price' => "90 ريال",
-            'image' => "/pioneerway/image/social/mailchimp.png",
+            'image' => "/pioneerway/image/design/mailchimp.png",
             'link' => "order.php?service=320",
             'description' => "خدمات التسويق عبر البريد الإلكتروني باستخدام ميل شيمب"
         ],
@@ -711,7 +713,7 @@ function getDesignServices()
             'name' => "رخصة موثوق لتقديم المحتوى الإعلاني",
             'group' => "خدمات السوشال ميديا",
             'price' => "225 ريال",
-            'image' => "/pioneerway/image/social/mawthooq-license.png",
+            'image' => "/pioneerway/image/services/Media license.png",
             'link' => "order.php?service=321",
             'description' => "الحصول على رخصة موثوق لتقديم المحتوى الإعلاني"
         ],
@@ -720,7 +722,7 @@ function getDesignServices()
             'name' => "إنشاء حساب آيكلاود",
             'group' => "خدمات السوشال ميديا",
             'price' => "54 ريال",
-            'image' => "/pioneerway/image/social/icloud.png",
+            'image' => "/pioneerway/image/design/icloud.png",
             'link' => "order.php?service=322",
             'description' => "إنشاء وإعداد حساب آيكلاود بشكل احترافي"
         ],
@@ -729,7 +731,7 @@ function getDesignServices()
             'name' => "إنشاء حساب جيميل",
             'group' => "خدمات السوشال ميديا",
             'price' => "54 ريال",
-            'image' => "/pioneerway/image/social/gmail.png",
+            'image' => "/pioneerway/image/design/gmail.png",
             'link' => "order.php?service=323",
             'description' => "إنشاء وإعداد حساب جيميل بشكل احترافي"
         ],
@@ -738,7 +740,7 @@ function getDesignServices()
             'name' => "إنشاء نطاق / دومين وربطه مع موقعك",
             'group' => "خدمات السوشال ميديا",
             'price' => "135 ريال",
-            'image' => "/pioneerway/image/social/domain.png",
+            'image' => "/pioneerway/image/services/Create a domain.png",
             'link' => "order.php?service=324",
             'description' => "إنشاء نطاق إلكتروني وربطه مع موقعك الإلكتروني"
         ],
@@ -747,7 +749,7 @@ function getDesignServices()
             'name' => "إضافة موقعك على خريطة سناب شات",
             'group' => "خدمات السوشال ميديا",
             'price' => "315 ريال",
-            'image' => "/pioneerway/image/social/snapchat-map.png",
+            'image' => "/pioneerway/image/design/snapchat-map.png",
             'link' => "order.php?service=325",
             'description' => "إضافة موقع عملك على خريطة سناب شات"
         ],
@@ -756,7 +758,7 @@ function getDesignServices()
             'name' => "خدمات خرائط قوقل",
             'group' => "خدمات السوشال ميديا",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/social/google-maps.png",
+            'image' => "/pioneerway/image/design/Google maps.png",
             'link' => "order.php?service=326",
             'description' => "خدمات متكاملة لخرائط قوقل للأعمال"
         ],
@@ -767,13 +769,13 @@ function getDesignServices()
             'name' => "خدمة كتابة المحتوى",
             'group' => "خدمات كتابة المحتوى",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/content/writing.png",
+            'image' => "/pioneerway/image/design/writing.png",
             'link' => "order.php?service=327",
             'description' => "خدمة كتابة محتوى احترافي وجذاب لمواقعك ومنصاتك"
         ]
     ];
 }
-
+//  دالة للخدمات الحكومية
 function getGovernmentServices()
 {
     return [
@@ -783,7 +785,7 @@ function getGovernmentServices()
             'name' => "انشاء سند أمر",
             'group' => "الوثائق والشهادات والعقود",
             'price' => "117 ريال",
-            'image' => "/pioneerway/image/government/order-bond.png",
+            'image' => "/pioneerway/image/services/Promissory note.png",
             'link' => "order.php?service=500",
             'description' => "إنشاء سند أمر رسمي ومعتمد"
         ],
@@ -792,7 +794,7 @@ function getGovernmentServices()
             'name' => "خدمات الغرف التجارية",
             'group' => "الوثائق والشهادات والعقود",
             'price' => "117 ريال",
-            'image' => "/pioneerway/image/government/chamber-of-commerce.png",
+            'image' => "/pioneerway/image/services/chamber of commerce.png",
             'link' => "order.php?service=501",
             'description' => "خدمات متكاملة للغرف التجارية السعودية"
         ],
@@ -801,7 +803,7 @@ function getGovernmentServices()
             'name' => "إصدار باركود مطابقة منتج - الهيئة السعودية للمواصفات والمقاييس",
             'group' => "الوثائق والشهادات والعقود",
             'price' => "315 ريال",
-            'image' => "/pioneerway/image/government/product-barcode.png",
+            'image' => "/pioneerway/image/services/QR.png",
             'link' => "order.php?service=502",
             'description' => "إصدار باركود مطابقة منتج من الهيئة السعودية للمواصفات والمقاييس"
         ],
@@ -810,7 +812,7 @@ function getGovernmentServices()
             'name' => "باقة التوثيق المتكاملة للمشاريع والمتاجر",
             'group' => "الوثائق والشهادات والعقود",
             'price' => "450 ريال",
-            'image' => "/pioneerway/image/government/documentation-package.png",
+            'image' => "/pioneerway/image/services/Document package.png",
             'link' => "order.php?service=503",
             'description' => "باقة توثيق متكاملة للمشاريع والمتاجر تشمل جميع المستندات المطلوبة"
         ],
@@ -819,7 +821,7 @@ function getGovernmentServices()
             'name' => "رخصة موثوق لتقديم المحتوى الإعلاني",
             'group' => "الوثائق والشهادات والعقود",
             'price' => "225 ريال",
-            'image' => "/pioneerway/image/government/mawthooq-license.png",
+            'image' => "/pioneerway/image/services/Media license.png",
             'link' => "order.php?service=504",
             'description' => "الحصول على رخصة موثوق لتقديم المحتوى الإعلاني"
         ],
@@ -929,7 +931,7 @@ function getGovernmentServices()
             'name' => "تسجيل مشروعك أو محلك في تطبيقات التوصيل",
             'group' => "خدمات التسجيل والتحديث",
             'price' => "18 ريال",
-            'image' => "/pioneerway/image/government/delivery-apps-registration.png",
+            'image' => "/pioneerway/image/services/Register for delivery applications.png",
             'link' => "order.php?service=516",
             'description' => "تسجيل المشروع أو المحل في تطبيقات التوصيل المختلفة"
         ],
@@ -974,7 +976,7 @@ function getGovernmentServices()
             'name' => "دعم توطين",
             'group' => "خدمات التسجيل والتحديث",
             'price' => "126 ريال",
-            'image' => "/pioneerway/image/government/tatweer.png",
+            'image' => "/pioneerway/image/government/tawteen.png",
             'link' => "order.php?service=521",
             'description' => "خدمات دعم توطين القطاعات المختلفة"
         ],
@@ -983,7 +985,7 @@ function getGovernmentServices()
             'name' => "التسجيل في وظائف طاقات",
             'group' => "خدمات التسجيل والتحديث",
             'price' => "108 ريال",
-            'image' => "/pioneerway/image/government/taqat-jobs.png",
+            'image' => "/pioneerway/image/government/taqat.png",
             'link' => "order.php?service=522",
             'description' => "التسجيل والتقديم على الوظائف في منصة طاقات"
         ],
@@ -992,7 +994,7 @@ function getGovernmentServices()
             'name' => "التسجيل في وظائف جدارات",
             'group' => "خدمات التسجيل والتحديث",
             'price' => "90 ريال",
-            'image' => "/pioneerway/image/government/jadaratt-jobs.png",
+            'image' => "/pioneerway/image/government/jadaratt.png",
             'link' => "order.php?service=523",
             'description' => "التسجيل والتقديم على الوظائف في منصة جدارات"
         ],
@@ -1001,7 +1003,7 @@ function getGovernmentServices()
             'name' => "التسجيل في وظائف كادر",
             'group' => "خدمات التسجيل والتحديث",
             'price' => "90 ريال",
-            'image' => "/pioneerway/image/government/kader-jobs.png",
+            'image' => "/pioneerway/image/government/kader.png",
             'link' => "order.php?service=524",
             'description' => "التسجيل والتقديم على الوظائف في برنامج كادر"
         ],
@@ -1018,8 +1020,8 @@ function getGovernmentServices()
             'id' => 526,
             'name' => "دعم ساند يصل الى 5400 شهريا",
             'group' => "خدمات التسجيل والتحديث",
-            'price' => "سيتم حجز موعد لتحديد السعر",
-            'image' => "/pioneerway/image/government/sanid-support.png",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/government/sanid.png",
             'link' => "order.php?service=526",
             'description' => "التسجيل في برنامج ساند للحصول على دعم يصل إلى 5400 ريال شهرياً"
         ],
@@ -1243,7 +1245,7 @@ function getGovernmentServices()
             'name' => "تمويل سيولة يصل الى 300 الف",
             'group' => "خدمات الدعم والتمويل",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/government/liquidity-financing.png",
+            'image' => "/pioneerway/image/government/X.png",
             'link' => "order.php?service=550",
             'description' => "التقديم على تمويل السيولة بمبلغ يصل إلى 300 ألف ريال"
         ],
@@ -1303,26 +1305,261 @@ function getGovernmentServices()
         ]
     ];
 }
+// دالة لخدمات التمويل والدعم
+function getSupportFinancingServices()
+{
+    return [
+        // الدعوم الحكومية الغير مستردة
+        [
+            'id' => 600,
+            'name' => "التمويل الموسمي دعم يصل لـ 30 الآلف ريال",
+            'group' => "الدعوم الحكومية الغير مستردة",
+            'price' => "225 ريال",
+            'image' => "/pioneerway/image/government/seasonal-financing.png",
+            'link' => "order.php?service=600",
+            'description' => "التمويل الموسمي بدعم حكومي يصل إلى 30 ألف ريال غير مسترد"
+        ],
+        [
+            'id' => 601,
+            'name' => "برنامج قرة لمساعدة الأم العاملة",
+            'group' => "الدعوم الحكومية الغير مستردة",
+            'price' => "126 ريال",
+            'image' => "/pioneerway/image/government/qurra-program.png",
+            'link' => "order.php?service=601",
+            'description' => "برنامج قرة لدعم الأمهات العاملات برعاية أطفالهن"
+        ],
+        [
+            'id' => 602,
+            'name' => "دعم توطين",
+            'group' => "الدعوم الحكومية الغير مستردة",
+            'price' => "126 ريال",
+            'image' => "/pioneerway/image/government/tawteen.png",
+            'link' => "order.php?service=602",
+            'description' => "دعم توطين القطاعات المختلفة في سوق العمل"
+        ],
+        [
+            'id' => 603,
+            'name' => "تمهير يصل الى 3000 شهريا",
+            'group' => "الدعوم الحكومية الغير مستردة",
+            'price' => "126 ريال",
+            'image' => "/pioneerway/image/government/tamheer.png",
+            'link' => "order.php?service=603",
+            'description' => "برنامج تمهير لدعم المتدربين بمبلغ يصل إلى 3000 ريال شهرياً"
+        ],
+        [
+            'id' => 604,
+            'name' => "دعم التأهيل الشامل يصل الى 1600 شهريا",
+            'group' => "الدعوم الحكومية الغير مستردة",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/financing/comprehensive-rehabilitation.png",
+            'link' => "order.php?service=604",
+            'description' => "دعم التأهيل الشامل للأشخاص ذوي الإعاقة يصل إلى 1600 ريال شهرياً"
+        ],
+        [
+            'id' => 605,
+            'name' => "خدمة الاستفسار عن الدعم أو التمويل المناسب لك",
+            'group' => "الدعوم الحكومية الغير مستردة",
+            'price' => "36 ريال",
+            'image' => "/pioneerway/image/financing/financing-consultation.png",
+            'link' => "order.php?service=605",
+            'description' => "خدمة استشارية لتحديد الدعم أو التمويل المناسب لاحتياجاتك"
+        ],
+        [
+            'id' => 606,
+            'name' => "دعم حساب المواطن يصل الى 720 شهريا",
+            'group' => "الدعوم الحكومية الغير مستردة",
+            'price' => "90 ريال",
+            'image' => "/pioneerway/image/financing/citizen-account.png",
+            'link' => "order.php?service=606",
+            'description' => "دعم حساب المواطن المالي الذي يصل إلى 720 ريال شهرياً"
+        ],
+        [
+            'id' => 607,
+            'name' => "دعم الضمان الإجتماعي يصل الى 1476 شهريا",
+            'group' => "الدعوم الحكومية الغير مستردة",
+            'price' => "90 ريال",
+            'image' => "/pioneerway/image/financing/social-security.png",
+            'link' => "order.php?service=607",
+            'description' => "دعم الضمان الاجتماعي الذي يصل إلى 1476 ريال شهرياً"
+        ],
+        [
+            'id' => 608,
+            'name' => "دعم وصول يصل الى 1100 شهريا",
+            'group' => "الدعوم الحكومية الغير مستردة",
+            'price' => "72 ريال",
+            'image' => "/pioneerway/image/government/wusool.png",
+            'link' => "order.php?service=608",
+            'description' => "دعم وصول للنقل يصل إلى 1100 ريال شهرياً"
+        ],
+        [
+            'id' => 609,
+            'name' => "دعم حافز يصل الى 2000 شهريا",
+            'group' => "الدعوم الحكومية الغير مستردة",
+            'price' => "90 ريال",
+            'image' => "/pioneerway/image/financing/hafiz.png",
+            'link' => "order.php?service=609",
+            'description' => "دعم حافز للبحث عن العمل يصل إلى 2000 ريال شهرياً"
+        ],
+
+        // تمويل الأعمال
+        [
+            'id' => 610,
+            'name' => "تمويل التميز يصل الى 40 مليون",
+            'group' => "تمويل الأعمال",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/government/excellence-financing.png",
+            'link' => "order.php?service=610",
+            'description' => "تمويل التميز لدعم المشاريع الكبيرة يصل إلى 40 مليون ريال"
+        ],
+        [
+            'id' => 611,
+            'name' => "تمويل سيولة يصل الى 300 الف",
+            'group' => "تمويل الأعمال",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/financing/liquidity-financing.png",
+            'link' => "order.php?service=611",
+            'description' => "تمويل السيولة للمشاريع يصل إلى 300 ألف ريال"
+        ],
+        [
+            'id' => 612,
+            'name' => "تمويل الاسر المنتجة يصل الى 50 الف",
+            'group' => "تمويل الأعمال",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/government/productive-families-financing.png",
+            'link' => "order.php?service=612",
+            'description' => "تمويل الأسر المنتجة يصل إلى 50 ألف ريال"
+        ],
+        [
+            'id' => 613,
+            'name' => "تمويل العمل الحر النقدي يصل الى 120 الف",
+            'group' => "تمويل الأعمال",
+            'price' => "225 ريال",
+            'image' => "/pioneerway/image/financing/freelance-cash.png",
+            'link' => "order.php?service=613",
+            'description' => "تمويل نقدي للعاملين في العمل الحر يصل إلى 120 ألف ريال"
+        ],
+        [
+            'id' => 614,
+            'name' => "تمويل رواد الأعمال يصل إلى 500 ألف",
+            'group' => "تمويل الأعمال",
+            'price' => "225 ريال",
+            'image' => "/pioneerway/image/financing/entrepreneurs-financing.png",
+            'link' => "order.php?service=614",
+            'description' => "تمويل رواد الأعمال والمشاريع الريادية يصل إلى 500 ألف ريال"
+        ],
+
+        // التمويل الشخصي
+        [
+            'id' => 615,
+            'name' => "التمويل الموسمي دعم يصل لـ 30 الآلف ريال",
+            'group' => "التمويل الشخصي",
+            'price' => "225 ريال",
+            'image' => "/pioneerway/image/government/seasonal-financing.png",
+            'link' => "order.php?service=615",
+            'description' => "تمويل موسي شخصي بدعم يصل إلى 30 ألف ريال"
+        ],
+        [
+            'id' => 616,
+            'name' => "تمويل الاسر المنتجة يصل الى 50 الف",
+            'group' => "التمويل الشخصي",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/government/productive-families-financing.png",
+            'link' => "order.php?service=616",
+            'description' => "تمويل شخصي للأسر المنتجة يصل إلى 50 ألف ريال"
+        ],
+        [
+            'id' => 617,
+            'name' => "تمويل الترميم يصل الى 60 الف",
+            'group' => "التمويل الشخصي",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/government/renovation-financing.png",
+            'link' => "order.php?service=617",
+            'description' => "تمويل شخصي لترميم المنازل يصل إلى 60 ألف ريال"
+        ],
+        [
+            'id' => 618,
+            'name' => "تمويل الأصول - السيارات يصل الى 300 الف",
+            'group' => "التمويل الشخصي",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/government/assets-financing.png",
+            'link' => "order.php?service=618",
+            'description' => "تمويل شخصي لشراء السيارات والأصول يصل إلى 300 ألف ريال"
+        ],
+        [
+            'id' => 619,
+            'name' => "تمويل كنف يصل الى 30 الف",
+            'group' => "التمويل الشخصي",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/government/kanaf-financing.png",
+            'link' => "order.php?service=619",
+            'description' => "تمويل كنف الشخصي يصل إلى 30 ألف ريال"
+        ],
+        [
+            'id' => 620,
+            'name' => "تمويل الاسرة يصل الى 100 الف",
+            'group' => "التمويل الشخصي",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/government/family-financing.png",
+            'link' => "order.php?service=620",
+            'description' => "تمويل شخصي للأسرة يصل إلى 100 ألف ريال"
+        ],
+        [
+            'id' => 621,
+            'name' => "تمويل الزواج يصل الى 60 الف",
+            'group' => "التمويل الشخصي",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/government/marriage-financing.png",
+            'link' => "order.php?service=621",
+            'description' => "تمويل شخصي للزواج يصل إلى 60 ألف ريال"
+        ],
+        [
+            'id' => 622,
+            'name' => "دعم توصيل الطلبات يصل الى 3000 شهرياً",
+            'group' => "التمويل الشخصي",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/financing/delivery-support.png",
+            'link' => "order.php?service=622",
+            'description' => "دعم توصيل الطلبات يصل إلى 3000 ريال شهرياً"
+        ],
+        [
+            'id' => 623,
+            'name' => "دعم النقل الموجه (أوبر وكريم) يصل الى 3000 شهرياً",
+            'group' => "التمويل الشخصي",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/financing/ride-hailing-support.png",
+            'link' => "order.php?service=623",
+            'description' => "دعم النقل الموجه (أوبر وكريم) يصل إلى 3000 ريال شهرياً"
+        ],
+        [
+            'id' => 624,
+            'name' => "تمويل جنى يصل الى 50 الف",
+            'group' => "التمويل الشخصي",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/financing/jana-financing.png",
+            'link' => "order.php?service=624",
+            'description' => "تمويل جنى الشخصي يصل إلى 50 ألف ريال"
+        ],
+        [
+            'id' => 625,
+            'name' => "تمويل إمكان يصل الى مليون و 500 الف",
+            'group' => "التمويل الشخصي",
+            'price' => "180 ريال",
+            'image' => "/pioneerway/image/financing/emkan-financing.png",
+            'link' => "order.php?service=625",
+            'description' => "تمويل إمكان الشخصي يصل إلى مليون ونصف ريال"
+        ]
+    ];
+}
 
 
-
-// أضف هذه الدالة إلى services-functions.php
+// اضافة صور الاقسام
 function getGroupImagePath($groupName, $section = 'programming')
 {
     $groupImages = [
         // صور قسم البرمجة
-        'تطوير الويب' => 'web-development.png',
-        'تطبيقات الجوال' => 'mobile-apps.png',
-        'قواعد البيانات' => 'database.png',
-        'برمجة مخصصة' => 'coding.png',
-        'أنظمة الإدارة' => 'cms.png',
-        'الصيانة والتطوير' => 'maintenance.png',
-        'تحسين الأداء' => 'optimization.png',
-        'الذكاء الاصطناعي' => 'ai.png',
-        'الأمن والحماية' => 'security.png',
-        'استشارات تقنية' => 'consultation.png',
-        'تطوير الألعاب' => 'game.png',
-        'تحليل البيانات' => 'analytics.png',
+        "تطوير التطبيقات" => 'appDev.png',
+        "تطوير المواقع والمنصات" => 'web.png',
+
 
         // صور قسم التجارة
         'خدمات المتاجر الالكترونيه' => 'ecommerce.png',
@@ -1330,6 +1567,38 @@ function getGroupImagePath($groupName, $section = 'programming')
         'خدمات الاسر المنتجه' => 'family-business.png',
         'خدمات الشركات والموسسات' => 'Companies.png',
         'استخراج الوثائق والشهادات' => 'documents.png',
+
+
+        // صور قسم الخدمات الابداعية والتسويقيه 
+        "التصاميم الاحترافية" => 'design.png',
+        "خدمات كتابة المحتوى" => 'content_writing.png',
+        "خدمات السوشال ميديا" => 'social_media.png',
+        "إنتاج الفيديو الإبداعي" => 'video.png',
+
+
+
+
+
+
+        // صور قسم الخدمات المكتبيه    
+        "الدعوم الحكومية الغير مستردة" => 'appDev.png',
+        "تمويل الأعمال" => 'web.png',
+        "التمويل الشخصي" => 'web.png',
+
+
+        // صور قسم الخدمات الدعم  والتمويل  
+        "خدمات الذكاء الاصطناعي والتصميم" => 'appDev.png',
+        "خدمات الملفات والمستندات" => 'web.png',
+        "خدمات الحسابات والاستبيانات" => 'web.png',
+
+        // صور قسم الخدمات الحكوميه    
+        "الوثائق والشهادات والعقود" => 'abshir.png',
+        "خدمات التسجيل والتحديث" => 'Registration and update services.png',
+        "التوظيف ودعم الموظفين" => 'Employment services.png',
+        "خدمات أبشر والأحوال المدنية" => 'abshir.png',
+        "تقديم الشكاوى والإعتراضات" => 'Complaints services.png',
+        "خدمات الدعم والتمويل" => 'Support and financing services.png',
+
     ];
 
     $imageName = $groupImages[$groupName] ?? 'default.png';
@@ -1341,11 +1610,15 @@ function getGroupImagePath($groupName, $section = 'programming')
         case 'business-and-freelance':
             return "/pioneerway/image/groups/business/{$imageName}";
         case 'office':
-            return "/pioneerway/image/groups/office/{$imageName}";
+            return "/pioneerway/image/groups/programming/{$imageName}";
         case 'design':
             return "/pioneerway/image/groups/design/{$imageName}";
         case 'marketing':
             return "/pioneerway/image/groups/marketing/{$imageName}";
+        case 'sport':
+            return "/pioneerway/image/groups/programming/{$imageName}";
+        case 'government':
+            return "/pioneerway/image/groups/government/{$imageName}";
         default:
             return "/pioneerway/image/groups/business/{$imageName}";
     }

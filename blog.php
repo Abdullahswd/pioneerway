@@ -6,9 +6,9 @@
     <title>مدونة طريق الريادة</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/pioneerway/fonts.css">
     <script>
         tailwind.config = {
             theme: {
@@ -17,16 +17,14 @@
                         primary: '#6C9EFC',
                         secondary: '#6A5E62',
                     },
-                    fontFamily: {
-                        'tajawal': ['Tajawal', 'sans-serif'],
-                    }
+                   
                 }
             }
         }
     </script>
     <style>
         body {
-            font-family: 'Tajawal', sans-serif;
+           font-family: 'Tajawal', sans-serif;
         }
         
         .blog-card {

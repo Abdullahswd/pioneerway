@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Tajawal';
+  src: url('fonts/Tajawal/Tajawal-Black.ttf') format('truetype');
+  font-weight: 900; /* Black = 900 */
+  font-style: normal;
+  font-display: swap;
+}

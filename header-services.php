@@ -16,7 +16,7 @@
                </a>
 
                <!-- من نحن -->
-               <a href="#about"
+               <a href="/pioneerway/index.php#about"
                    class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">
                    <i class="fas fa-user ml-1 text-blue-500"></i>
                    من نحن
@@ -61,6 +61,13 @@
                            الخدمات المكتبية
                        </a>
 
+                        <!--خدمات الدعم والتمويل -->
+                       <a href="sport-services.php"
+                           class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
+                           <i class="fas fa-hand-holding-dollar ml-3 text-blue-500"></i>
+                           خدمات الدعم والتمويل
+                       </a>
+
                        <!-- الخدمات الحكومية -->
                        <a href="government-services.php"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
@@ -81,12 +88,12 @@
                    </button>
                    <div
                        class="dropdown-menu absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible transition-all duration-300 transform translate-y-2">
-                       <a href="#portfolio"
+                       <a href="/pioneerway/index.php#portfolio"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
                            <i class="fas fa-briefcase ml-3 text-blue-500"></i>
                            مشاريعنا
                        </a>
-                       <a href="#testimonials"
+                       <a href="/pioneerway/index.php#testimonials"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
                            <i class="fas fa-star ml-3 text-blue-500"></i>
                            شهادات العملاء
@@ -104,17 +111,17 @@
                    </button>
                    <div
                        class="dropdown-menu absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible transition-all duration-300 transform translate-y-2">
-                       <a href="#team"
+                       <a href="/pioneerway/index.php#team"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
                            <i class="fas fa-users ml-3 text-blue-500"></i>
                            فريقنا
                        </a>
-                       <a href="#about-us"
+                       <a href="/pioneerway/index.php#about-us"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
                            <i class="fas fa-book-open ml-3 text-blue-500"></i>
                            قصتنا
                        </a>
-                       <a href="#faq"
+                       <a href="/pioneerway/index.php#faq"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200">
                            <i class="fas fa-question-circle ml-3 text-blue-500"></i>
                            الأسئلة الشائعة
@@ -130,7 +137,7 @@
                </a>
 
                <!-- تواصل معنا -->
-               <a href="#contact"
+               <a href="/pioneerway/index.php#contact"
                    class="flex items-center text-gray-700 hover:text-blue-600 transition duration-300 px-3 py-2">
                    <i class="fas fa-envelope ml-1 text-blue-500"></i>
                    تواصل معنا
@@ -171,6 +178,10 @@
        <a href="office-services.php">
            <i class="fas fa-briefcase"></i>
            الخدمات المكتبية
+       </a>
+        <a href="sport-services.php">
+           <i class="fas fa-briefcase"></i>
+           خدمات الدعم والتمويل
        </a>
        <a href="government-services.php">
            <i class="fas fa-briefcase"></i>

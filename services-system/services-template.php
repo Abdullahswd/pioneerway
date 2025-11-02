@@ -8,16 +8,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle; ?></title>
+    
+    <!-- CSS أولاً -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/pioneerway/fonts.css">
     <link rel="stylesheet" href="/pioneerway/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
+        /* شاشة التحميل والتهيئة الأولية */
         body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            font-size: 0.9rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
 
+        body.page-loaded {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loading-screen.hidden {
+            display: none;
+        }
+
+        /* الأنماط الأصلية */
         .service-cards h3 {
             font-size: 1rem;
         }
@@ -470,6 +498,14 @@
 </head>
 
 <body class="bg-gray-50">
+    <!-- شاشة تحميل -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="text-center">
+            <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <p class="text-gray-600">جاري التحميل...</p>
+        </div>
+    </div>
+
     <!-- قسم منحني فاخر -->
     <div class="curved-div"></div>
 
@@ -480,7 +516,7 @@
                 <div class="flex flex-col md:flex-row gap-6 items-center justify-between">
                     <!-- المسار -->
                     <div class="breadcrumb text-sm">
-                        <span>الرئيسية</span> / <span><?php echo $pageTitle; ?></span>
+                        <span><a href="/pioneerway/index.php#services">الرئيسية</a></span> / <span><?php echo $pageTitle; ?></span>
                     </div>
 
                     <!-- البحث -->
@@ -498,10 +534,10 @@
                 <div class="flex flex-wrap justify-center gap-6">
                     <!-- تبويب "الكل" -->
                     <button class="tab-btn active flex flex-col items-center p-4 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 w-28" data-category="all">
-                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-200 to-purple-200 flex items-center justify-center mb-3">
+                        <div class="w-25 h-25 rounded-full bg-gradient-to-br from-blue-200 to-purple-200 flex items-center   mb-3">
                             <img src="/pioneerway/image/groups/all.png" alt="الكل"
-                                class="w-10 h-10 object-contain"
-                                onerror="this.src='/pioneerway/image/logo.png'">
+                                class="w-25 h-25 object-contain"
+                                onerror="this.src='/pioneerway/image/logo2.png'">
                         </div>
                         <span class="text-sm font-medium text-center">الكل</span>
                     </button>
@@ -512,7 +548,7 @@
                             <div class="w-16 h-16 rounded-full flex items-center justify-center mb-3">
                                 <img src="<?php echo getGroupImagePath($group, $section); ?>"
                                     alt="<?php echo htmlspecialchars($group); ?>"
-                                    class="w-10 h-10 object-contain"
+                                    class="w-15 h-15 object-contain"
                                     onerror="this.src='<?php echo getDefaultGroupImage($section); ?>'">
                             </div>
                             <span class="text-sm font-medium text-center"><?php echo $group; ?></span>
@@ -686,6 +722,12 @@
                 });
             });
 
+            // إخفاء شاشة التحميل وإظهار المحتوى بعد تحميل كل شيء
+            setTimeout(() => {
+                document.body.classList.add('page-loaded');
+                document.getElementById('loadingScreen').classList.add('hidden');
+            }, 300);
+
             console.log('✅ التطبيق تم تهيئته بنجاح - جميع الخدمات معروضة مباشرة');
         }
 
@@ -696,9 +738,10 @@
             initializeApp();
         }
     </script>
+    
     <?php include 'footer.php'; ?>
 
-    <script src="/pioneerway/script.js"></script>
+    <script src="/pioneerway/script.js" defer></script>
 </body>
 
 </html>
