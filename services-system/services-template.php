@@ -8,10 +8,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle; ?></title>
+
+        <!-- معلومات الموقع -->
+    <meta name="description" content="طريق الريادة تقدم حلولاً ذكية ومتكاملة للتجارة الإلكترونية، تصميم متاجر إلكترونية، وخدمات تسويق رقمي تساعدك على النجاح في السوق السعودي والخليجي.">
+    <meta name="keywords" content="تجارة إلكترونية, تصميم متجر, طريق الريادة, حلول متاجر, بوابة دفع, متجر الكتروني, السعودية, الخليج, ريادة أعمال, تسويق رقمي">
+    <meta name="author" content="شركة طريق الريادة">
+
+    <!-- بيانات Open Graph -->
+    <meta property="og:title" content="طريق الريادة | حلول التجارة الإلكترونية">
+    <meta property="og:description" content="نساعدك في إطلاق متجرك الإلكتروني باحتراف. من التصميم حتى الدفع والتسويق.">
+    <meta property="og:type" content="website">
+
+    <!-- أيقونة الموقع -->
+    <link rel="icon" href="/pioneerway/image/logo.png" type="image/x-icon">
     
     <!-- CSS أولاً -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/pioneerway/fonts.css">
+    <link rel="stylesheet" href="/pioneerway/font.css">
     <link rel="stylesheet" href="/pioneerway/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -521,9 +534,9 @@
 
                     <!-- البحث -->
                     <div class="flex-1 w-full">
-                        <div class="flex items-center max-w-xl mx-auto border border-gray-300 rounded-md ">
+                        <div class="flex items-center max-w-xl mx-auto border border-blue-300 rounded-md ">
                             <input type="text" id="searchInput" placeholder="ابحث عن الخدمة التي تريدها..." class="search-input w-full py-2 focus:outline-none">
-                            <i class="fas fa-search text-gray-400 ml-2"></i>
+                            <i class="fas fa-search text-blue ml-2"></i>
                         </div>
                     </div>
                 </div>
@@ -535,7 +548,7 @@
                     <!-- تبويب "الكل" -->
                     <button class="tab-btn active flex flex-col items-center p-4 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 w-28" data-category="all">
                         <div class="w-25 h-25 rounded-full bg-gradient-to-br from-blue-200 to-purple-200 flex items-center   mb-3">
-                            <img src="/pioneerway/image/groups/all.png" alt="الكل"
+                            <img src="/pioneerway/image/logo2.png" alt="الكل"
                                 class="w-25 h-25 object-contain"
                                 onerror="this.src='/pioneerway/image/logo2.png'">
                         </div>
@@ -611,7 +624,7 @@
                     <img src="${service.image}" alt="${service.name}"
                          class="w-full h-full object-cover"
                          loading="lazy"
-                         onerror="this.src='../image/logo.png'; this.alt='صورة بديلة'">
+                         onerror="this.src='/pioneerway/image/logo2.png'; this.alt='صورة بديلة'">
                     <div class="absolute top-0 right-0">
                         <span class="group-badge">${service.group}</span>
                     </div>

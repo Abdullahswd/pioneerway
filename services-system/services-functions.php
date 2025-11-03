@@ -1,5 +1,4 @@
 <?php
-// services-functions.php
 
 // دالة لتحميل الخدمات بناءً على القسم
 function getServices($section)
@@ -15,7 +14,7 @@ function getServices($section)
             return getDesignServices();
         case 'government':
             return getGovernmentServices();
-        case 'sport':
+        case 'support':
             return getSupportFinancingServices();
         default:
             return getBusinessServices();
@@ -361,8 +360,6 @@ function getBusinessServices()
         ],
     ];
 }
-
-
 // دالة لخدمات البرمجة
 function getProgrammingServices()
 {
@@ -830,7 +827,7 @@ function getGovernmentServices()
             'name' => "الغاء عقد الايجار",
             'group' => "الوثائق والشهادات والعقود",
             'price' => "72 ريال",
-            'image' => "/pioneerway/image/government/lease-cancellation.png",
+            'image' => "/pioneerway/image/government/lease-cancellation1.png",
             'link' => "order.php?service=505",
             'description' => "خدمات إلغاء عقود الإيجار بشكل رسمي وقانوني"
         ],
@@ -902,7 +899,7 @@ function getGovernmentServices()
             'name' => "استخراج وثيقة العمل الحر",
             'group' => "الوثائق والشهادات والعقود",
             'price' => "135 ريال",
-            'image' => "/pioneerway/image/government/freelance-document.png",
+            'image' => "/pioneerway/image/services/Self-employment document.png",
             'link' => "order.php?service=513",
             'description' => "استخراج وثيقة العمل الحر من منصة العمل الحر"
         ],
@@ -913,7 +910,7 @@ function getGovernmentServices()
             'name' => "تسجيل مندوب توصيل",
             'group' => "خدمات التسجيل والتحديث",
             'price' => "90 ريال",
-            'image' => "/pioneerway/image/government/delivery-agent-registration.png",
+            'image' => "/pioneerway/image/services/sales representative.png",
             'link' => "order.php?service=514",
             'description' => "تسجيل مندوب توصيل في منصات التوصيل المختلفة"
         ],
@@ -1245,7 +1242,7 @@ function getGovernmentServices()
             'name' => "تمويل سيولة يصل الى 300 الف",
             'group' => "خدمات الدعم والتمويل",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/government/X.png",
+            'image' => "/pioneerway/image/support/liquidity-financing.png",
             'link' => "order.php?service=550",
             'description' => "التقديم على تمويل السيولة بمبلغ يصل إلى 300 ألف ريال"
         ],
@@ -1272,7 +1269,7 @@ function getGovernmentServices()
             'name' => "تمويل الأصول - السيارات يصل الى 300 الف",
             'group' => "خدمات الدعم والتمويل",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/government/assets-financing.png",
+            'image' => "/pioneerway/image/support/assets-financing.png",
             'link' => "order.php?service=553",
             'description' => "التقديم على تمويل الأصول والمركبات بمبلغ يصل إلى 300 ألف ريال"
         ],
@@ -1281,7 +1278,7 @@ function getGovernmentServices()
             'name' => "تمويل كنف يصل الى 30 الف",
             'group' => "خدمات الدعم والتمويل",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/government/kanaf-financing.png",
+            'image' => "/pioneerway/image/support/kanaf-financing.png",
             'link' => "order.php?service=554",
             'description' => "التقديم على تمويل كنف بمبلغ يصل إلى 30 ألف ريال"
         ],
@@ -1290,7 +1287,7 @@ function getGovernmentServices()
             'name' => "تمويل الاسره يصل الى 100 الف",
             'group' => "خدمات الدعم والتمويل",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/government/family-financing.png",
+            'image' => "/pioneerway/image/support/Household financing.png",
             'link' => "order.php?service=555",
             'description' => "التقديم على تمويل الأسرة بمبلغ يصل إلى 100 ألف ريال"
         ],
@@ -1351,7 +1348,7 @@ function getSupportFinancingServices()
             'name' => "دعم التأهيل الشامل يصل الى 1600 شهريا",
             'group' => "الدعوم الحكومية الغير مستردة",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/financing/comprehensive-rehabilitation.png",
+            'image' => "/pioneerway/image/support/comprehensive-rehabilitation.png",
             'link' => "order.php?service=604",
             'description' => "دعم التأهيل الشامل للأشخاص ذوي الإعاقة يصل إلى 1600 ريال شهرياً"
         ],
@@ -1360,7 +1357,7 @@ function getSupportFinancingServices()
             'name' => "خدمة الاستفسار عن الدعم أو التمويل المناسب لك",
             'group' => "الدعوم الحكومية الغير مستردة",
             'price' => "36 ريال",
-            'image' => "/pioneerway/image/financing/financing-consultation.png",
+            'image' => "/pioneerway/image/support/financing-consultation.png",
             'link' => "order.php?service=605",
             'description' => "خدمة استشارية لتحديد الدعم أو التمويل المناسب لاحتياجاتك"
         ],
@@ -1369,7 +1366,7 @@ function getSupportFinancingServices()
             'name' => "دعم حساب المواطن يصل الى 720 شهريا",
             'group' => "الدعوم الحكومية الغير مستردة",
             'price' => "90 ريال",
-            'image' => "/pioneerway/image/financing/citizen-account.png",
+            'image' => "/pioneerway/image/support/citizen-account.png",
             'link' => "order.php?service=606",
             'description' => "دعم حساب المواطن المالي الذي يصل إلى 720 ريال شهرياً"
         ],
@@ -1378,7 +1375,7 @@ function getSupportFinancingServices()
             'name' => "دعم الضمان الإجتماعي يصل الى 1476 شهريا",
             'group' => "الدعوم الحكومية الغير مستردة",
             'price' => "90 ريال",
-            'image' => "/pioneerway/image/financing/social-security.png",
+            'image' => "/pioneerway/image/support/social-security.png",
             'link' => "order.php?service=607",
             'description' => "دعم الضمان الاجتماعي الذي يصل إلى 1476 ريال شهرياً"
         ],
@@ -1396,7 +1393,7 @@ function getSupportFinancingServices()
             'name' => "دعم حافز يصل الى 2000 شهريا",
             'group' => "الدعوم الحكومية الغير مستردة",
             'price' => "90 ريال",
-            'image' => "/pioneerway/image/financing/hafiz.png",
+            'image' => "/pioneerway/image/support/hafiz.png",
             'link' => "order.php?service=609",
             'description' => "دعم حافز للبحث عن العمل يصل إلى 2000 ريال شهرياً"
         ],
@@ -1416,7 +1413,7 @@ function getSupportFinancingServices()
             'name' => "تمويل سيولة يصل الى 300 الف",
             'group' => "تمويل الأعمال",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/financing/liquidity-financing.png",
+            'image' => "/pioneerway/image/support/liquidity-financing.png",
             'link' => "order.php?service=611",
             'description' => "تمويل السيولة للمشاريع يصل إلى 300 ألف ريال"
         ],
@@ -1434,7 +1431,7 @@ function getSupportFinancingServices()
             'name' => "تمويل العمل الحر النقدي يصل الى 120 الف",
             'group' => "تمويل الأعمال",
             'price' => "225 ريال",
-            'image' => "/pioneerway/image/financing/freelance-cash.png",
+            'image' => "/pioneerway/image/support/freelance-cash.png",
             'link' => "order.php?service=613",
             'description' => "تمويل نقدي للعاملين في العمل الحر يصل إلى 120 ألف ريال"
         ],
@@ -1443,7 +1440,7 @@ function getSupportFinancingServices()
             'name' => "تمويل رواد الأعمال يصل إلى 500 ألف",
             'group' => "تمويل الأعمال",
             'price' => "225 ريال",
-            'image' => "/pioneerway/image/financing/entrepreneurs-financing.png",
+            'image' => "/pioneerway/image/support/entrepreneurs-financing.png",
             'link' => "order.php?service=614",
             'description' => "تمويل رواد الأعمال والمشاريع الريادية يصل إلى 500 ألف ريال"
         ],
@@ -1481,7 +1478,7 @@ function getSupportFinancingServices()
             'name' => "تمويل الأصول - السيارات يصل الى 300 الف",
             'group' => "التمويل الشخصي",
             'price' => "180 ريال",
-            'image' => "/pioneerway/government/assets-financing.png",
+            'image' => "/pioneerway/image/support/assets-financing.png",
             'link' => "order.php?service=618",
             'description' => "تمويل شخصي لشراء السيارات والأصول يصل إلى 300 ألف ريال"
         ],
@@ -1490,7 +1487,7 @@ function getSupportFinancingServices()
             'name' => "تمويل كنف يصل الى 30 الف",
             'group' => "التمويل الشخصي",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/government/kanaf-financing.png",
+            'image' => "/pioneerway/image/support/kanaf-financing.png",
             'link' => "order.php?service=619",
             'description' => "تمويل كنف الشخصي يصل إلى 30 ألف ريال"
         ],
@@ -1499,7 +1496,7 @@ function getSupportFinancingServices()
             'name' => "تمويل الاسرة يصل الى 100 الف",
             'group' => "التمويل الشخصي",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/government/family-financing.png",
+            'image' => "/pioneerway/image/support/Household financing.png",
             'link' => "order.php?service=620",
             'description' => "تمويل شخصي للأسرة يصل إلى 100 ألف ريال"
         ],
@@ -1517,7 +1514,7 @@ function getSupportFinancingServices()
             'name' => "دعم توصيل الطلبات يصل الى 3000 شهرياً",
             'group' => "التمويل الشخصي",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/financing/delivery-support.png",
+            'image' => "/pioneerway/image/support/Support delivery of orders.png",
             'link' => "order.php?service=622",
             'description' => "دعم توصيل الطلبات يصل إلى 3000 ريال شهرياً"
         ],
@@ -1526,7 +1523,7 @@ function getSupportFinancingServices()
             'name' => "دعم النقل الموجه (أوبر وكريم) يصل الى 3000 شهرياً",
             'group' => "التمويل الشخصي",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/financing/ride-hailing-support.png",
+            'image' => "/pioneerway/image/support/Support directed transfer.png",
             'link' => "order.php?service=623",
             'description' => "دعم النقل الموجه (أوبر وكريم) يصل إلى 3000 ريال شهرياً"
         ],
@@ -1535,7 +1532,7 @@ function getSupportFinancingServices()
             'name' => "تمويل جنى يصل الى 50 الف",
             'group' => "التمويل الشخصي",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/financing/jana-financing.png",
+            'image' => "/pioneerway/image/support/Jana financing.png",
             'link' => "order.php?service=624",
             'description' => "تمويل جنى الشخصي يصل إلى 50 ألف ريال"
         ],
@@ -1544,20 +1541,18 @@ function getSupportFinancingServices()
             'name' => "تمويل إمكان يصل الى مليون و 500 الف",
             'group' => "التمويل الشخصي",
             'price' => "180 ريال",
-            'image' => "/pioneerway/image/financing/emkan-financing.png",
+            'image' => "/pioneerway/image/support/Imkan financing.png",
             'link' => "order.php?service=625",
             'description' => "تمويل إمكان الشخصي يصل إلى مليون ونصف ريال"
         ]
     ];
 }
-
-
 // اضافة صور الاقسام
 function getGroupImagePath($groupName, $section = 'programming')
 {
     $groupImages = [
         // صور قسم البرمجة
-        "تطوير التطبيقات" => 'appDev.png',
+        "تطوير التطبيقات" => 'app.png',
         "تطوير المواقع والمنصات" => 'web.png',
 
 
@@ -1568,31 +1563,25 @@ function getGroupImagePath($groupName, $section = 'programming')
         'خدمات الشركات والموسسات' => 'Companies.png',
         'استخراج الوثائق والشهادات' => 'documents.png',
 
-
         // صور قسم الخدمات الابداعية والتسويقيه 
         "التصاميم الاحترافية" => 'design.png',
         "خدمات كتابة المحتوى" => 'content_writing.png',
         "خدمات السوشال ميديا" => 'social_media.png',
         "إنتاج الفيديو الإبداعي" => 'video.png',
 
-
-
-
-
-
         // صور قسم الخدمات المكتبيه    
-        "الدعوم الحكومية الغير مستردة" => 'appDev.png',
-        "تمويل الأعمال" => 'web.png',
-        "التمويل الشخصي" => 'web.png',
+        "الدعوم الحكومية الغير مستردة" => 's_Government support.png',
+        "تمويل الأعمال" => 's_Business support.png',
+        "التمويل الشخصي" => 's_Personal finance.png',
 
 
         // صور قسم الخدمات الدعم  والتمويل  
-        "خدمات الذكاء الاصطناعي والتصميم" => 'appDev.png',
-        "خدمات الملفات والمستندات" => 'web.png',
-        "خدمات الحسابات والاستبيانات" => 'web.png',
+        "خدمات الذكاء الاصطناعي والتصميم" => 'office_ai.png',
+        "خدمات الملفات والمستندات" => 'office_file.png',
+        "خدمات الحسابات والاستبيانات" => 'office_accunt.png',
 
         // صور قسم الخدمات الحكوميه    
-        "الوثائق والشهادات والعقود" => 'abshir.png',
+        "الوثائق والشهادات والعقود" => 'decoment.png',
         "خدمات التسجيل والتحديث" => 'Registration and update services.png',
         "التوظيف ودعم الموظفين" => 'Employment services.png',
         "خدمات أبشر والأحوال المدنية" => 'abshir.png',
@@ -1610,26 +1599,29 @@ function getGroupImagePath($groupName, $section = 'programming')
         case 'business-and-freelance':
             return "/pioneerway/image/groups/business/{$imageName}";
         case 'office':
-            return "/pioneerway/image/groups/programming/{$imageName}";
+            return "/pioneerway/image/groups/office/{$imageName}";
         case 'design':
             return "/pioneerway/image/groups/design/{$imageName}";
         case 'marketing':
             return "/pioneerway/image/groups/marketing/{$imageName}";
-        case 'sport':
-            return "/pioneerway/image/groups/programming/{$imageName}";
+        case 'support':
+            return "/pioneerway/image/groups/Support/{$imageName}";
         case 'government':
-            return "/pioneerway/image/groups/government/{$imageName}";
+            return "/pioneerway/image/groups/governments/{$imageName}";
         default:
             return "/pioneerway/image/groups/business/{$imageName}";
     }
 }
 
+
+
+
 // دالة للصورة الافتراضية إذا لم توجد الصورة
 function getDefaultGroupImage($section = 'programming')
 {
     if ($section === 'programming') {
-        return "../image/groups/programming/default.png";
+        return "/pioneerway/image/logo2.png";
     } else {
-        return "../image/groups/business/default.png";
+        return "/pioneerway/image/logo2.png";
     }
 }

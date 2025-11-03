@@ -25,29 +25,31 @@
                             aria-label="تيك توك">
                             <i class="fab fa-tiktok"></i>
                         </a>
-
                     </div>
                 </div>
                 <div class="footer-col">
                     <h3>روابط سريعة</h3>
                     <ul>
                         <li><a href="/pioneerway/index.php"><i class="fas fa-arrow-left"></i> الرئيسية</a></li>
-                        <li><a href="#about"><i class="fas fa-arrow-left"></i> من نحن</a></li>
-                        <li><a href="#services"><i class="fas fa-arrow-left"></i> خدماتنا</a></li>
-                        <li><a href="#portfolio"><i class="fas fa-arrow-left"></i> أعمالنا</a></li>
-                        <li><a href="#contact"><i class="fas fa-arrow-left"></i> اتصل بنا</a></li>
+                        <li><a href="/pioneerway/index.php#about"><i class="fas fa-arrow-left"></i> من نحن</a></li>
+                        <li><a href="/pioneerway/index.php#services"><i class="fas fa-arrow-left"></i> خدماتنا</a></li>
+                        <li><a href="/pioneerway/index.php#portfolio"><i class="fas fa-arrow-left"></i> أعمالنا</a></li>
+                        <li><a href="/pioneerway/index.php#contact"><i class="fas fa-arrow-left"></i> اتصل بنا</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>خدماتنا</h3>
                     <ul>
                         <li><a href="business-services.php"><i class="fas fa-arrow-left"></i> خدمات التجارة والعمل الحر </a></li>
-                        <li><a href="#"><i class="fas fa-arrow-left"></i>الخدمات الإبداعية والتسويقية</a></li>
+                        <li><a href="design-services.php"><i class="fas fa-arrow-left"></i>الخدمات الإبداعية والتسويقية</a></li>
                         <li><a href="programming-services.php"><i class="fas fa-arrow-left"></i>الخدمات البرمجية</a></li>
-                        <li><a href="#"><i class="fas fa-arrow-left"></i>الخدمات المكتبية</a></li>
+                        <li><a href="office-services.php"><i class="fas fa-arrow-left"></i>الخدمات المكتبية</a></li>
+                        <li><a href="support-services.php"><i class="fas fa-arrow-left"></i>خدمات الدعم والتمويل</a></li>
+                        <li><a href="government-services.php"><i class="fas fa-arrow-left"></i>الخدمات الحكوميه</a></li>
                         <li><a href="#"><i class="fas fa-arrow-left"></i> الاستشارات</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-col">
                     <h3>النشرة البريدية</h3>
                     <p>ابق على اطلاع بأحدث النصائح والعروض الخاصة</p>
@@ -56,6 +58,9 @@
                         <button type="submit"><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
+                
+
+            
             </div>
             <!-- Logos for Payment -->
             <div class="footer-logos">

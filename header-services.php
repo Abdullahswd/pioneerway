@@ -62,7 +62,7 @@
                        </a>
 
                         <!--خدمات الدعم والتمويل -->
-                       <a href="sport-services.php"
+                       <a href="support-services.php"
                            class="flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-200 border-b border-gray-100">
                            <i class="fas fa-hand-holding-dollar ml-3 text-blue-500"></i>
                            خدمات الدعم والتمويل
@@ -179,7 +179,7 @@
            <i class="fas fa-briefcase"></i>
            الخدمات المكتبية
        </a>
-        <a href="sport-services.php">
+        <a href="support-services.php">
            <i class="fas fa-briefcase"></i>
            خدمات الدعم والتمويل
        </a>

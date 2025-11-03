@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شركة طريق الريادة</title> 
+    <title>شركة طريق الريادة</title>
 
     <!-- معلومات الموقع -->
     <meta name="description" content="طريق الريادة تقدم حلولاً ذكية ومتكاملة للتجارة الإلكترونية، تصميم متاجر إلكترونية، وخدمات تسويق رقمي تساعدك على النجاح في السوق السعودي والخليجي.">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/pioneerway/fonts.css">
+    <link rel="stylesheet" href="/pioneerway/font.css">
 
 
 </head>
@@ -80,16 +80,17 @@
                     <!-- Features List -->
                     <ul class="space-y-3 max-w-xl mx-auto lg:mr-0" data-aos="fade-up" data-aos-delay="400">
                         <li class="flex items-center gap-3 text-lg text-[#6A5E62] dark:text-gray-300">
-                            <i class="fas fa-check text-[#ffffff] bg-[#6C9EFC]/10 p-2 rounded-full"></i>
+                            <i class="fas fa-check text-blue-500 dark:text-white bg-blue-100 dark:bg-[#6C9EFC]/10 p-2 rounded-full"></i>
+
                             <span>خدمات متنوعة تنطلق بأعمالك نحو القمة</span>
                         </li>
                         <li class="flex items-center gap-3 text-lg text-[#6A5E62] dark:text-gray-300">
-                            <i class="fas fa-check text-[#ffffff] bg-[#6C9EFC]/10 p-2 rounded-full"></i>
+                            <i class="fas fa-check text-blue-500 dark:text-white bg-blue-100 dark:bg-[#6C9EFC]/10 p-2 rounded-full"></i>
                             <span>من التجارة الإلكترونية إلى الخدمات الحكومية والتمويل
                             </span>
                         </li>
                         <li class="flex items-center gap-3 text-lg text-[#6A5E62] dark:text-gray-300">
-                            <i class="fas fa-check text-[#fff] bg-[#6C9EFC]/10 p-2 rounded-full"></i>
+                            <i class="fas fa-check text-blue-500 dark:text-white bg-blue-100 dark:bg-[#6C9EFC]/10 p-2 rounded-full"></i>
                             <span>شريكك الموثوق في النجاح الرقمي والإداري</span>
                         </li>
                     </ul>
@@ -110,34 +111,15 @@
                 </div>
 
                 <!-- Image Section - Second on Mobile -->
-                <div class="flex-1 flex justify-center lg:justify-start order-2" data-aos="fade-left">
-                    <div class="relative">
-                        <!-- Main Image Container -->
-                        <div class="relative bg-gradient-to-br from-[#6C9EFC] to-blue-400 rounded-3xl p-2 shadow-2xl">
-                            <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden">
-                                <img
-                                    src="image/misk main.png"
-                                    alt="مؤسس الشركة"
-                                    class="w-full h-auto max-w-md lg:max-w-lg rounded-2xl transform hover:scale-105 transition-transform duration-500" />
-                            </div>
-                        </div>
-
-                        <!-- Floating Elements -->
-                        <div class="absolute -top-4 -right-4 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl border border-[#6C9EFC]/20">
-                            <div class="flex items-center gap-2">
-                                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                                <span class="text-sm font-semibold text-[#6A5E62] dark:text-gray-300">نشط الآن</span>
-                            </div>
-                        </div>
-
-                        <div class="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl border border-[#6C9EFC]/20">
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-[#6C9EFC]">150+</div>
-                                <div class="text-xs text-[#6A5E62] dark:text-gray-300">مشروع ناجح</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="flex-1 flex justify-center lg:justify-start order-2 relative">
+                    <img
+                        src="image/main_image2.png"
+                        alt="صورة بديلة"
+                        class="max-w-[800px] w-full h-auto opacity-0 scale-95 transition-all duration-1000 ease-out"
+                        onload="requestAnimationFrame(() => { this.classList.remove('opacity-0','scale-95'); });" />
                 </div>
+
+
             </div>
 
             <!-- Scroll Indicator - Third on Mobile -->
@@ -323,7 +305,7 @@
                 </a>
                 <!-- sport Card 6 -->
 
-                <a href="sport-services.php" class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-[#6C9EFC] dark:hover:border-blue-400 hover:-translate-y-2">
+                <a href="support-services.php" class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-100 dark:border-gray-700 hover:border-[#6C9EFC] dark:hover:border-blue-400 hover:-translate-y-2">
                     <!-- Background Gradient -->
                     <div class="absolute inset-0 bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -638,43 +620,60 @@
             </div>
             <div class="offers-grid">
                 <div class="offer-card fade-in">
-                    <div class="offer-badge">الأساسية</div>
-                    <h3>بداية المشروع</h3>
-                    <div class="offer-price">999 ريال</div>
-                    <ul class="offer-features">
-                        <li><i class="fas fa-check"></i> تصميم متجر احترافي</li>
-                        <li><i class="fas fa-check"></i> 10 منتجات أساسية</li>
-                        <li><i class="fas fa-check"></i> تدريب على الاستخدام</li>
-                        <li><i class="fas fa-times"></i> تسويق إلكتروني</li>
-                        <li><i class="fas fa-times"></i> دعم فني لمدة سنة</li>
-                    </ul>
-                    <a href="#contact" class="cta-button">اختر الباقة</a>
-                </div>
+    <div class="offer-badge">الحل الشامل</div>
+    <h3>الامتثال والريادة القانونية</h3>
+    <div class="offer-price">1,399 ريال</div>
+    <ul class="offer-features">
+        <li><i class="fas fa-check"></i> تسجيل العلامة التجارية وحماية الملكية</li>
+        <li><i class="fas fa-check"></i> إصدار السجل التجاري والتراخيص الرسمية</li>
+        <li><i class="fas fa-check"></i> فتح حساب بنكي تجاري معتمد</li>
+        <li><i class="fas fa-check"></i> التسجيل في ضريبة القيمة المضافة</li>
+        <li><i class="fas fa-check"></i> إصدار جهاز نقاط بيع متكامل</li>
+        <li><i class="fas fa-check"></i> عضوية الغرف التجارية والتوثيق</li>
+        <li><i class="fas fa-check"></i> باركود مطابقة المنتج من الهيئة السعودية</li>
+        <li><i class="fas fa-check"></i> باقة التوثيق المتكاملة للمشاريع</li>
+    </ul>
+    <div class="offer-value p-4">
+        <span>راحة بال كاملة وأمان قانوني لمشروعك</span>
+    </div>
+    <a href="#contact" class="cta-button">احصل على الاستقرار القانوني</a>
+</div>
                 <div class="offer-card featured fade-in">
                     <div class="offer-badge">الأكثر طلباً</div>
-                    <h3>المتكاملة</h3>
-                    <div class="offer-price">1499 ريال</div>
+                    <h3>التأسيس الذهبي للمتجر الإلكتروني</h3>
+                    <div class="offer-price">1,499 ريال</div>
                     <ul class="offer-features">
-                        <li><i class="fas fa-check"></i> تصميم متجر متكامل</li>
-                        <li><i class="fas fa-check"></i> عدد غير محدود من المنتجات</li>
-                        <li><i class="fas fa-check"></i> تدريب متقدم</li>
-                        <li><i class="fas fa-check"></i> خطة تسويق لمدة 3 أشهر</li>
-                        <li><i class="fas fa-check"></i> دعم فني لمدة سنة</li>
+                        <li><i class="fas fa-check"></i> تصميم متجر إلكتروني احترافي متكامل</li>
+                        <li><i class="fas fa-check"></i> بناء الهوية البصرية للعلامة التجارية</li>
+                        <li><i class="fas fa-check"></i> ربط المتجر بمنصات المخازن الإلكترونية</li>
+                        <li><i class="fas fa-check"></i> رفع وإضافة المنتجات مع محتوى محسن</li>
+                        <li><i class="fas fa-check"></i> توثيق حساب واتساب الأعمال</li>
+                        <li><i class="fas fa-check"></i> إنشاء نطاق إلكتروني خاص واحترافي</li>
+                        <li><i class="fas fa-check"></i> شهادة توثيق التجارة الإلكترونية</li>
+                        <li><i class="fas fa-check"></i> تسجيل في تطبيقات التوصيل الشهيرة</li>
                     </ul>
-                    <a href="#contact" class="cta-button">اختر الباقة</a>
+                    <div class="offer-value p-4">
+                        <span>وفر أكثر من 20% على الخدمات المنفردة</span>
+                    </div>
+                    <a href="#contact" class="cta-button">ابدأ مشروعك الآن</a>
                 </div>
+
                 <div class="offer-card fade-in">
-                    <div class="offer-badge">المتقدمة</div>
-                    <h3>الريادية</h3>
-                    <div class="offer-price">1999 ريال</div>
+                    <div class="offer-badge">الباقة المميزة</div>
+                    <h3>القوة التسويقية الشاملة</h3>
+                    <div class="offer-price">2,699 ريال</div>
                     <ul class="offer-features">
-                        <li><i class="fas fa-check"></i> تصميم متجر فاخر</li>
-                        <li><i class="fas fa-check"></i> منتجات غير محدودة</li>
-                        <li><i class="fas fa-check"></i> تدريب وإدارة فريق</li>
-                        <li><i class="fas fa-check"></i> خطة تسويق لمدة 6 أشهر</li>
-                        <li><i class="fas fa-check"></i> دعم فني لمدة سنتين</li>
+                        <li><i class="fas fa-check"></i> تصميم موقع تعريفي احترافي للأعمال</li>
+                        <li><i class="fas fa-check"></i> تصميم صفحات هبوط مخصصة للحملات</li>
+                        <li><i class="fas fa-check"></i> بناء هوية بصرية متكاملة ومؤثرة</li>
+                        <li><i class="fas fa-check"></i> استخراج رخصة موثوق للإعلان الرقمي</li>
+                        <li><i class="fas fa-check"></i> إنشاء مدونة متكاملة محسنة لمحركات البحث</li>
+                        <li><i class="fas fa-check"></i> تسجيل وتوثيق في خرائط جوجل للأعمال</li>
                     </ul>
-                    <a href="#contact" class="cta-button">اختر الباقة</a>
+                    <div class="offer-value p-4">
+                        <span>تحول علامتك التجارية إلى لاعب رئيسي في السوق</span>
+                    </div>
+                    <a href="#contact" class="cta-button">احجز الباقة المميزة</a>
                 </div>
             </div>
         </div>
@@ -849,56 +848,135 @@ justify-content:center; align-items:center; z-index:9998;">
     </section>
 
     <!-- قسم الأسئلة الشائعة  -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-title">
-                <h2>الأسئلة الشائعة</h2>
-                <p>إجابات على أكثر الأسئلة شيوعاً</p>
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-title">
+            <h2>الأسئلة الشائعة</h2>
+            <p>إجابات على أكثر الأسئلة شيوعاً</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item fade-in">
+                <button class="faq-question">
+                    ما هي مدة تنفيذ الخدمات المختلفة لديكم؟
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>تختلف المدة حسب نوع الخدمة: الخدمات السريعة (كاستخراج الوثائق) تستغرق 1-3 أيام، الخدمات المتوسطة (كالتصميم والتطوير) 1-3 أسابيع، والمشاريع المتكاملة 3-6 أسابيع. نلتزم بمواعيد التسليم المتفق عليها.</p>
+                </div>
             </div>
-            <div class="faq-container">
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        كم تستغرق مدة إنشاء المتجر الإلكتروني؟
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>تتراوح مدة إنشاء المتجر الإلكتروني بين 2 إلى 6 أسابيع حسب تعقيد المشروع والخدمات المطلوبة.
-                            نحرص على التسليم في الوقت المتفق عليه مع الحفاظ على أعلى معايير الجودة.</p>
-                    </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question">
+                    هل يمكنني طلب تصميم خاص غير مذكور في القائمة؟
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>بالتأكيد! نحن نقدم خدمات مخصصة  حسب احتياجاتك الخاصة. يمكنك التواصل مع فريق التصميم لمناقشة فكرتك وسنقوم بدراستها وتقديم الحل الأمثل الذي يتناسب مع متطلباتك وميزانيتك.</p>
                 </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        هل تدعمون خدمات ما بعد الإطلاق؟
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>نعم، نقدم حزمة دعم شاملة تشمل الصيانة الدورية، التحديثات، النسخ الاحتياطي، والدعم الفني
-                            المستمر لضمان استمرارية عمل متجرك بشكل مثالي.</p>
-                    </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question">
+                    ما الذي يميزكم عن غيركم من مقدمي الخدمات؟
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>نتميز بتقديم حلول متكاملة تحت سقف واحد، حيث نجمع بين الخبرة التقنية والمعرفة القانونية والاستشارات التسويقية. فريقنا متعدد التخصصات ويعمل بتناغم لضمان تحقيق رؤيتك بشكل متكامل ومحترف.</p>
                 </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        ما هي منصات التجارة الإلكترونية التي تعملون عليها؟
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>نعمل على جميع المنصات الرائدة مثل Shopify , زد , سله . ننصحك بأفضل منصة
-                            تناسب احتياجاتك وميزانيتك.</p>
-                    </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question">
+                    هل المتجر سيكون متجاوبًا مع الجوال والأجهزة اللوحية؟
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>نعم، جميع تصاميمنا responsive ومتوافقة مع جميع الأجهزة بنسبة 100%. نضمن تجربة مستخدم مثالية على الجوال، الأجهزة اللوحية، وأجهزة الكمبيوتر بمختلف مقاساتها.</p>
                 </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        هل يمكنني إدارة المتجر بنفسي بعد التسليم؟
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>بالتأكيد، نسلمك المتجر مع لوحة تحكم سهلة الاستخدام، بالإضافة إلى جلسات تدريبية لتمكينك من
-                            إدارة متجرك باحترافية.</p>
-                    </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question">
+                    هل تساعدونني في تحديد الجمهور المستهدف للإعلانات؟
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>نعم، نقدم خدمات تحليل السوق وتحديد الجمهور المستهدف بدقة. نحلل السلوك الشرائي، الاهتمامات، والخصائص الديموغرافية لمساعدتك في الوصول للعملاء المناسبين وتحقيق أعلى عائد على الاستثمار.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question">
+                    ما الفرق بين المتجر الإلكتروني وصفحات الهبوط؟ وأيهما أناسب؟
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>المتجر الإلكتروني منصة متكاملة للبيع والعرض، بينما صفحات الهبوط مصممة لحملات إعلانية محددة. ننصح بالمتجر إذا كان لديك منتجات متعددة، وصفحات الهبوط للحملات المؤقتة أو العروض الخاصة.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question">
+                    ما هي الخدمات الحكومية والرسمية التي تقدمونها؟
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>نقدم مجموعة شاملة من الخدمات الحكومية تشمل: التسجيل التجاري، التوثيق الرسمي، الاستعلامات، الشكاوى، التوظيف، وجميع معاملات منصة أبشر والجهات الرسمية الأخرى.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question">
+                    هل تدعمون خدمات التصميم والتطوير بشكل منفصل؟
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>نعم، يمكنك طلب أي خدمة بشكل منفصل: تصميم الهوية البصرية، تطوير المواقع، برمجة التطبيقات، تصميم الجرافيك، إنتاج الفيديو، أو الحصول على حل متكامل حسب احتياجاتك.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question">
+                    ما هي ضمانات الجودة التي تقدمونها على الخدمات؟
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>نقدم ضمان الجودة من خلال: فريق مختص لكل خدمة، مراجعة الجودة في كل مرحلة، التزام بالمواصفات المطلوبة، فترة صيانة مجانية، ودعم فني مستمر لضمان رضاك التام عن الخدمة.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question">
+                    هل تقدمون خدمات الدعم والتدريب بعد التسليم؟
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>نعم، نقدم حزم دعم متعددة تشمل: التدريب على استخدام الخدمات، الدعم الفني، الصيانة الدورية، التحديثات، والاستشارات المستمرة لضمان استفادتك القصوى من خدماتنا.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question">
+                    كيف أختار الخدمة المناسبة لمشروعي؟
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>يمكنك التواصل مع مستشارينا المتخصصين الذين سيساعدونك في تحليل احتياجاتك وتحديد الخدمات المناسبة لمشروعك، سواءً كانت خدمات فردية أو حلاً متكاملاً يلبي جميع متطلباتك.</p>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <button class="faq-question">
+                    ما هي خيارات الدفع المتاحة لديكم؟
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>نوفر خيارات دفع مرنة تشمل: الدفع النقدي، التحويل البنكي، الدفع بالبطاقات الائتمانية، الدفع الإلكتروني، بالإضافة إلى خيارات التقسيط لبعض الخدمات لتسهيل التعامل معنا.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- التذييل -->
     <?php include 'footer.php'; ?>
@@ -930,5 +1008,3 @@ justify-content:center; align-items:center; z-index:9998;">
 </body>
 
 </html>
-
-
