@@ -583,32 +583,57 @@
                 <h2>أعمالنا</h2>
                 <p>إليك بعض المشاريع الناجحة التي نفخر بها</p>
             </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">متجر الأزياء الراقية</div>
-                    <div class="portfolio-content">
-                        <h3>متجر الأزياء الراقية</h3>
-                        <p>تصميم وتطوير متجر إلكتروني متكامل لعلامة أزياء رائدة، مع حلول دفع إلكتروني آمنة وتجربة مستخدم
-                            استثنائية.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">متجر ميرامسك</div>
-                    <div class="portfolio-content">
-                        <h3>متجر ميرامسك</h3>
-                        <p>تصميم متجر إلكتروني متخصص في عرض وبيع إكسسوارات بديل الذهب الأصلي بجودة عالية وتصاميم عصرية،
-                            مع تجربة تسوّق سهلة وآمنة.</p>
-                    </div>
-                </div>
+            <div class="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="portfolio-item bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 fade-in">
 
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">متجر الأدوات المنزلية</div>
-                    <div class="portfolio-content">
-                        <h3>متجر الأدوات المنزلية</h3>
-                        <p>تصميم متجر إلكتروني سهل الاستخدام لبيع الأدوات المنزلية، مع نظام طلبات وتوصيل متكامل.</p>
+                    <!-- صورة الخلفية مع شعار -->
+                    <div class="portfolio-img relative h-48 bg-gradient-to-br from-blue-500 to-stone-600 flex items-center justify-center overflow-hidden rounded-t-2xl">
+                        <!-- شعار المتجر -->
+                        <img src="./image/miramisk.png" alt="شعار متجر ميرامسك" class="store-logo max-w-40 max-h-40 object-contain rounded-xl shadow-md bg-white p-2 transition-transform duration-300 hover:scale-105">
+                    </div>
+
+                    <!-- محتوى الكارد -->
+                    <div class="portfolio-content p-6 flex flex-col">
+
+                        <!-- عنوان العمل والفئة -->
+                        <div class="portfolio-header flex justify-between items-center mb-4">
+                            <h3 class="text-gray-800 text-xl font-bold m-0">متجر ميرامسك</h3>
+                            <span class="portfolio-category bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
+                                متجر إلكتروني متكامل
+                            </span>
+                        </div>
+
+                        <!-- وصف العمل -->
+                        <p class="text-gray-600 leading-relaxed mb-4 text-justify">
+                            تصميم متجر إلكتروني متخصص في عرض وبيع إكسسوارات بديل الذهب الأصلي بجودة عالية وتصاميم عصرية، مع تجربة تسوّق سهلة وآمنة. تم تطوير واجهة مستخدم بديهية ونظام دفع إلكتروني آمن.
+                        </p>
+
+                        <!-- مميزات العمل -->
+                        <div class="portfolio-features flex flex-wrap gap-2 mb-4">
+                            <span class="feature-tag bg-gray-50 text-blue-500 px-3 py-1 rounded-full text-xs border border-gray-200">
+                                تصميم متجاوب
+                            </span>
+                            <span class="feature-tag bg-gray-50 text-blue-500 px-3 py-1 rounded-full text-xs border border-gray-200">
+                                نظام دفع آمن
+                            </span>
+                            <span class="feature-tag bg-gray-50 text-blue-500 px-3 py-1 rounded-full text-xs border border-gray-200">
+                                إدارة مخزون
+                            </span>
+                            <span class="feature-tag bg-gray-50 text-blue-500 px-3 py-1 rounded-full text-xs border border-gray-200">
+                                تحليلات متقدمة
+                            </span>
+                        </div>
+
+                        <!-- زر زيارة المتجر -->
+                        <a href="https://miramisk.com" target="_blank" class="mt-auto store-visit-btn bg-blue-500 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 justify-center hover:bg-blue-600 transition-all duration-300">
+                            <i class="fas fa-external-link-alt"></i>
+                            زيارة المتجر
+                        </a>
+
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
     <!-- قسم العروض الخاصة  -->
@@ -620,24 +645,24 @@
             </div>
             <div class="offers-grid">
                 <div class="offer-card fade-in">
-    <div class="offer-badge">الحل الشامل</div>
-    <h3>الامتثال والريادة القانونية</h3>
-    <div class="offer-price">1,399 ريال</div>
-    <ul class="offer-features">
-        <li><i class="fas fa-check"></i> تسجيل العلامة التجارية وحماية الملكية</li>
-        <li><i class="fas fa-check"></i> إصدار السجل التجاري والتراخيص الرسمية</li>
-        <li><i class="fas fa-check"></i> فتح حساب بنكي تجاري معتمد</li>
-        <li><i class="fas fa-check"></i> التسجيل في ضريبة القيمة المضافة</li>
-        <li><i class="fas fa-check"></i> إصدار جهاز نقاط بيع متكامل</li>
-        <li><i class="fas fa-check"></i> عضوية الغرف التجارية والتوثيق</li>
-        <li><i class="fas fa-check"></i> باركود مطابقة المنتج من الهيئة السعودية</li>
-        <li><i class="fas fa-check"></i> باقة التوثيق المتكاملة للمشاريع</li>
-    </ul>
-    <div class="offer-value p-4">
-        <span>راحة بال كاملة وأمان قانوني لمشروعك</span>
-    </div>
-    <a href="#contact" class="cta-button">احصل على الاستقرار القانوني</a>
-</div>
+                    <div class="offer-badge">الحل الشامل</div>
+                    <h3>الامتثال والريادة القانونية</h3>
+                    <div class="offer-price">1,399 ريال</div>
+                    <ul class="offer-features">
+                        <li><i class="fas fa-check"></i> تسجيل العلامة التجارية وحماية الملكية</li>
+                        <li><i class="fas fa-check"></i> إصدار السجل التجاري والتراخيص الرسمية</li>
+                        <li><i class="fas fa-check"></i> فتح حساب بنكي تجاري معتمد</li>
+                        <li><i class="fas fa-check"></i> التسجيل في ضريبة القيمة المضافة</li>
+                        <li><i class="fas fa-check"></i> إصدار جهاز نقاط بيع متكامل</li>
+                        <li><i class="fas fa-check"></i> عضوية الغرف التجارية والتوثيق</li>
+                        <li><i class="fas fa-check"></i> باركود مطابقة المنتج من الهيئة السعودية</li>
+                        <li><i class="fas fa-check"></i> باقة التوثيق المتكاملة للمشاريع</li>
+                    </ul>
+                    <div class="offer-value p-4">
+                        <span>راحة بال كاملة وأمان قانوني لمشروعك</span>
+                    </div>
+                    <a href="#contact" class="cta-button">احصل على الاستقرار القانوني</a>
+                </div>
                 <div class="offer-card featured fade-in">
                     <div class="offer-badge">الأكثر طلباً</div>
                     <h3>التأسيس الذهبي للمتجر الإلكتروني</h3>
@@ -848,135 +873,135 @@ justify-content:center; align-items:center; z-index:9998;">
     </section>
 
     <!-- قسم الأسئلة الشائعة  -->
-<section class="faq" id="faq">
-    <div class="container">
-        <div class="section-title">
-            <h2>الأسئلة الشائعة</h2>
-            <p>إجابات على أكثر الأسئلة شيوعاً</p>
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>الأسئلة الشائعة</h2>
+                <p>إجابات على أكثر الأسئلة شيوعاً</p>
+            </div>
+            <div class="faq-container text-justify">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        ما هي مدة تنفيذ الخدمات المختلفة لديكم؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>تختلف المدة حسب نوع الخدمة: الخدمات السريعة (كاستخراج الوثائق) تستغرق 1-3 أيام، الخدمات المتوسطة (كالتصميم والتطوير) 1-3 أسابيع، والمشاريع المتكاملة 3-6 أسابيع. نلتزم بمواعيد التسليم المتفق عليها.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        هل يمكنني طلب تصميم خاص غير مذكور في القائمة؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>بالتأكيد! نحن نقدم خدمات مخصصة حسب احتياجاتك الخاصة. يمكنك التواصل مع فريق التصميم لمناقشة فكرتك وسنقوم بدراستها وتقديم الحل الأمثل الذي يتناسب مع متطلباتك وميزانيتك.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        ما الذي يميزكم عن غيركم من مقدمي الخدمات؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نتميز بتقديم حلول متكاملة تحت سقف واحد، حيث نجمع بين الخبرة التقنية والمعرفة القانونية والاستشارات التسويقية. فريقنا متعدد التخصصات ويعمل بتناغم لضمان تحقيق رؤيتك بشكل متكامل ومحترف.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        هل المتجر سيكون متجاوبًا مع الجوال والأجهزة اللوحية؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، جميع تصاميمنا responsive ومتوافقة مع جميع الأجهزة بنسبة 100%. نضمن تجربة مستخدم مثالية على الجوال، الأجهزة اللوحية، وأجهزة الكمبيوتر بمختلف مقاساتها.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        هل تساعدونني في تحديد الجمهور المستهدف للإعلانات؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، نقدم خدمات تحليل السوق وتحديد الجمهور المستهدف بدقة. نحلل السلوك الشرائي، الاهتمامات، والخصائص الديموغرافية لمساعدتك في الوصول للعملاء المناسبين وتحقيق أعلى عائد على الاستثمار.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        ما الفرق بين المتجر الإلكتروني وصفحات الهبوط؟ وأيهما أناسب؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>المتجر الإلكتروني منصة متكاملة للبيع والعرض، بينما صفحات الهبوط مصممة لحملات إعلانية محددة. ننصح بالمتجر إذا كان لديك منتجات متعددة، وصفحات الهبوط للحملات المؤقتة أو العروض الخاصة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        ما هي الخدمات الحكومية والرسمية التي تقدمونها؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نقدم مجموعة شاملة من الخدمات الحكومية تشمل: التسجيل التجاري، التوثيق الرسمي، الاستعلامات، الشكاوى، التوظيف، وجميع معاملات منصة أبشر والجهات الرسمية الأخرى.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        هل تدعمون خدمات التصميم والتطوير بشكل منفصل؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، يمكنك طلب أي خدمة بشكل منفصل: تصميم الهوية البصرية، تطوير المواقع، برمجة التطبيقات، تصميم الجرافيك، إنتاج الفيديو، أو الحصول على حل متكامل حسب احتياجاتك.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        ما هي ضمانات الجودة التي تقدمونها على الخدمات؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نقدم ضمان الجودة من خلال: فريق مختص لكل خدمة، مراجعة الجودة في كل مرحلة، التزام بالمواصفات المطلوبة، فترة صيانة مجانية، ودعم فني مستمر لضمان رضاك التام عن الخدمة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        هل تقدمون خدمات الدعم والتدريب بعد التسليم؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، نقدم حزم دعم متعددة تشمل: التدريب على استخدام الخدمات، الدعم الفني، الصيانة الدورية، التحديثات، والاستشارات المستمرة لضمان استفادتك القصوى من خدماتنا.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        كيف أختار الخدمة المناسبة لمشروعي؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>يمكنك التواصل مع مستشارينا المتخصصين الذين سيساعدونك في تحليل احتياجاتك وتحديد الخدمات المناسبة لمشروعك، سواءً كانت خدمات فردية أو حلاً متكاملاً يلبي جميع متطلباتك.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        ما هي خيارات الدفع المتاحة لديكم؟
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نوفر خيارات دفع مرنة تشمل: الدفع النقدي، التحويل البنكي، الدفع بالبطاقات الائتمانية، الدفع الإلكتروني، بالإضافة إلى خيارات التقسيط لبعض الخدمات لتسهيل التعامل معنا.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="faq-container">
-            <div class="faq-item fade-in">
-                <button class="faq-question">
-                    ما هي مدة تنفيذ الخدمات المختلفة لديكم؟
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>تختلف المدة حسب نوع الخدمة: الخدمات السريعة (كاستخراج الوثائق) تستغرق 1-3 أيام، الخدمات المتوسطة (كالتصميم والتطوير) 1-3 أسابيع، والمشاريع المتكاملة 3-6 أسابيع. نلتزم بمواعيد التسليم المتفق عليها.</p>
-                </div>
-            </div>
-
-            <div class="faq-item fade-in">
-                <button class="faq-question">
-                    هل يمكنني طلب تصميم خاص غير مذكور في القائمة؟
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>بالتأكيد! نحن نقدم خدمات مخصصة  حسب احتياجاتك الخاصة. يمكنك التواصل مع فريق التصميم لمناقشة فكرتك وسنقوم بدراستها وتقديم الحل الأمثل الذي يتناسب مع متطلباتك وميزانيتك.</p>
-                </div>
-            </div>
-
-            <div class="faq-item fade-in">
-                <button class="faq-question">
-                    ما الذي يميزكم عن غيركم من مقدمي الخدمات؟
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>نتميز بتقديم حلول متكاملة تحت سقف واحد، حيث نجمع بين الخبرة التقنية والمعرفة القانونية والاستشارات التسويقية. فريقنا متعدد التخصصات ويعمل بتناغم لضمان تحقيق رؤيتك بشكل متكامل ومحترف.</p>
-                </div>
-            </div>
-
-            <div class="faq-item fade-in">
-                <button class="faq-question">
-                    هل المتجر سيكون متجاوبًا مع الجوال والأجهزة اللوحية؟
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>نعم، جميع تصاميمنا responsive ومتوافقة مع جميع الأجهزة بنسبة 100%. نضمن تجربة مستخدم مثالية على الجوال، الأجهزة اللوحية، وأجهزة الكمبيوتر بمختلف مقاساتها.</p>
-                </div>
-            </div>
-
-            <div class="faq-item fade-in">
-                <button class="faq-question">
-                    هل تساعدونني في تحديد الجمهور المستهدف للإعلانات؟
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>نعم، نقدم خدمات تحليل السوق وتحديد الجمهور المستهدف بدقة. نحلل السلوك الشرائي، الاهتمامات، والخصائص الديموغرافية لمساعدتك في الوصول للعملاء المناسبين وتحقيق أعلى عائد على الاستثمار.</p>
-                </div>
-            </div>
-
-            <div class="faq-item fade-in">
-                <button class="faq-question">
-                    ما الفرق بين المتجر الإلكتروني وصفحات الهبوط؟ وأيهما أناسب؟
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>المتجر الإلكتروني منصة متكاملة للبيع والعرض، بينما صفحات الهبوط مصممة لحملات إعلانية محددة. ننصح بالمتجر إذا كان لديك منتجات متعددة، وصفحات الهبوط للحملات المؤقتة أو العروض الخاصة.</p>
-                </div>
-            </div>
-
-            <div class="faq-item fade-in">
-                <button class="faq-question">
-                    ما هي الخدمات الحكومية والرسمية التي تقدمونها؟
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>نقدم مجموعة شاملة من الخدمات الحكومية تشمل: التسجيل التجاري، التوثيق الرسمي، الاستعلامات، الشكاوى، التوظيف، وجميع معاملات منصة أبشر والجهات الرسمية الأخرى.</p>
-                </div>
-            </div>
-
-            <div class="faq-item fade-in">
-                <button class="faq-question">
-                    هل تدعمون خدمات التصميم والتطوير بشكل منفصل؟
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>نعم، يمكنك طلب أي خدمة بشكل منفصل: تصميم الهوية البصرية، تطوير المواقع، برمجة التطبيقات، تصميم الجرافيك، إنتاج الفيديو، أو الحصول على حل متكامل حسب احتياجاتك.</p>
-                </div>
-            </div>
-
-            <div class="faq-item fade-in">
-                <button class="faq-question">
-                    ما هي ضمانات الجودة التي تقدمونها على الخدمات؟
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>نقدم ضمان الجودة من خلال: فريق مختص لكل خدمة، مراجعة الجودة في كل مرحلة، التزام بالمواصفات المطلوبة، فترة صيانة مجانية، ودعم فني مستمر لضمان رضاك التام عن الخدمة.</p>
-                </div>
-            </div>
-
-            <div class="faq-item fade-in">
-                <button class="faq-question">
-                    هل تقدمون خدمات الدعم والتدريب بعد التسليم؟
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>نعم، نقدم حزم دعم متعددة تشمل: التدريب على استخدام الخدمات، الدعم الفني، الصيانة الدورية، التحديثات، والاستشارات المستمرة لضمان استفادتك القصوى من خدماتنا.</p>
-                </div>
-            </div>
-
-            <div class="faq-item fade-in">
-                <button class="faq-question">
-                    كيف أختار الخدمة المناسبة لمشروعي؟
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>يمكنك التواصل مع مستشارينا المتخصصين الذين سيساعدونك في تحليل احتياجاتك وتحديد الخدمات المناسبة لمشروعك، سواءً كانت خدمات فردية أو حلاً متكاملاً يلبي جميع متطلباتك.</p>
-                </div>
-            </div>
-
-            <div class="faq-item fade-in">
-                <button class="faq-question">
-                    ما هي خيارات الدفع المتاحة لديكم؟
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>نوفر خيارات دفع مرنة تشمل: الدفع النقدي، التحويل البنكي، الدفع بالبطاقات الائتمانية، الدفع الإلكتروني، بالإضافة إلى خيارات التقسيط لبعض الخدمات لتسهيل التعامل معنا.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- التذييل -->
     <?php include 'footer.php'; ?>
